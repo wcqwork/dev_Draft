@@ -1,0 +1,3789 @@
+<script>
+  !(function (f, n) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+      n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = "2.0";
+    n.queue = [];
+  })(window);
+  fbq("init", "712858323029538");
+  fbq("track", "PageView");
+  fbq("track", "ViewContent");
+  onloadHack(function () {
+    setTimeout(function () {
+      !(function (f, b, e, v, n, t, s) {
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+    }, 500);
+  });
+  window.fbAccessToken = "true";
+  // part1
+  onloadHack(function () {
+    setTimeout(function () {
+      !(function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = (w[t] = w[t] || []);
+        (ttq.methods = [
+          "page",
+          "track",
+          "identify",
+          "instances",
+          "debug",
+          "on",
+          "off",
+          "once",
+          "ready",
+          "alias",
+          "group",
+          "enableCookie",
+          "disableCookie",
+        ]),
+          (ttq.setAndDefer = function (t, e) {
+            t[e] = function () {
+              t.push([e].concat(Array.prototype.slice.call(arguments, 0)));
+            };
+          });
+        for (var i = 0; i < ttq.methods.length; i++)
+          ttq.setAndDefer(ttq, ttq.methods[i]);
+        (ttq.instance = function (t) {
+          for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)
+            ttq.setAndDefer(e, ttq.methods[n]);
+          return e;
+        }),
+          (ttq.load = function (e, n) {
+            var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+            (ttq._i = ttq._i || {}),
+              (ttq._i[e] = []),
+              (ttq._i[e]._u = i),
+              (ttq._t = ttq._t || {}),
+              (ttq._t[e] = +new Date()),
+              (ttq._o = ttq._o || {}),
+              (ttq._o[e] = n || {});
+            var o = document.createElement("script");
+            (o.type = "text/javascript"),
+              (o.async = !0),
+              (o.src = i + "?sdkid=" + e + "&lib=" + t);
+            var a = document.getElementsByTagName("script")[0];
+            a.parentNode.insertBefore(o, a);
+          });
+        //part2
+        ttq.load("tiktok");
+        ttq.page();
+      })(window, document, "ttq");
+    }, 2000);
+  })
+  
+  (function (window, $, undefined) {})(window, $);
+
+  (function (window, $, undefined) {
+    /**guid='68acc0d1-8d52-4d1f-8169-c9002a4b5a54' componentAlias='navigation_style' jumpNameRepeatHack='false' collectToRender='true' jumpName='ULUpAKgBYrjn' ajaxLoad='' type='text/javascript'**/
+
+    /*id='u_ccfb2d8c3a6e4fc6a21a696f676f23fa' guid='u_ccfb2d8c3a6e4fc6a21a696f676f23fa' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_a40086d5ddb14e3cbf4408eb532a5671' guid='u_a40086d5ddb14e3cbf4408eb532a5671' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//jprnrwxhjjjr5o.leadongcdn.cn:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_0440baddd7a543d2af7f7b39ad463a79' guid='u_0440baddd7a543d2af7f7b39ad463a79' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//rornrwxhjjjr5o.leadongcdn.cn:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_e59c38e8767743a8b4670949cf87f36c' guid='u_e59c38e8767743a8b4670949cf87f36c' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_144dcf84f83c43d4805a8c8a1097f3a1' guid='u_144dcf84f83c43d4805a8c8a1097f3a1' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_fa4437dab5b44b2f9df3fa78a3ef8450' guid='u_fa4437dab5b44b2f9df3fa78a3ef8450' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_5ff204b509f9462cac56a65b3ee5dd18' guid='u_5ff204b509f9462cac56a65b3ee5dd18' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//jprnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_44c911d6137246a8b6c66dc5fb8c3739' guid='u_44c911d6137246a8b6c66dc5fb8c3739' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//iqrnrwxhjjjr5o.leadongcdn.cn:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_ecfb0bbb76c342f9911e5eec3e00f002' guid='u_ecfb0bbb76c342f9911e5eec3e00f002' pm_script='sitewidget-navigation_style-20230706115039' jumpTo='ULUpAKgBYrjn' type='text/javascript'*/
+    try {
+      $(function () {
+        if (
+          phoenixSite.phoenixCompSettings &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style !==
+            "undefined" &&
+          typeof phoenixSite.phoenixCompSettings.navigation_style
+            .navigationStyle == "function"
+        ) {
+          phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+            ".sitewidget-navigation_style-20230706115039",
+            "",
+            "navnew-wide-substyle-new0",
+            "0",
+            "0",
+            "100px",
+            "0",
+            "0"
+          );
+          return;
+        }
+        $.getScript(
+          "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.navigation_style.settings.js?_=1689557831150",
+          function () {
+            phoenixSite.phoenixCompSettings.navigation_style.navigationStyle(
+              ".sitewidget-navigation_style-20230706115039",
+              "",
+              "navnew-wide-substyle-new0",
+              "0",
+              "0",
+              "100px",
+              "0",
+              "0"
+            );
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+  })(window, $);
+
+  (function (window, $, undefined) {
+    /**guid='fca3455a-75cf-4f3f-8f4f-df771fbcfa4e' componentAlias='pictureNew' jumpNameRepeatHack='false' collectToRender='true' jumpName='YZUpfKVBYstR' ajaxLoad='' type='text/javascript'**/
+
+    /*id='u_2077d46cdbe6454484df84de02bd11c6' guid='u_2077d46cdbe6454484df84de02bd11c6' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//jprnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_2d956fd52ec84aa8ae70b591753aeab4' guid='u_2d956fd52ec84aa8ae70b591753aeab4' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_a51cf8c0512746cea27bfe8b9e8e7080' guid='u_a51cf8c0512746cea27bfe8b9e8e7080' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_32f3a9f384914ceb83b5189b6c320b7d' guid='u_32f3a9f384914ceb83b5189b6c320b7d' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_95d16a71e79f4a769eae6e769b8530f8' guid='u_95d16a71e79f4a769eae6e769b8530f8' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_d583dda235e346ceae13c36461bb1be7' guid='u_d583dda235e346ceae13c36461bb1be7' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_dff55813604d4d5a977966b7830e5449' guid='u_dff55813604d4d5a977966b7830e5449' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//jprnrwxhjjjr5o.leadongcdn.cn:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_eaa2cf60ae6b48e8abea53c2d02e5ef0' guid='u_eaa2cf60ae6b48e8abea53c2d02e5ef0' pm_script='sitewidget-pictureNew-20230717102027' jumpTo='YZUpfKVBYstR' type='text/javascript'*/
+    try {
+      (function (window, $, undefined) {
+        var respSetting = {},
+          temp;
+        var picLinkTop = "";
+        $(function () {
+          if ("0" == "10") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("singleHoverValue");
+            });
+          }
+          if ("0" == "11") {
+            $("#picture-wrap-YZUpfKVBYstR").mouseenter(function () {
+              $(this).addClass("picHoverReflection");
+            });
+          }
+          var version = $.trim("1.0.0");
+          if (!!!version) {
+            version = undefined;
+          }
+          var initPicHoverEffect_YZUpfKVBYstR = function (obj) {
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounceInDown bounceInLeft bounceInRight bounceInUp fadeInDownBig fadeInLeftBig fadeInRightBig fadeInUpBig zoomInDown zoomInLeft zoomInRight zoomInUp"
+              );
+            $(obj)
+              .find(".picture-wrap")
+              .removeClass(
+                "animated bounce zoomIn pulse rotateIn swing fadeIn"
+              );
+          };
+          if (
+            phoenixSite.phoenixCompSettings &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew !== "undefined" &&
+            phoenixSite.phoenixCompSettings.pictureNew.version == version &&
+            typeof phoenixSite.phoenixCompSettings.pictureNew
+              .pictureLoadEffect == "function"
+          ) {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+            return;
+          }
+          var resourceUrl =
+            "//iqrnrwxhjjjr5o.leadongcdn.cn:6540/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          if (phoenixSite && phoenixSite.page) {
+            var cdnUrl = phoenixSite.page.cdnUrl;
+            resourceUrl =
+              cdnUrl +
+              "/static/assets/widget/script/compsettings/comp.pictureNew.settings.js?_=1689557831150";
+          }
+          var callback = function () {
+            phoenixSite.phoenixCompSettings.pictureNew.pictureLoadEffect(
+              "YZUpfKVBYstR",
+              ".sitewidget-pictureNew-20230717102027",
+              "",
+              "",
+              respSetting
+            );
+          };
+          if (phoenixSite.cachedScript) {
+            phoenixSite.cachedScript(resourceUrl, callback());
+          } else {
+            $.getScript(resourceUrl, callback());
+          }
+        });
+      })(window, jQuery);
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+  })(window, $);
+
+  (function (window, $, undefined) {
+    /**guid='b1cc880b-27e6-458f-a443-9cac05fd7b80' componentAlias='button' jumpNameRepeatHack='false' collectToRender='true' jumpName='VNKAUpgVsYjv' ajaxLoad='' type='text/javascript'**/
+
+    /*id='u_e5edf58b12064b39be2d5d7f085864c7' guid='u_e5edf58b12064b39be2d5d7f085864c7' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_486c98d042004ffe8a0945420aaf8a0b' guid='u_486c98d042004ffe8a0945420aaf8a0b' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_aa39ea7b89ad4d8a814c3c993dc1c45f' guid='u_aa39ea7b89ad4d8a814c3c993dc1c45f' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_5767a8f4b260410d8bfefd9089d8df35' guid='u_5767a8f4b260410d8bfefd9089d8df35' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_e7e9f720b5df48c2b49150f03f773e05' guid='u_e7e9f720b5df48c2b49150f03f773e05' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_a4f98fc048584f09b7622eb72630cfa3' guid='u_a4f98fc048584f09b7622eb72630cfa3' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_847e67cb10204dbc882ced120d13e87d' guid='u_847e67cb10204dbc882ced120d13e87d' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+    /*id='u_458d68dc84754012ba07ea53dc6f2e89' guid='u_458d68dc84754012ba07ea53dc6f2e89' pm_script='sitewidget-button-20230717102016' jumpTo='VNKAUpgVsYjv' type='text/javascript'*/
+    try {
+      $(function () {
+        $(".sitewidget-button-20230717102016 .backstage-component-btn").each(
+          function () {
+            var link = $(this).attr("href");
+            var anchor = "";
+            //button的href属性不存在
+            if (!link || link.indexOf("#") == -1) {
+              return;
+            }
+            if (link.indexOf("http") == 0) {
+              return;
+            }
+            if (
+              window.location.href.indexOf(link.substr(0, link.indexOf("#"))) >
+              -1
+            ) {
+              $(this).attr("href", "javascript:;");
+              $(this).removeAttr("target");
+            } else {
+              if (link.substr(0, link.indexOf("#")).indexOf("index") > -1) {
+                $(this).attr("href", "javascript:;");
+                $(this).removeAttr("target");
+              }
+            }
+
+            anchor = link.substr(link.indexOf("#"));
+            if (anchor.indexOf("=") != -1) {
+              return;
+            }
+
+            // 发送GA跟踪报告
+            if ($(anchor).length == 0) {
+              return;
+            }
+            // $(this).attr("href","javascript:;");
+
+            $(this)
+              .off("click")
+              .on("click", function () {
+                $("html,body").animate(
+                  {
+                    scrollTop: $(anchor).offset().top,
+                  },
+                  500
+                );
+              });
+          }
+        );
+      });
+    } catch (e) {
+      try {
+        console && console.log && console.log(e);
+      } catch (e) {}
+    }
+  })(window, $);
+
+  (function (window, $, undefined) {})(window, $);
+
+  (function (window, $, undefined) {})(window, $);
+
+  (function () {
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(":")[0];
+    if (curProtocol === "https") {
+      bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+    } else {
+      bp.src = "//push.zhanzhang.baidu.com/push.js";
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+
+  try {
+    $(function () {
+      $(".sitewidget-text-20230706115629 .sitewidget-bd a").each(function () {
+        if ($(this).attr("href")) {
+          if ($(this).attr("href").indexOf("#") != -1) {
+            console.log("anchor-link", $(this));
+            $(this).attr("anchor-link", "true");
+          }
+        }
+      });
+    });
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  try {
+    $(function () {
+      $(".sitewidget-text-20230717102048 .sitewidget-bd a").each(function () {
+        if ($(this).attr("href")) {
+          if ($(this).attr("href").indexOf("#") != -1) {
+            console.log("anchor-link", $(this));
+            $(this).attr("anchor-link", "true");
+          }
+        }
+      });
+    });
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  try {
+    function sortableli(el, data, value) {
+      var newArr = [];
+      //平铺风格
+      if (
+        value == "0" ||
+        value == "1" ||
+        value == "2" ||
+        value == "3" ||
+        value == "4" ||
+        value == "5" ||
+        value == "6" ||
+        value == "7" ||
+        value == "8" ||
+        value == "12" ||
+        value == "14"
+      ) {
+        for (var i = 0; i < data.length; i++) {
+          el.find(".lang-cont").each(function () {
+            if (data[i].isDefault == "0") {
+              if ($(this).attr("data-default") == "0") {
+                if ($(this).attr("data-lancode") == data[i].islanCode) {
+                  var cloneSpan = $(this).clone(true);
+                  newArr.push(cloneSpan);
+                }
+              }
+            } else {
+              if ($(this).attr("data-default") == "1") {
+                if ($(this).attr("data-lancode") == data[i].islanCode) {
+                  //newArr.push($(this))
+                  var cloneSpan = $(this).clone(true);
+                  newArr.push(cloneSpan);
+                }
+              }
+            }
+          });
+        }
+
+        if (value == "0" || value == "6" || value == "3") {
+          var langDivMid = ' <span class="lang-div-mid">|</span> ';
+        } else if (
+          value == "1" ||
+          value == "4" ||
+          value == "7" ||
+          value == "14"
+        ) {
+          var langDivMid = ' <span class="lang-div-mid"></span> ';
+        } else if (
+          value == "2" ||
+          value == "12" ||
+          value == "5" ||
+          value == "8"
+        ) {
+          var langDivMid = ' <span class="lang-div-mid">/</span> ';
+        } else {
+          var langDivMid = ' <span class="lang-div-mid">|</span> ';
+        }
+        if (newArr.length >= 0) {
+          el.find("span").remove();
+          for (var i = 0; i < newArr.length; i++) {
+            el.append(newArr[i]);
+            if (i == newArr.length - 1) {
+            } else {
+              el.append(langDivMid);
+            }
+          }
+        }
+      } else {
+        //下拉风格
+        for (var i = 0; i < data.length; i++) {
+          el.find(".lang-item").each(function () {
+            if (data[i].isDefault == "0") {
+              if ($(this).attr("data-default") == "0") {
+                if ($(this).attr("data-lancode") == data[i].islanCode) {
+                  var cloneSpan = $(this).clone(true);
+                  newArr.push(cloneSpan);
+                }
+              }
+            } else {
+              if ($(this).attr("data-default") == "1") {
+                if ($(this).attr("data-lancode") == data[i].islanCode) {
+                  //newArr.push($(this))
+                  var cloneSpan = $(this).clone(true);
+                  newArr.push(cloneSpan);
+                }
+              }
+            }
+          });
+        }
+
+        if (newArr.length >= 0) {
+          el.find(".lang-item").remove();
+          for (var i = 0; i < newArr.length; i++) {
+            if (value == "13") {
+              el.find(".langBar-easystyle-sub").append(newArr[i]);
+            } else {
+              el.find(".lang-menu").append(newArr[i]);
+            }
+          }
+        }
+      }
+    }
+    // 组件包裹框注册
+    $(function () {
+      var dom = $(
+        ".sitewidget-langBar-20230717113442 .sitewidget-bd .lang-bar"
+      );
+      var sortArr = [
+        {
+          id: 0,
+          islanCode: "0",
+          isDefault: "0",
+        },
+        {
+          id: 1,
+          islanCode: "1",
+          isDefault: "0",
+        },
+        {
+          id: 2,
+          islanCode: "2",
+          isDefault: "0",
+        },
+        {
+          id: 3,
+          islanCode: "3",
+          isDefault: "0",
+        },
+        {
+          id: 4,
+          islanCode: "4",
+          isDefault: "0",
+        },
+        {
+          id: 5,
+          islanCode: "10",
+          isDefault: "0",
+        },
+        {
+          id: 6,
+          islanCode: "13",
+          isDefault: "0",
+        },
+        {
+          id: 7,
+          islanCode: "14",
+          isDefault: "0",
+        },
+        {
+          id: 8,
+          islanCode: "15",
+          isDefault: "0",
+        },
+        {
+          id: 9,
+          islanCode: "16",
+          isDefault: "0",
+        },
+        {
+          id: 10,
+          islanCode: "17",
+          isDefault: "0",
+        },
+      ];
+      if (sortArr != "" && sortArr != undefined) {
+        sortableli(dom, sortArr, 4);
+      }
+    });
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_b179744291e945be91d1584788527c32' guid='u_157619161c4d446db804ca2e62965963' renderEmptyFake='true' pm_script='u_b179744291e945be91d1584788527c32' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_b179744291e945be91d1584788527c32";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "724771665236586b4648583544684a69346d615834673739595973326d7a774e";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_173ab2a6aaa24522b4f9559a271b2458' guid='u_6f3e17b331eb451ebc5a1bf6956a7487' renderEmptyFake='true' pm_script='u_173ab2a6aaa24522b4f9559a271b2458' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_173ab2a6aaa24522b4f9559a271b2458";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "6d32317857334d61566178514357516d4339686f567a654a6d34535237383331";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_7ad66141c6e54da0940e897991a4febd' guid='u_cf8598f91acc4be1b4f2644d1c1b26fc' renderEmptyFake='true' pm_script='u_7ad66141c6e54da0940e897991a4febd' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_7ad66141c6e54da0940e897991a4febd";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "50477a5772627654364e505878576f5a7757766247556458306972365a614d36";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_176fd5809e004752b19df7882a16e069' guid='u_3c94c90bc7df4c5e865a60f77d3e9edb' renderEmptyFake='true' pm_script='u_176fd5809e004752b19df7882a16e069' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_176fd5809e004752b19df7882a16e069";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "305a67637544436d5253503639396e7736445746505562507a5863546e6a4c38";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_5ee32755fe08472585c52cd6706e5341' guid='u_f5226322719448f780e85d61e49b0900' renderEmptyFake='true' pm_script='u_5ee32755fe08472585c52cd6706e5341' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_5ee32755fe08472585c52cd6706e5341";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "42524851595a57313053306576424b75317339626a307371442f375867633344";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_aac763d1f6734e66805950f07a59917b' guid='u_bd61ba3a50314f2aa67b657a4d85efe8' renderEmptyFake='true' pm_script='u_aac763d1f6734e66805950f07a59917b' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_aac763d1f6734e66805950f07a59917b";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "6f685633616d46416658596d45454e597438705a384f36534947714247696d31";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_474d9662b8bb4db7963153432f66bd50' guid='u_40accfee59244060a56a256210b76921' renderEmptyFake='true' pm_script='u_474d9662b8bb4db7963153432f66bd50' jumpTo='dynamic' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      var dynamicElementId = "u_474d9662b8bb4db7963153432f66bd50";
+      var settingId = "TEKfUAqgYDkM";
+      var relationCommonId = "pIUpKfAlGcje";
+      var componentAlias =
+        "435852594368454a5734484b674a7959417149726445444e54477131515a4465";
+      var staticUpdateVersion = "ipBjVKrWWVik";
+      var _version_ = "2.0.1";
+      if (
+        !!!dynamicElementId ||
+        !!!settingId ||
+        !!!relationCommonId ||
+        !!!componentAlias
+      ) {
+        return;
+      }
+      var nomalViewAjaxMode = "false";
+      nomalViewAjaxMode = "true";
+      var ajaxUrl =
+        "/phoenix/admin/component/dynamic/" +
+        settingId +
+        "/" +
+        relationCommonId +
+        "/" +
+        componentAlias;
+      var ajaxOption = {
+        url: ajaxUrl,
+        type: "post",
+        cache: false,
+        dataType: "html",
+      };
+      var postData = ajaxOption["data"] || {};
+      $.extend(postData, {
+        staticUpdateVersion: staticUpdateVersion,
+      });
+      $.extend(postData, {
+        __lj__: typeof $LAB != "undefined" && !!$LAB,
+      });
+      $.extend(postData, {
+        __ls__:
+          typeof window.LABHelper != "undefined" &&
+          typeof window.LABHelper.loadCss != "undefined" &&
+          !!window.LABHelper.loadCss,
+      });
+      $.extend(postData, {
+        nomalViewAjaxMode: nomalViewAjaxMode,
+      });
+      var isSinglePublishMode = false;
+      if (
+        typeof window.phoenixSite != "undefined" &&
+        typeof window.phoenixSite._sViewMode != "undefined" &&
+        window.phoenixSite._sViewMode == "true" &&
+        typeof window.phoenixSite._singlePublish != "undefined"
+      ) {
+        isSinglePublishMode = window.phoenixSite._singlePublish;
+      }
+      $.extend(postData, {
+        singlePublishMode: isSinglePublishMode,
+      });
+      ajaxOption["data"] = postData;
+      $.ajax(ajaxOption)
+        .fail(function (jqXHR, textStatus, errorThrown) {
+          $("#" + dynamicElementId).remove();
+        })
+        .done(function (response, textStatus, jqXHR) {
+          if (!!!response) {
+            $("#" + dynamicElementId).remove();
+            return;
+          }
+          if (response.indexOf("frontend-body-canvas") != -1) {
+            location.reload();
+            return;
+          }
+          $("#" + dynamicElementId).replaceWith(response);
+        })
+        .always(function (response, textStatus, jqXHR) {});
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_8dc991d9d4004f15af580b440bc8e8bf' guid='u_8dc991d9d4004f15af580b440bc8e8bf' pm_script='siteblocks-URfUApKffojA-20230625112524' data_collect='true' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      /**guid='572bdf45-192c-4791-a914-29cd06105668' jumpNameRepeatHack='false' collectToRender='true' jumpName='VPUKAfqVspNd' type='text/javascript'**/
+
+      /*id='u_2d5e09635b8e4cc096dcf2369bc28316' guid='u_2d5e09635b8e4cc096dcf2369bc28316' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_4da1e58f103340d9a266a4aafe5f7ee7' guid='u_4da1e58f103340d9a266a4aafe5f7ee7' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_ac242f1403ac4d9b993f715e9621c3ed' guid='u_ac242f1403ac4d9b993f715e9621c3ed' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_03c8562e2a8b4a2a92d75929365ae6da' guid='u_03c8562e2a8b4a2a92d75929365ae6da' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_558f6cd8637841e589cc812607f9fee7' guid='u_558f6cd8637841e589cc812607f9fee7' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_6eedcf31ebd14de48a887fabf9aa77d4' guid='u_6eedcf31ebd14de48a887fabf9aa77d4' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_9832395c7ded40c4aa96c9b3c48bace5' guid='u_9832395c7ded40c4aa96c9b3c48bace5' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_1d776f0121a64816ab5b0aa32edbd59f' guid='u_1d776f0121a64816ab5b0aa32edbd59f' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_777120bbf3a74152a830b386ac8f95b6' guid='u_777120bbf3a74152a830b386ac8f95b6' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_8f49a729bdf6455e881b5f19e7677f3b' guid='u_8f49a729bdf6455e881b5f19e7677f3b' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_d6367707800646c4889b4470a1c02c6c' guid='u_d6367707800646c4889b4470a1c02c6c' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_ad7d4af62f0447b095f6eecd32899d6e' guid='u_ad7d4af62f0447b095f6eecd32899d6e' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_ad00f21c4c8241789ec8c16ac1c9fea8' guid='u_ad00f21c4c8241789ec8c16ac1c9fea8' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_ce39454983f54457910cecbcedd807a5' guid='u_ce39454983f54457910cecbcedd807a5' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_43b887564d4e415b96db8f6ecf9e2812' guid='u_43b887564d4e415b96db8f6ecf9e2812' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_bb057ea955dd4e1baebb723357a2f8d7' guid='u_bb057ea955dd4e1baebb723357a2f8d7' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_404cd4067f0742b590e74ee43c411d69' guid='u_404cd4067f0742b590e74ee43c411d69' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, $, undefined) {
+          $(function () {
+            onloadHack(function () {
+              $(".siteblocks-setting-wrap[data-isTimeout=1]").each(function () {
+                $(this).detach();
+              });
+            });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+      /*id='u_2e72fc794aa8410cb515a25cebd941e2' guid='u_2e72fc794aa8410cb515a25cebd941e2' pm_script='siteblocks-URfUApKffojA-20230625112524' jumpTo='VPUKAfqVspNd' type='text/javascript'*/
+      try {
+        (function (window, jQuery, undefined) {
+          $(function () {
+            var $thisBlock = $("#siteblocks-setting-wrap-VPUKAfqVspNd");
+            var handleStyleDomId = "handlestyle_VPUKAfqVspNd";
+            if ($thisBlock.find("*[data-handleColorId]").length > 0) {
+              if ($thisBlock.find("#" + handleStyleDomId).length > 0) {
+                $thisBlock.find("#" + handleStyleDomId).remove();
+              }
+              $thisBlock.append("");
+            }
+            $("#siteblocks-setting-wrap-VPUKAfqVspNd")
+              .find("*[data-blockSetting-color]")
+              .each(function (index, item) {
+                var curColorStr = $(this).attr("data-blockSetting-color") || "";
+                var handleColorId = $(this).attr("data-handleColorId") || "";
+                var curColorObj;
+                if (!!curColorStr) curColorObj = eval("(" + curColorStr + ")");
+                if (curColorObj instanceof Object) {
+                  var classObj = {};
+                  for (var k in curColorObj) {
+                    var kValList = curColorObj[k].split("-");
+                    if (kValList.length != 3 && !kValList[2]) {
+                      continue;
+                    }
+                    var kArray = k.split("_");
+                    if (kArray.length == 1) {
+                      classObj[k] = kValList[2];
+                    } else {
+                      $("#" + handleStyleDomId).append(
+                        '#siteblocks-setting-wrap-VPUKAfqVspNd [data-handleColorId="' +
+                          handleColorId +
+                          '"]:' +
+                          kArray[0] +
+                          "{" +
+                          kArray[1] +
+                          ":" +
+                          kValList[2] +
+                          "!important}"
+                      );
+                    }
+                  }
+                  $(this).css(classObj);
+                }
+              });
+          });
+        })(window, jQuery);
+      } catch (e) {
+        try {
+          console && console.log && console.log(e);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_e778993726554e2fb645cb7fe9531050' guid='u_e778993726554e2fb645cb7fe9531050' pm_script='sitewidget-text-20230706115629' data_collect='true' type='text/javascript'*/
+  try {
+    // labjs ["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.text.settings.js"]
+    // 10000
+    // lazycss ["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/style/component/graphic/graphic.css","//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/picture/animate.css"]
+    // 360
+    (function (window, $, undefined) {
+      try {
+        window.__datalazyload__debug__ = true;
+        if (
+          !!!window.__pc_opt_modules__ ||
+          !!!window.__pc_opt_modules__.modules
+        ) {
+          return;
+        }
+        var modules = __pc_opt_modules__.modules;
+        var settingId = "WCfApULgiWjJ",
+          alias = "text";
+        var uuid = alias + "_" + settingId;
+        var id = "component_" + settingId;
+        var module = modules[uuid] || (modules[uuid] = {});
+        module.id = id;
+        module.uuid = uuid;
+        module.alias = alias;
+        module.settingId = settingId;
+        module.js_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.text.settings.js"]';
+        module.js_threshold = "10000";
+        module.css_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/style/component/graphic/graphic.css","//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/picture/animate.css"]';
+        module.css_threshold = "360";
+      } catch (ex) {
+        try {
+          console && console.log && console.log(ex);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_feb561a399cf4fb39f2ff5952405b9c3' guid='u_feb561a399cf4fb39f2ff5952405b9c3' pm_script='sitewidget-navigation_style-20230706115039' type='text/javascript'*/
+  try {
+    (function (window, $) {
+      $(function () {
+        typeof respond != "undefined" &&
+          respond.ext &&
+          respond.ext.push(
+            $("#component_ULUpAKgBYrjn").find("style[respond=true]")
+          );
+      });
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_d45700aa0d4a43fda7fe44cff6969abd' guid='u_d45700aa0d4a43fda7fe44cff6969abd' pm_script='sitewidget-navigation_style-20230706115039' data_collect='true' type='text/javascript'*/
+  try {
+    // labjs ["//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/smartmenu/js/jquery.smartmenusUpdate.js","//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.navigation_style.settings.js"]
+    // 50
+    // lazycss
+    //
+    (function (window, $, undefined) {
+      try {
+        window.__datalazyload__debug__ = true;
+        if (
+          !!!window.__pc_opt_modules__ ||
+          !!!window.__pc_opt_modules__.modules
+        ) {
+          return;
+        }
+        var modules = __pc_opt_modules__.modules;
+        var settingId = "ULUpAKgBYrjn",
+          alias = "navigation_style";
+        var uuid = alias + "_" + settingId;
+        var id = "component_" + settingId;
+        var module = modules[uuid] || (modules[uuid] = {});
+        module.id = id;
+        module.uuid = uuid;
+        module.alias = alias;
+        module.settingId = settingId;
+        module.js_depand =
+          '["//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/smartmenu/js/jquery.smartmenusUpdate.js","//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.navigation_style.settings.js"]';
+        module.js_threshold = "50";
+        module.css_depand = "";
+        module.css_threshold = "";
+      } catch (ex) {
+        try {
+          console && console.log && console.log(ex);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_a7708aaed8d3497098a14c1bd9dcdb01' guid='u_a7708aaed8d3497098a14c1bd9dcdb01' pm_script='sitewidget-pictureNew-20230717102027' data_collect='true' type='text/javascript'*/
+  try {
+    // labjs ["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/jquery.lazyload.js","//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.pictureNew.settings.js"]
+    // 50
+    // lazycss
+    //
+    (function (window, $, undefined) {
+      try {
+        window.__datalazyload__debug__ = true;
+        if (
+          !!!window.__pc_opt_modules__ ||
+          !!!window.__pc_opt_modules__.modules
+        ) {
+          return;
+        }
+        var modules = __pc_opt_modules__.modules;
+        var settingId = "YZUpfKVBYstR",
+          alias = "pictureNew";
+        var uuid = alias + "_" + settingId;
+        var id = "component_" + settingId;
+        var module = modules[uuid] || (modules[uuid] = {});
+        module.id = id;
+        module.uuid = uuid;
+        module.alias = alias;
+        module.settingId = settingId;
+        module.js_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/jquery.lazyload.js","//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.pictureNew.settings.js"]';
+        module.js_threshold = "50";
+        module.css_depand = "";
+        module.css_threshold = "";
+      } catch (ex) {
+        try {
+          console && console.log && console.log(ex);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_e6efc22706bb4195ae463ccd377b3d5c' guid='u_e6efc22706bb4195ae463ccd377b3d5c' pm_script='sitewidget-button-20230717102016' data_collect='true' type='text/javascript'*/
+  try {
+    // labjs ["//rornrwxhjjjr5o.leadongcdn.cn:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/button/button.js"]
+    // 50
+    // lazycss ["//rornrwxhjjjr5o.leadongcdn.cn:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/style/component/button/button.css"]
+    // 360
+    (function (window, $, undefined) {
+      try {
+        window.__datalazyload__debug__ = true;
+        if (
+          !!!window.__pc_opt_modules__ ||
+          !!!window.__pc_opt_modules__.modules
+        ) {
+          return;
+        }
+        var modules = __pc_opt_modules__.modules;
+        var settingId = "VNKAUpgVsYjv",
+          alias = "button";
+        var uuid = alias + "_" + settingId;
+        var id = "component_" + settingId;
+        var module = modules[uuid] || (modules[uuid] = {});
+        module.id = id;
+        module.uuid = uuid;
+        module.alias = alias;
+        module.settingId = settingId;
+        module.js_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.cn:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/button/button.js"]';
+        module.js_threshold = "50";
+        module.css_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.cn:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/style/component/button/button.css"]';
+        module.css_threshold = "360";
+      } catch (ex) {
+        try {
+          console && console.log && console.log(ex);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_3a164feab3224e70bb9ff3816d6f3faf' guid='u_3a164feab3224e70bb9ff3816d6f3faf' pm_script='sitewidget-text-20230717102048' data_collect='true' type='text/javascript'*/
+  try {
+    // labjs ["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.text.settings.js"]
+    // 10000
+    // lazycss ["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/style/component/graphic/graphic.css","//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/picture/animate.css"]
+    // 360
+    (function (window, $, undefined) {
+      try {
+        window.__datalazyload__debug__ = true;
+        if (
+          !!!window.__pc_opt_modules__ ||
+          !!!window.__pc_opt_modules__.modules
+        ) {
+          return;
+        }
+        var modules = __pc_opt_modules__.modules;
+        var settingId = "UUKpAfBLNsZy",
+          alias = "text";
+        var uuid = alias + "_" + settingId;
+        var id = "component_" + settingId;
+        var module = modules[uuid] || (modules[uuid] = {});
+        module.id = id;
+        module.uuid = uuid;
+        module.alias = alias;
+        module.settingId = settingId;
+        module.js_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/compsettings/comp.text.settings.js"]';
+        module.js_threshold = "10000";
+        module.css_depand =
+          '["//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/style/component/graphic/graphic.css","//rornrwxhjjjr5o.leadongcdn.com:6540/static/t-7kBmBKiKponmqnkpiirnj/assets/widget/script/plugins/picture/animate.css"]';
+        module.css_threshold = "360";
+      } catch (ex) {
+        try {
+          console && console.log && console.log(ex);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_2b268475223a49efa3f748c52cde10c0' guid='u_2b268475223a49efa3f748c52cde10c0' pm_script='sitewidget-langBar-20230717113442' data_collect='true' type='text/javascript'*/
+  try {
+    // labjs
+    // 50
+    // lazycss
+    //
+    (function (window, $, undefined) {
+      try {
+        window.__datalazyload__debug__ = true;
+        if (
+          !!!window.__pc_opt_modules__ ||
+          !!!window.__pc_opt_modules__.modules
+        ) {
+          return;
+        }
+        var modules = __pc_opt_modules__.modules;
+        var settingId = "WgfAUpVqDYjJ",
+          alias = "langBar";
+        var uuid = alias + "_" + settingId;
+        var id = "component_" + settingId;
+        var module = modules[uuid] || (modules[uuid] = {});
+        module.id = id;
+        module.uuid = uuid;
+        module.alias = alias;
+        module.settingId = settingId;
+        module.js_depand = "";
+        module.js_threshold = "50";
+        module.css_depand = "";
+        module.css_threshold = "";
+      } catch (ex) {
+        try {
+          console && console.log && console.log(ex);
+        } catch (e) {}
+      }
+    })(window, $);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_bea6aa2163244313bca3046b601d870e' guid='u_bea6aa2163244313bca3046b601d870e' pm_script='front_control' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      $(function () {
+        if (!!phoenixSite && phoenixSite.browser.firefox) {
+          $(document.body).css({
+            "-moz-user-select": "none",
+          });
+        } else {
+          $(document).disableSelection();
+        }
+        $("img").css({
+          "pointer-events": "none !important",
+        });
+        $(
+          '<a href="javascript:;" title="" class="sitewidget-backtop backToTopStyle8" type="8">top</a>'
+        ).appendTo("body");
+        !!phoenixSite && phoenixSite.sitewidgets.back2topbtn();
+        phoenixSite && phoenixSite.sitewidgets.closePicturePreview();
+      });
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_cdda2d95a9474549bb097c7b04c1d839' guid='u_cdda2d95a9474549bb097c7b04c1d839' pm_script='technical_support' type='text/javascript'*/
+  try {
+    (function (window, $, undefined) {
+      if ($(".freeuser-copyrigh-discrtn").length > 0) {
+        $(".freeuser-copyrigh-discrtn").hover(
+          function () {
+            $(".freeuser-copyrigh-discrtn").append(
+              '<div class="freeuser-copyrigh-remove"><span class="front">开始创建您的响应式网站</span></div>'
+            );
+          },
+          function () {
+            $(".freeuser-copyrigh-remove").remove();
+          }
+        );
+      }
+    })(window, jQuery);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_02e781af21cd4b5ea1036f76348d7083' guid='u_02e781af21cd4b5ea1036f76348d7083' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//rornrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_fd19b130a27c43299c6a0285d034aaef' guid='u_fd19b130a27c43299c6a0285d034aaef' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//iqrnrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_768f4ea1fb434427b7250a5b3970d337' guid='u_768f4ea1fb434427b7250a5b3970d337' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//rornrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_630d026d909a49e3b50f99c06be3f1e6' guid='u_630d026d909a49e3b50f99c06be3f1e6' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//jprnrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//jprnrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_71b5393dc0434bb1880b3707249b4e99' guid='u_71b5393dc0434bb1880b3707249b4e99' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//rornrwxhjjjr5o.leadongcdn.cn:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//rornrwxhjjjr5o.leadongcdn.cn:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_4943953eb0fe4839ba631a24c69d5e89' guid='u_4943953eb0fe4839ba631a24c69d5e89' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//rornrwxhjjjr5o.leadongcdn.cn:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//rornrwxhjjjr5o.leadongcdn.cn:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_eca4f81dcb114d43a8e8735161f42243' guid='u_eca4f81dcb114d43a8e8735161f42243' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//iqrnrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//iqrnrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_35926192b6ff454796fc938a180f57fe' guid='u_35926192b6ff454796fc938a180f57fe' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//rornrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  /*id='u_f7731f5f0f0f410087a87d6efc7bf472' guid='u_f7731f5f0f0f410087a87d6efc7bf472' jumpOrder='last' pm_script='probe' jumpTo='bottom' type='text/javascript'*/
+  try {
+    var __probe__ = __probe__ || {};
+    __probe__["prefix"] = "//rornrwxhjjjr5o.leadongcdn.com:6540";
+    __probe__["pId"] = "pIUpKfAlGcje";
+    __probe__["pCId"] = "";
+    __probe__["argSuffix"] = "";
+    __probe__["random"] =
+      new Date().getTime() +
+      ((1 + Math.random() * 65536) | 0).toString(16).substring(1);
+    __probe__["debug"] = "true";
+    __probe__["_menu_prefix"] = "";
+    __probe__["_referer_"] = document.referrer || "";
+    (function () {
+      $.get("/phoenix/admin/access?t=0", function (result) {
+        try {
+          result = $.parseJSON(result);
+          if (result["success"] == "true") {
+            var count_timer = new Date().getTime();
+            var timer_func = setInterval(function () {
+              var new_time = new Date().getTime();
+              if (new_time > 10 * 1000 + count_timer) {
+                clearInterval(timer_func);
+              }
+              if ($("#notice_accessPassword").length == 0) {
+                var p = document.createElement("script");
+                p.type = "text/javascript";
+                p.async = true;
+                p.src =
+                  "//rornrwxhjjjr5o.leadongcdn.com:6540/static/assets/script/plugins/probe/probe.js?_=1689557831150";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(p, s);
+                clearInterval(timer_func);
+              }
+            }, 200);
+            return;
+          }
+        } catch (e) {}
+      });
+    })();
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  try {
+    if ("serviceWorker" in navigator) {
+      if (
+        !(
+          /Safari/.test(navigator.userAgent) &&
+          !/Chrome/.test(navigator.userAgent) &&
+          !/Mobile/.test(navigator.userAgent)
+        ) &&
+        !/Edge/.test(navigator.userAgent) &&
+        !/MicroMessenger/.test(navigator.userAgent)
+      ) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/sw.js");
+        });
+      }
+    }
+  } catch (e) {}
+
+  /*id='u_a9a62d528a1147aea97a8dcacabc513c' guid='u_a9a62d528a1147aea97a8dcacabc513c' pm_script='init' type='text/javascript'*/
+  try {
+    (function (window, undefined) {
+      var phoenixSite = window.phoenixSite || (window.phoenixSite = {});
+      phoenixSite.lanEdition = "ZH_CN";
+      var page = phoenixSite.page || (phoenixSite.page = {});
+      page.cdnUrl = "//iqrnrwxhjjjr5o.leadongcdn.com:6540";
+      page.siteUrl = "//cn.leadongtop.preview.ldwebsitebuilder.com:6541";
+      page.lanEdition = phoenixSite.lanEdition;
+      page._menu_prefix = "";
+      page._menu_trans_flag = "";
+      page._captcha_domain_prefix = "captcha.c";
+      page._pId = "pIUpKfAlGcje";
+      phoenixSite._sViewMode = "false";
+      phoenixSite._templateSupport = "true";
+      phoenixSite._singlePublish = "false";
+    })(this);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  try {
+    (function (window, undefined) {
+      var datalazyloadDefaultOptions =
+        window.datalazyloadDefaultOptions ||
+        (window.datalazyloadDefaultOptions = {});
+      datalazyloadDefaultOptions["version"] = "2.0.1";
+      datalazyloadDefaultOptions["isMobileViewer"] = "false";
+      datalazyloadDefaultOptions["_version"] = "2.0.0";
+      datalazyloadDefaultOptions["isPcOptViewer"] = "false";
+      window.__datalazyload__debug__ = true;
+    })(this);
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+  try {
+    var thisUrl = location.host;
+    var referUrl = document.referrer;
+    if (referUrl.indexOf(thisUrl) == -1) {
+      localStorage.setItem("landedPage", document.URL);
+    }
+  } catch (e) {
+    try {
+      console && console.log && console.log(e);
+    } catch (e) {}
+  }
+</script>

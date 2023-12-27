@@ -1,0 +1,113 @@
+[@table_select selectCateIds="${component.productGroup_ids!''}" serviceName="phoenixGroupService" selectGroupType="${component.selectProdGroupType!'0'}"]
+	<ul class="allGroup-list">
+		[#if table_data??]
+			[#list table_data as group]
+				<li class="[#if productGroupId?? && productGroupId = group.prodGroupId ]on[/#if]">
+					<div class="prodCataName">
+						<div class="prodImg_Url">
+							[#if group.photoUrls??]
+								[#list group.photoUrls as photourlItem]
+									[#if photourlItem_index == 0]
+										<img src="${photourlItem!?html}" alt="" >
+									[/#if]
+								[/#list]
+							[/#if]
+						</div>
+						<a [#if group.hasSub??]class="cate-has-sub"[/#if] href="[#if prodShowType=='1' && group.hasSub??]${group.cateListUrl}[#else]${group.groupUrl}[/#if]" title="${group.groupName!?html}">${group.groupName!?html}
+							[#if group.hasSub??]<i class="fa fa-chevron-right"></i>[/#if]
+						</a>
+					</div>
+					[#-- 二级菜单start --]
+					[#if group.hasSub??]
+				  		<ul class="subGroup-list">
+							[#list group.subGroups as subGroup]
+								[#if subGroup_index % 3 == 0 ] <div class="list_child_item">[/#if]
+									<li class="[#if productGroupId?? && productGroupId = subGroup.prodGroupId ]on[/#if]">
+									<a [#if subGroup.hasSub??]class="cate-has-sub"[/#if] href="[#if prodShowType=='1' && subGroup.hasSub??]${subGroup.cateListUrl}[#else]${subGroup.groupUrl}[/#if]" title="${subGroup.groupName!?html}"><span >${subGroup.groupName!?html}</span>
+										[#if subGroup.hasSub??]
+											<i class="fa fa-chevron-right"></i>
+										[/#if]
+									</a>
+
+									[#-- 三级菜单start --]
+									[#if subGroup.hasSub??]
+								  		<ul class="thirdGroup-list">
+
+											[#list subGroup.subGroups as thirdGroup]
+												<li class="[#if productGroupId?? && productGroupId = thirdGroup.prodGroupId ]on[/#if]">
+													<a [#if thirdGroup.hasSub??]class="cate-has-sub"[/#if] href="[#if prodShowType=='1' && thirdGroup.hasSub??]${thirdGroup.cateListUrl}[#else]${thirdGroup.groupUrl}[/#if]" title="${thirdGroup.groupName!?html}">${thirdGroup.groupName!?html}
+														[#if thirdGroup.hasSub??]
+															<i class="fa fa-chevron-right"></i>
+														[/#if]
+													</a>
+
+													[#-- 四级菜单start --]
+													[#if thirdGroup.hasSub??]
+												  		<ul class="forthGroup-list">
+
+														[#list thirdGroup.subGroups as forthGroup]
+															<li class="[#if productGroupId?? && productGroupId = forthGroup.prodGroupId ]on[/#if]">
+																<a [#if forthGroup.hasSub??]class="cate-has-sub"[/#if] href="[#if prodShowType=='1' && forthGroup.hasSub??]${forthGroup.cateListUrl}[#else]${forthGroup.groupUrl}[/#if]" title="${forthGroup.groupName!?html}">${forthGroup.groupName!?html}
+																	[#if forthGroup.hasSub??]
+																		<i class="fa fa-chevron-right"></i>
+																	[/#if]
+																</a>
+
+																[#-- 五级菜单start --]
+																[#if forthGroup.hasSub??]
+																  	<ul class="lastGroup-list">
+																	[#list forthGroup.subGroups as lastGroup]
+																		<li class="[#if productGroupId?? && productGroupId = lastGroup.prodGroupId ]on[/#if]">
+																			<a href="${lastGroup.groupUrl}" title="${lastGroup.groupName!?html}">${lastGroup.groupName!?html}</a>
+																		</li>
+																	[/#list]
+																	</ul>
+																[/#if]
+																[#-- 五级菜单end --]
+
+															</li>
+														[/#list]
+														</ul>
+													[/#if]
+													[#-- 四级菜单end --]
+
+												</li>
+											[/#list]
+										</ul>
+									[/#if]
+									[#-- 三级菜单end --]
+
+								</li>
+								[#if subGroup_index % 3 == 2 ] </div>[/#if]
+							[/#list]
+						</ul>
+					[/#if]
+					[#-- 二级菜单end --]
+
+				</li>
+			[/#list]
+		[#else]
+			[@web_backend]
+				[@phoenix_directive_i18n code="component_cont_txt_prod_cate" es="false" txt="<p>请进入“内容”》“产品管理”》“添加产品分类”，进行产品分类数据的添加，添加好的产品分类会自动展示出来。</p>"/]
+			[/@web_backend]
+		[/#if]
+	</ul>
+[/@table_select]
+[@web_javascript collect="true" pm_script="${component.widgetClass!}" jumpTo="${settingId!}"]
+(function(window, $, undefined){
+	$(function() {
+		$(".${component.widgetClass}.prodGroupCategory21 .allGroup-list i.fa").unbind("click").bind("click",function(event){
+			if($(window).width()>1100){
+				return;
+			}
+			$(this).toggleClass("fa-rotate-90");
+			if($(this).parent().parent().parent().find(">ul").length > 0){
+				$(this).parent().parent().parent().find(">ul").slideToggle();
+			}else{
+				$(this).parent().parent().find(">ul").slideToggle();
+			}
+			event.preventDefault();
+		})
+	});
+})(window, jQuery);
+[/@web_javascript]

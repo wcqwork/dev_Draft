@@ -1,0 +1,77 @@
+打开发帖：1.获取本地缓存中josn 2.渲染贴文页面 输入贴文文案：1.更新本地缓存json
+2.渲染贴文页面 账号关联页面显示控件 以账号为出发点：
+<script>
+  const defaultAccountConfig = {
+    isCustomized: false, //编辑贴文 false代表使用同一个编辑贴文
+    FB: {
+      firstComment: true, // 首次评论
+      postType: false, // 贴文类型 post | reel
+    },
+    IN: {
+      firstComment: true, // 首次评论
+      privacyStatus: false, //隐私状态
+    },
+  };
+</script>
+
+<!-- 根据选择账号动态生成json -->
+<script>
+  // 默认设置
+  const defaultConfig = {
+    attachments: [], //图片附件
+    post: "", //贴文内容文本、标签、链接等,
+    selectedProfiles: [], // 所有选择的社媒信息
+  };
+  //   facebook设置
+  const faceBookConfig = {
+    FBprofile: {
+      // 当前对应的社媒账号信息
+    },
+    FBAloneSeeting: {
+      // 其它设置信息
+      firstComment: "", // 首次评论
+      firstCommentMedia:
+        "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/E3wltj2wy.png",
+    },
+  };
+
+  //    linkin设置
+  const linkinConfig = {
+    Inprofile: {
+      // 当前对应的社媒账号信息
+    },
+    InAloneSeeting: {
+      // 其它设置信息
+      firstComment: "", // 首次评论
+      firstCommentMedia:
+        "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/E3wltj2wy.png",
+    },
+  };
+
+  // 页面生成导出json
+  let pageResultJson = {};
+  // 统一设置
+  pageResultJson = {
+    isCustomized: false, // 外围设置项，不跟账号绑定设置
+    custom: {
+      ...defaultConfig,
+      ...faceBookConfig,
+      ...linkinConfig,
+    },
+  };
+  // 单独设置json
+  pageResultJson = {
+    isCustomized: true, // 外围设置项，不跟账号绑定设置
+    custom: {
+      // 账号相关
+      FB: {
+        ...defaultConfig,
+        ...faceBookConfig,
+      },
+      IN: {
+        ...defaultConfig,
+        ...linkinConfig,
+      },
+    },
+  };
+</script>

@@ -1,0 +1,632 @@
+{
+    "code": "0",
+    "message": "SUCCESS",
+    "result": {
+        "cdnDomainRecord": "//a12.leadongcdn.cn:6540",
+        "groupEnableInfo": {
+            "1": "1",
+            "2": "1",
+            "3": "0",
+            "4": "1",
+            "5": "1"
+        },
+        "jsDomain": "ldwebsitebuilder.com",
+        "payList": {
+            "1": [
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "6",
+                    "payProperty": "{\"isSmartPayment\":1,\"payAccount\":\"678678\"}",
+                    "payTypeGroup": "1",
+                    "payTypeId": 7,
+                    "payTypeName": "Paypal",
+                    "usingStatus": "1"
+                }
+            ],
+            "2": [
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "1",
+                    "payProperty": "{\"merchant_id\":\"aasfasf2018091312333310004684\",\"private_key\":\"asfas2018091312333310004684\",\"selectedCreditCardList\":[\"VISA\",\"Mastercard\",\"AmericanExpress\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 1,
+                    "payTypeName": "Cashier",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "9",
+                    "payProperty": "{\"sk_live\":\"2018091312333310004684\",\"pk_live\":\"2018091312333310004684\",\"merchantNo\":\"54\",\"MD5key\":\"554\",\"selectedCreditCardList\":[\"VISA\",\"Mastercard\",\"AmericanExpress\",\"Discover\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 58,
+                    "payTypeName": "Stripe-Card",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "11",
+                    "payProperty": "{\"merchantNo\":\"2018091312333310004684\",\"MD5key\":\"2018091312333310004684\",\"selectedCreditCardList\":[\"VISA\",\"Mastercard\",\"AmericanExpress\",\"JCB\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 64,
+                    "payTypeName": "Win To Pay",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "0",
+                    "payGroup": "14",
+                    "payProperty": "",
+                    "payTypeGroup": "2",
+                    "payTypeId": 69,
+                    "payTypeName": "Eec Pay",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "0",
+                    "payGroup": "15",
+                    "payProperty": "{\"mchtId\":\"086320059990002\",\"selectedCreditCardList\":[\"AmericanExpress\",\"Diners\",\"Discover\",\"JCB\",\"Mastercard\",\"UnionPay\",\"VISA\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 72,
+                    "payTypeName": "AllinPay",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "17",
+                    "payProperty": "{\"accId\":\"2018091312333310004684\",\"clientId\":\"2018091312333310004\",\"salt\":\"DA62D3CF8F7B63793543E76A\",\"selectedCreditCardList\":[\"VISA\",\"Mastercard\",\"AmericanExpress\",\"JCB\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 76,
+                    "payTypeName": "PingPong",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "18",
+                    "payProperty": "{\"merchantId\":\"202004290000417004\",\"merchantPrivateKey\":\"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCSWR0pEGOd+ZRdmEa0xsMjEqbFFX9VspqFSY44nO/H6g0NV3dxacbGPlslCtj+OfotO0HnGVEbtWEldJ+oHVVn3AgVZKdYVPoBiZceZxvlxFVdNKnXb58oSJsuv5/J0aNFaynqB1XREMuBWa5zIaLVEW2JuY2T+WEPx3wgFqkoLhjIYdcGxas8QUJL63lXBejtM2QYdcOLQ2bSqBxwSYkjPASMCeuTTmF62M9rg83Zxy0uDttl+SJIzttnip+LnEylPfCz4HblsqHdEWyqtDmtAukERsyisbVl8K4GGjGNUYfGbOTtSNy8ZtOM28tHhCw4iwt7XUtfFAR8DYEIksF5AgMBAAECggEAAb1TbmiGdps/2zjzJjTyntka6F7QC6m60njEWwHqi7rJeu4eOlfih/q3xKHzYFo6Eg2RQ/j2ENlAFVzkhPAMUta3teFjZ9Zivl/vTuo0169UwG3e0vO9tZHfXlfiw1hdk3apoeGCcKC9eoUhYLb2o4e4gJmXCDo/oBtj61G5owOcp6M9m+HyePL6AQ7j+2YI9+trVuk1bHYcTFap1y+RftnpIvRxZNuxI6L3WhBCEChEXW1e9Z/e1mCT6leJrOKZFRjcOTqXRdJczcORstnSN+8xmqm92zXL6ooR0egQN1pPBRI4b08gl6T8IUX3CBfaUG7lhu4Urcg4ez8HcT5McQKBgQDE7OlELm5Se8dDgaLUB5vwnh4kALrc1jIX4lBv2bS8yc2xRQeAHZvsG5r40kecO4NCXjYr2avYsICOc5l8iiMMyGvWa80Fv31oQn3Gl82o7JB9hdDALRddOf5nEo4OyS9oBASd84EWs/Yt/hzCPGpsByhFSkWf6zcun0fIRow4bQKBgQC+QBCliUnBnibePqbyxWKem9qrcewVzy6il0wdByptkSn5m0ao0F6o28GfDQozdBe1rMUrcRTwyM5eZX9tIudZmHw5zObpnprkxtGba3V+wfRhBmYamy4vT8V3RG2IgOvHO+uPwbqpMFe+xuj/0p1lZeWUoEwMxWUg9uULJ1PdvQKBgHQ2q+LE0+5xhcLc+k7OvsRdS8RLefthnOZjdLzNadAP+AepiSeeUaohEG/PCNu2c1vzZVyzdKrIXtWyet34V37vuFQuAixmOYgR1VAhvgj2sr6g/fSrp6Io223QkW1AZW2pEWB1l7TiN2IlGKu4I8Xk42sgzb32ffZRoXcbyxxxAoGBAIJAkGUVElcp9QhxspFBzFw07kg0zeK8nvwYQ7cYAddT7H4E7iKDzlsjYXOIVPSXRehPKgqs+B5GDOwZ510L6YKw4FQeUfWebgO1jyouLxoipjKLU/phRgSEQ/h889TiFwqnnoYkp6xP+bMWscz8IGCcm8re2FJiDvO7tWKmgUetAoGAddxIS0ksA2PEVGwIh8wlJOMQjiHkn4IGYvCFzxooIj1/sCxofQjfRY2/MPzYmCHrau261jslLyFiBVkc1okmq1BWaEwjn5A8eEnfznIkyNNfZTEUiymhh+ESqWg3gXSgsNLQL3Ng033DaHJC++FF6nCkA+KCnwAUeSAQf1i2GSE=\",\"selectedCreditCardList\":[\"VISA\",\"Mastercard\",\"AmericanExpress\",\"JCB\",\"Diners\",\"Discover\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 78,
+                    "payTypeName": "LianLian",
+                    "usingStatus": "1"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "20",
+                    "payProperty": "{\"account\":\"995181\",\"terminl\":\"99518101\",\"securecode\":\"24pbh00b4d6404bjp6264D4646rh42z2R64tv04t6486T40T0TRf066t64400j6H\",\"key\":\"807e81657e5e11e314ab4aa3e314c08a6a3040155085e5e38295ae6ee3c9ca6132cb3d6a1a00f219eea30860b53329e7e7b0ef268302d7a5f87fa606b6aedfede98c271b6345f1ab702b6fcce90b74913d99e2acc2e96a56c04e9bf98590657d32cd1fd060b57d5a8a0fb3640a91529a68eb0c2d5b6930f36a531fd831f3f20b\",\"selectedCreditCardList\":[\"VISA\",\"Mastercard\",\"AmericanExpress\",\"JCB\"]}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 98,
+                    "payTypeName": "Oceanpayment",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "21",
+                    "payProperty": "{\"account\":\"65454512\",\"terminl\":\"545451212\",\"securecode\":\"5455\",\"key\":\"45512\",\"selectedCreditCardList\":[\"AmericanExpress\",\"Diners\",\"Discover\",\"JCB\",\"Mastercard\",\"UnionPay\",\"VISA\"],\"ProfileID\":\"5BB6CCCD-94A3-4BFD-997F-CF81A8588FDD\",\"Access_key\":\"63d516457df436548af6c8d6308397ed\",\"Secret_key\":\"a7b12fedf29245eca07b480372a1baecd4b740758e334cc2983d2a5809832b08bf3b71acea694b99887b3a898709870d3a03636dbb5e45d593ead4acbacce8c91dfd021b921d434d8c1d43430644a03dc09e6177c4b8423da8cb37cfb85555e9eebb796ae9a8453c9a8ca77dedb50159bf56458c610b4f6ba32cddc234c0fa84\",\"Merchant_key\":\"adasdas\",\"Merchant_shared_secret_key\":\"asfasfasf\",\"Merchat_id\":\"212154545\"}",
+                    "payTypeGroup": "2",
+                    "payTypeId": 99,
+                    "payTypeName": "Cybersource",
+                    "usingStatus": "0"
+                }
+            ],
+            "3": [
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "2",
+                    "payProperty": "{\"APP_ID\":\"132\",\"PRIVATE_KEY\":\"123\",\"ALIPAY_PUBLIC_KEY\":\"123\",\"AliPayPublicKey\":\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtFLFkv7AcIqlAey1uP6xy8n9OxJH3KvErQXA1HnaLk75PI284YwbGP6ozqqj8y3Nz+DknmS5uWKl1b8iN1lAaHK1uE1/OzwhEa2eF0KugwDnll9+HXVdrgUQ23tUtxDNFASlao7h3xNht56xsFxUjh+hWTznQT2cSJSo4EOOCH+AGgddWYY8wJYnTZsX2sey5EA8UFIP6y3/1eJRGK7CsBBiEgZ6D00VtIEwpJmXTfAhDI5XS8oJldN+hctmatnMWTlAFIXoz52YkDzFBIK7vWZacpGczDVO4gmA0J0T8vne8VsUy8aiTgTIanx3e9hSYOx43TQxPEmTg+PUPJ+gjwIDAQAB\",\"AliPatAppId\":\"2016092000555472\",\"AliPayKey\":\"MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCs83heFtA1ljU6lJk6Ufs1sPYpqahFQoeF+ZxlLbPr1tV1T22ECA42cz1WRq36LVhVfGX+KYHVwQNwYAosMkab9aaNDrcPUHB7jrXp1b56CPrF8u+jqbtswCS41MAlW8Bh3o4nOP+YED3WwBG2a6QO3+k/yVV8fY81tvowzZUux3Hj3FtF3teVR4CkC6eghO/A96tDdSim/EZpjOJvEqgPWtLsN1u4vx9IIpVY1ANgn2Eat2gPgoy7POe0hzJinWxi9VJTDk3xv/wxyNvIIlm73TMiOXQwqK1AvQ5t/piwhBw7o6vPYLbFpsltkCA9xBttnSd0c8oArbw1/QCNey53AgMBAAECggEAPMCFfp+K4dfyuLIsJPVZReH0hmwHJNUa3+/vhQcJ1YUwlDWjZaaiv3O5jw3i3SeCiPzaou4XomtbduT1jdLXRL+EkrYhjaqW6IAX3JztfNacqF4O2bGsmaXhAGATYswZBwfzbUmzVsoVvtLXJfonteXnfDWP5twAK0EsH2qHxddJYiaQEtxaYJyl3OGic+O4B9wW9FYNOulYhSFlfdOhahy4l4MzLuw/2oGQ2fBeqQK2uKH2kuAeha2WwFBO+0Rpxg7CbIzM0whf/mGhJmh6qPQSH2bT7joYRHEyRj8QaA0XpMiQ5qZGqBy1yIBwH1IePYE1jjhg/FdbAI9arxCn8QKBgQD51ml3SOyS456+Tb8JxBQuNc1QcDMJjLpvX0PICGMruo621a0XJ1Lfmgs/V1nPGm774uq/eGgHPsmKb+hqmcw6XE4xss2y2P/hZ7ysl1P1Pk+s2iNxlBXkVUMQvCczzdS0XTFWHO+2hZPcGBWwxjYWMqXjIxVsKwRWhV6t0LaRqQKBgQCxN4/YZWIf5bleF88TeXfRe9FwZ6tkEiqVK2Fk3wRGbyDtaeORLJ+xk6Gfsbs6m8cW3FD/rMqj2MUdqT87ToA0uRU8MJGims+d/TGnXfseGCCzW6LPvzDGu/oFnlgBBioZZP0TLFFWj8TXdTw+beN5Ou1ybcr0LD2MhdtkoBATHwKBgQDkpkmRpQj2iiE/U5ISUwSRIiZMhtL+22/I++vhx2NTowJ37GjkdtXO1IGUr9H+y9dk6dEj+QNkFh+HdlHENguGIfJiY50EILtWRIWVg02Qdj2fGWk0ym2asjmVuE08iRUxGNVNVWBBsFCZLuWzCkR33lSZ4wL5IwluUdNLymc8OQKBgALJAsO95CroK1+lNCX0NMPgFEyV9IWgG3c4tVEmiCSrPnM8xMzVTLU3wsSFwJGNPTXIxKUgDBdDIuXycQH3m+A4QHMvuDo8AKNVBWDCA15Xtrva5tYpBRU6gxVvhaaOeD7p7WhNvAGGROu19fptM7QGDxFLVHM99sGsoOQV9+q1AoGBANw5/ZN1qJfYngCCfL36/mOfkKuhtm6koBgdE9lbWXW52wPL64jEfNkoidIb1qmKKp/DrJjA2RTWZKawxh6kYt+kl/2yZX5x1WtEfgS3jmc9OiXsdFOLcO9sbqJ7R58/roFaDAKjA1kKR1JtOPVb+zl9kxx5wy+3qOup0Iyhzf5W\"}",
+                    "payTypeGroup": "3",
+                    "payTypeId": 2,
+                    "payTypeName": "支付宝",
+                    "usingStatus": "0"
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 8,
+                    "payTypeName": "Payssion-财付通",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 9,
+                    "payTypeName": "Payssion-支付宝",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 10,
+                    "payTypeName": "Payssion-银联",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 11,
+                    "payTypeName": "Payssion-Hong Leong",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 12,
+                    "payTypeName": "Payssion-Maybank2u",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 13,
+                    "payTypeName": "Payssion-CIMB Clicks",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 14,
+                    "payTypeName": "Payssion-Affin Bank",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 15,
+                    "payTypeName": "Payssion-Am online",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 16,
+                    "payTypeName": "Payssion-RHB Now",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 17,
+                    "payTypeName": "Payssion-MOLPay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 18,
+                    "payTypeName": "Payssion-Webcash",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 19,
+                    "payTypeName": "Payssion-7-eleven",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 20,
+                    "payTypeName": "Payssion-Esapay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 21,
+                    "payTypeName": "Payssion-epay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 22,
+                    "payTypeName": "Payssion-eNets",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 23,
+                    "payTypeName": "Payssion-SAM by SingPost",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 24,
+                    "payTypeName": "Payssion-ATMVA",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 25,
+                    "payTypeName": "Payssion-Vtcpay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 26,
+                    "payTypeName": "Payssion-Dragonpay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 27,
+                    "payTypeName": "Payssion-Paysbuy",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 28,
+                    "payTypeName": "Payssion-Gash",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 29,
+                    "payTypeName": "Payssion-onecard",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 30,
+                    "payTypeName": "Payssion-dineromail",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 31,
+                    "payTypeName": "Payssion-bancodobrasil",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 32,
+                    "payTypeName": "Payssion-itau",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 33,
+                    "payTypeName": "Payssion-Boleto",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 34,
+                    "payTypeName": "Payssion-bradesco",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 35,
+                    "payTypeName": "Payssion-banamex",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 36,
+                    "payTypeName": "Payssion-oxxo",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 37,
+                    "payTypeName": "Payssion-redpagos",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 38,
+                    "payTypeName": "Payssion-Banco de Chile",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 39,
+                    "payTypeName": "Payssion-RedCompra",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 40,
+                    "payTypeName": "Payssion-Webmoney",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 41,
+                    "payTypeName": "Payssion-QIWI",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 42,
+                    "payTypeName": "Payssion-Yandex(Bank Card)",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 43,
+                    "payTypeName": "Payssion-Yandex(Cash)",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 44,
+                    "payTypeName": "Payssion-Yandex",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 45,
+                    "payTypeName": "Payssion-Alfa-Click",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 46,
+                    "payTypeName": "Payssion-Moneta",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 47,
+                    "payTypeName": "Payssion-Sberbank",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 48,
+                    "payTypeName": "Payssion-Promsvyazbank",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 49,
+                    "payTypeName": "Payssion-Russian Standard Bank",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 50,
+                    "payTypeName": "Payssion-Faktura",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 51,
+                    "payTypeName": "Payssion-Russian Post centres",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 52,
+                    "payTypeName": "Payssion-Trustpay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 53,
+                    "payTypeName": "Payssion-Dotpay",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 54,
+                    "payTypeName": "Payssion-Sofort",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 55,
+                    "payTypeName": "Payssion-Polipayment",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 56,
+                    "payTypeName": "Payssion-Bitcoin",
+                    "usingStatus": ""
+                },
+                {
+                    "isGroupDefault": "",
+                    "payGroup": "4",
+                    "payProperty": "",
+                    "payTypeGroup": "3",
+                    "payTypeId": 57,
+                    "payTypeName": "Payssion-Myclear FPX",
+                    "usingStatus": ""
+                }
+            ],
+            "4": [
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "8",
+                    "payProperty": "{\"name\":\"111\",\"desc\":\"\",\"instruct\":\"\"}",
+                    "payTypeGroup": "4",
+                    "payTypeId": 6,
+                    "payTypeName": "Cash on Delivery",
+                    "usingStatus": "1"
+                }
+            ],
+            "5": [
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "5",
+                    "payProperty": "{\"bankTransferInfo\":\"123123123123\"}",
+                    "payTypeGroup": "5",
+                    "payTypeId": 4,
+                    "payTypeName": "Bank Transfer",
+                    "usingStatus": "1"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "7",
+                    "payProperty": "{\"Beneficiary\":\"收款账号\",\"Frist_Name\":\"名字\",\"Last_Name\":\"性别\",\"Country\":\"国家\",\"Address\":\"地址\",\"WestUnionInfo\":\"\\n收款人：收款账号\\n名：名字\\n姓：性别\\n国家：国家\\n地址：地址\"}",
+                    "payTypeGroup": "5",
+                    "payTypeId": 5,
+                    "payTypeName": "Western Union",
+                    "usingStatus": "1"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "16",
+                    "payProperty": "{\"TTInfo\":\"TT\"}",
+                    "payTypeGroup": "5",
+                    "payTypeId": 75,
+                    "payTypeName": "TT",
+                    "usingStatus": "1"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "19",
+                    "payProperty": "{\"Beneficiary\":\"收款账号\",\"Frist_Name\":\"名字1\",\"Last_Name\":\"性别2\",\"Country\":\"国家32\",\"Address\":\"地址231\",\"wiseInfo\":\"收款人：收款账号\\n名：名字1\\n姓：性别2\\n国家：国家32\\n地址：地址231\\n\"}",
+                    "payTypeGroup": "5",
+                    "payTypeId": 97,
+                    "payTypeName": "Wise",
+                    "usingStatus": "1"
+                },
+                {
+                    "isGroupDefault": "1",
+                    "payGroup": "22",
+                    "payProperty": "{\"Beneficiary\":\"收款账号\",\"Frist_Name\":\"名字1\",\"Last_Name\":\"性别2\",\"Country\":\"国家32\",\"Address\":\"地址231\",\"XTransferInfo\":\"收款人：收款账号\\n名：名字1\\n姓：性别2\\n国家：国家32\\n地址：地址231\\n\"}",
+                    "payTypeGroup": "5",
+                    "payTypeId": 88,
+                    "payTypeName": "XTransfer",
+                    "usingStatus": "1"
+                }
+            ]
+        },
+        "paypalActionUrl": "/paypal/bindpaypal",
+        "paypalNeedBind": false
+    }
+}

@@ -1,0 +1,87 @@
+<!-- async await -->
+await 等的是一个 fulfiled 状态的 Promise ******
+1、await后面接一个会return new promise的函数并执行它
+2、await只能放在async函数里
+
+<script>
+    async function test() {
+        try {
+            await new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log(1111111);
+                    reject('成功了！！！');
+                    // reject('失败了！！！');
+                }, 3000);
+            })
+            console.log(22222);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    // test();
+</script>
+
+<script>
+    function getProdFun(sino) {
+        return new Promise((resolve, reject) => {
+            let _number = parseInt(Math.random() * 6 + 1);
+            setTimeout(function () {
+                if (_number > 3) {
+                    if (sino == '大') {
+                        resolve(_number)
+                    } else {
+                        reject(_number);
+                    }
+                } else {
+                    if (sino == '大') {
+                        reject(_number);
+                    } else {
+                        resolve(_number);
+                    }
+                }
+            }, 3000);
+        });
+    }
+    async function getList() {
+        try {
+            let n = await getProdFun('大');
+            console.log('赢了' + n)
+        } catch (error) {
+            console.log('输了' + error);
+        }
+    }
+
+    // promise.all里面跟一个数组，数组的每一项是一个返回promise的函数调用，then的第一个参数是所有的promise都成功后调用，拿到所有promise的结果是一个数组；第二个参数拿到的是第一个失败的值
+    async function mytest() {
+        try {
+            let result = Promise.all([getProdFun('大'), getProdFun('大')]);
+            result.then(res => {
+                console.log(res);
+            }, error => {
+                console.log(error);
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    // mytest();
+    // getList();
+</script>
+
+<script>
+    function testFun() {
+        return new Promise((resolve,reject) => {
+            setTimeout(function () {
+                console.log(888888888);
+                resolve('1');
+            }, 3000);
+        })
+    }
+    async function handlerRun() {
+        await testFun();
+        console.log('1111');
+    }
+
+    handlerRun();
+
+</script>

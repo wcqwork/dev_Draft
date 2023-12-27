@@ -1,0 +1,113 @@
+<script>
+  (function (window, $, undefined) {
+    var dynamicElementId = "u_1677b0551dfc45c68e306c9c9b8a0c07";
+    var settingId = "gPpMgnUflVtE";
+    var relationCommonId = "iBKUMuGCkqmE";
+    var componentAlias =
+      "666a5a6b4a742f4c5562674e794936744f2b532f7a39365a6c484d456b59316a";
+    var staticUpdateVersion = "ipBjVKrWWVik";
+    var _version_ = "3.0.0";
+    var _isPcOptViewer_ = "true";
+    if (
+      !!!dynamicElementId ||
+      !!!settingId ||
+      !!!relationCommonId ||
+      !!!componentAlias
+    ) {
+      return;
+    }
+    var nomalViewAjaxMode = "false";
+    nomalViewAjaxMode = "true";
+    var terminal = "0";
+    var ajaxUrl =
+      "/phoenix/admin/component/dynamic/" +
+      settingId +
+      "/" +
+      relationCommonId +
+      "/" +
+      componentAlias;
+    var ajaxOption = {
+      url: ajaxUrl,
+      type: "post",
+      cache: false,
+      dataType: "html",
+    };
+    var postData = ajaxOption["data"] || {};
+    $.extend(postData, { terminal: terminal });
+    $.extend(postData, { staticUpdateVersion: staticUpdateVersion });
+    $.extend(postData, { __lj__: typeof $LAB != "undefined" && !!$LAB });
+    $.extend(postData, {
+      __ls__:
+        typeof window.LABHelper != "undefined" &&
+        typeof window.LABHelper.loadCss != "undefined" &&
+        !!window.LABHelper.loadCss,
+    });
+    $.extend(postData, { __ver__: _version_ });
+    $.extend(postData, { nomalViewAjaxMode: nomalViewAjaxMode });
+    $.extend(postData, { _isPcOptViewer_: _isPcOptViewer_ });
+    var isSinglePublishMode = false;
+    if (
+      typeof window.phoenixSite != "undefined" &&
+      typeof window.phoenixSite._sViewMode != "undefined" &&
+      window.phoenixSite._sViewMode == "true" &&
+      typeof window.phoenixSite._singlePublish != "undefined"
+    ) {
+      isSinglePublishMode = window.phoenixSite._singlePublish;
+    }
+    $.extend(postData, { singlePublishMode: isSinglePublishMode });
+    ajaxOption["data"] = postData;
+    $.ajax(ajaxOption)
+      .fail(function (jqXHR, textStatus, errorThrown) {
+        $("#" + dynamicElementId).remove();
+      })
+      .done(function (response, textStatus, jqXHR) {
+        if (!!!response) {
+          $("#" + dynamicElementId).remove();
+          return;
+        }
+        if (response.indexOf("frontend-body-canvas") != -1) {
+          location.reload();
+          return;
+        }
+        var result = $(response),
+          jsDepand = "",
+          cssDepand = "";
+        var hackTextarea = result.find("textarea[data-id=" + settingId + "]");
+        if (!!hackTextarea.length) {
+          jsDepand = hackTextarea.attr("data-jsDepand");
+          cssDepand = hackTextarea.attr("data-cssDepand");
+          try {
+            cssDepand = $.trim(cssDepand);
+            cssDepand = $.parseJSON(cssDepand);
+          } catch (e) {
+            cssDepand = "";
+          }
+          try {
+            jsDepand = $.trim(jsDepand);
+            jsDepand = $.parseJSON(jsDepand);
+          } catch (e) {
+            jsDepand = "";
+          }
+        }
+        $.each(cssDepand, function (i, v) {
+          var options = {};
+          var supportPreload =
+            typeof preloadCSS != "undefined" &&
+            typeof preloadCSS.relpreload != "undefined" &&
+            preloadCSS.relpreload.supportPreload;
+          options.preload = supportPreload;
+          options.url = v;
+          options.callback = function () {};
+          LABHelper.loadCss(options);
+        });
+        $LAB
+          .setOptions({ AlwaysPreserveOrder: true })
+          .script(jsDepand)
+          .wait(function () {
+            $("#" + dynamicElementId).replaceWith(response);
+            $("div[data-id=" + settingId + "]").remove();
+          });
+      })
+      .always(function (response, textStatus, jqXHR) {});
+  })(window, jQuery);
+</script>

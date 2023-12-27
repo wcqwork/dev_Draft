@@ -1,0 +1,140 @@
+<script>
+    function rollingPageEffect(){
+        var _style = `
+        <style>
+            div[data-type=outerContainer],div[data-type=siteblocks]{
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            .opacity-no-show-show{
+                transform: translateY(0) !important;
+                opacity: 1 !important;
+            }    
+        </style>
+        `;
+        $("body").append(_style);
+        function debounce(func, wait) {
+            var timeout;
+            return function () {
+                var content = this;
+                var args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(function () {
+                    func.apply(content, args);
+                }, wait);
+            }
+        }
+
+        function pageScrollAnimation() {
+            var $scrollTop = $(this).scrollTop();
+            var $windowHeight = $(window).height();
+            var $contentH = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)
+
+            var _prevAnimationDomTop = 0;
+            if ($('div[data-type=outerContainer]:not(".opacity-no-show-show"),div[data-type=siteblocks]:not(".opacity-no-show-show")').length) {
+                $('div[data-type=outerContainer]:not(".opacity-no-show-show"),div[data-type=siteblocks]:not(".opacity-no-show-show")').each(function (i) {
+                    var rectTop = $(this).offset().top;
+                    // 出现在屏幕3/4位置
+                    if ($scrollTop > (rectTop - 3 * $windowHeight / 4)) {
+                        // 是否同行
+                        if (_prevAnimationDomTop == rectTop) {
+                            var _that = this;
+                            setTimeout(function () {
+                                $(_that).addClass('opacity-no-show-show');
+                            }, 50);
+                        } else {
+                            $(this).addClass('opacity-no-show-show');
+                        }
+                        _prevAnimationDomTop = rectTop;
+                    }
+
+                    // 在页面最底部
+                    if($scrollTop / ($contentH - $windowHeight) >= 0.99){
+                        $(this).addClass('opacity-no-show-show');
+                    }
+                });
+            }
+        }
+
+        // 初始化 首屏动画
+        function initEffectAnimation(){
+            debounce(pageScrollAnimation, 300)();
+        }
+
+        initEffectAnimation();
+        window.addEventListener('scroll', debounce(pageScrollAnimation, 100));
+    }
+
+    $(function(){
+        if($(window).width() > 768){
+            rollingPageEffect();
+        }
+    });
+</script>
+
+
+模糊图片处理
+<script>
+    /**
+    * @params $selector Jquery对象
+    * @params Array  { tag: 'img', attrs:['src', 'data-origin'] }
+    */
+    // 
+    function replaceAttr($selector, tags = []) {
+        if (!tags.length) return
+        try {
+            tags.forEach(function (item) {
+                $selector.find(item.tag).each(function () {
+                    var _this = $(this)
+                    item.attrs.forEach(function (attr) {
+                        var smallimage = _this.attr(attr);
+                        if (smallimage && smallimage.length) {
+                            smallimage = smallimage.replace(/\-[0-9]+\-[0-9]+/g, '');
+                            _this.attr(attr, smallimage);
+                        }
+                    })
+                })
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    // 例子
+    var replaceTags = [{
+        tag: 'img',
+        attrs: ['src','data-lazy', 'data-src']
+    }, {
+        tag: 'source',
+        attrs: ['srcset']
+    }]
+    console.log('#outerContainer_1686823480597','======================')
+    replaceAttr($('#outerContainer_1686823480597'), replaceTags)
+    $(window).scroll(function () {
+        replaceAttr($('#outerContainer_1686823480597'), replaceTags);
+        });
+    onloadHack(function () {
+        replaceAttr($('#outerContainer_1686823480597'), replaceTags);
+    })
+</script>
+
+
+<script>
+    onloadHack(function(){
+        setTimeout(function(){
+                    // gtag
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PJ8FQ6604W');
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-PJ8FQ6604W';
+        script.type = 'text/javascript'
+        script.async = true
+        document.head.appendChild(script);
+        },3000)
+    })
+</script>

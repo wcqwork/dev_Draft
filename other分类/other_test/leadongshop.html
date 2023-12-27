@@ -1,0 +1,2153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <!-- 生产上有https访问的，https请求跨域 在head中添加-->
+  <meta content="origin" name="referrer" />
+  <title>注册- 领动领售LeadongShop</title>
+  <link rel="stylesheet"
+    href="//5ororwxhiqoijij.leadongcdn.com/static/assets/style/iconfont/iconfont.css?_=1676547545316" />
+  <link rel="stylesheet"
+    href="//5lrorwxhiqoirij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/style/component/bindAccount/slidercaptcha.css" />
+  <link rel="stylesheet"
+    href="//5nrorwxhiqoiiij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/style/component/bindAccount/bindAccount.css" />
+  <style>
+    a {
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .fcaptcha-mask {
+      display: none;
+    }
+
+    .container {
+      position: relative;
+      top: 10vh;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    .leadongRegiste1.sitewidget-userRegiste .verification-code-hori {
+      padding-right: 2%;
+    }
+
+    #component_vPAfCSdVnyFL>div>div.sitewidget-hd>h2 {
+      font-size: 24px;
+      color: #4b646e;
+      font-weight: 400;
+      line-height: 1.8em;
+      text-align: center;
+      font-family: Noto Sans SC;
+      margin: 15px 0;
+      margin-bottom: 0;
+    }
+
+    body {
+      background: #f3f9ff;
+    }
+
+    .imgContent {
+      text-align: center;
+    }
+
+    .imgContent img {
+      width: 180px;
+    }
+
+    #outerContainer_1423625418750 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outerContainer" id="outerContainer_1423625418750" data-type="outerContainer" data-level="rows"
+    style="display: none">
+    <div class="container" data-type="container" data-level="rows" cnttype="backstage-container-mark">
+      <div class="imgContent">
+        <img src="//5ororwxhiqoijij.leadongcdn.com/cloud/koBpjKooRijSqrpjiplmj/logo.svg" alt="logo" />
+      </div>
+      <div class="row" data-type="rows" data-level="rows" data-attr-xs="null" data-attr-sm="null">
+        <div class="col-md-12" id="column_1423625406904" data-type="columns" data-level="columns">
+          <div class="row" data-type="rows" data-level="rows">
+            <div class="col-md-12" id="column_1471312145985" data-type="columns" data-level="columns">
+              <div id="location_1471312145988" data-type="locations" data-level="rows">
+                <div class="backstage-stwidgets-settingwrap" scope="0" settingid="vPAfCSdVnyFL"
+                  id="component_vPAfCSdVnyFL" relationcommonid="gpAUKENCwRHB"
+                  classattr="sitewidget-userRegiste-20150211112953">
+                  <div class="sitewidget-userRegiste sitewidget-userRegiste-20150211112953 leadongRegiste1 small-mode"
+                    data-style="4">
+                    <div class="sitewidget-hd">
+                      <h2>免费注册</h2>
+                    </div>
+                    <div class="sitewidget-bd 1" id="registeContent">
+                      <style>
+                        .leadongRegiste .countryFlagGroup .user-signup-hori-label {
+                          max-width: initial;
+                          text-align: left;
+                          margin-left: 10px;
+                          width: 77px;
+                          margin-right: 15px;
+                        }
+
+                        .leadongRegiste .countryFlagGroup .user-country-border {
+                          box-shadow: none;
+                          border-radius: inherit;
+                          background: 0 0;
+                          border: 0 !important;
+                          outline: 0;
+                        }
+
+                        .userRegisteShowStyle4 .countryFlagGroup .user-signup-hori-label {
+                          display: block;
+                        }
+
+                        .sitewidget-userRegiste select.user-login-input {
+                          height: 35px;
+                          line-height: 35px;
+                          position: relative;
+                          z-index: 5;
+                        }
+
+                        .leadongRegiste1 {
+                          padding-top: 10px;
+                        }
+
+                        .leadongRegiste1.sitewidget-userRegiste .user-control-group-default.userReg-group select:not([type="radio"]) {
+                          border: 2px solid #ccc;
+                          border-radius: 6px;
+                          background: 0 0;
+                          box-shadow: none;
+                          height: 50px;
+                          line-height: 50px;
+                          box-sizing: border-box;
+                        }
+
+                        .userRegisteShowStyle4 .countryFlagGroup .prompt {
+                          display: none;
+                        }
+
+                        .small-mode .countryFlagGroup .user-tips {
+                          margin-top: 0;
+                        }
+                      </style>
+                      <div class="func_account_regist_mobile">
+                        <div class="user-control-group-default userReg-group fix outBox">
+                          <div class="user-signup-hori-controls">
+                            <div class="userReg-sms-wrap user-input-wrap verification">
+                              <i class="font-icon block-icon block-iconshouji front-icon" aria-hidden="true"></i>
+                              <input type="text" id="mobile" name="mobile"
+                                class="user-login-input required unique_validate onlineFocus 222" autocomplete="off"
+                                placeholder="手机号码" />
+                            </div>
+                            <div id="mobile_unique_validate_url" style="display: none">
+                              /phoenix/admin/user/registe/unique
+                            </div>
+                            <span class="user-error-msg"><i
+                                class="font-icon block-icon block-icongantanhao-yuankuang shopHide"
+                                aria-hidden="true"></i>
+                              <span id="phone-error">请输入有效的手机号码</span></span>
+                          </div>
+                          <div class="user-signup-tips"></div>
+                        </div>
+                        <div class="user-control-group-default userReg-group fix outBox" id="userPhoneRegFaptcha"
+                          style="display: none">
+                          <input id="faptcha_server" type="hidden" value="/phoenix/captcha"
+                            data-faptchauuid="97fbff10-650b-45cb-b2a3-e0b8c44120b9" data-faptchatype="faptchaServer" />
+                          <input type="hidden" name="faptcha_challenge_field" id="faptcha_challenge_field"
+                            value="4935dd83-25d4-40b9-977e-2cc02562dd72"
+                            data-faptchauuid="97fbff10-650b-45cb-b2a3-e0b8c44120b9"
+                            data-faptchatype="faptchaChallengeField" />
+                          <label for="DJJBD" class="user-signup-hori-label"><span>验证码</span></label>
+                          <div class="user-signup-hori-controls">
+                            <div class="userReg-sms-wrap user-input-wrap userRegwrap">
+                              <input id="faptcha_response_field" name="faptcha_response_field" type="text"
+                                class="user-login-code-input required 2" autocomplete="off" maxlength="4"
+                                data-faptchauuid="97fbff10-650b-45cb-b2a3-e0b8c44120b9"
+                                data-faptchatype="faptchaValue" />
+                            </div>
+                            <a href="javascript:;" onclick="" class="userPhoneReg refreshImg flr"></a>
+                          </div>
+                          <div class="user-signup-tips"></div>
+                        </div>
+                        <input type="hidden" id="userLoginFaptchaFlag" value="0" />
+                        <div class="user-control-group-default userReg-group fix outBox">
+                          <div class="user-signup-hori-controls verification-code-hori">
+                            <div class="user-input-wrap">
+                              <i class="font-icon block-icon block-iconyanzhengma front-icon" aria-hidden="true"></i>
+                              <input id="smsVerifyCode" name="smsVerifyCode" type="text"
+                                class="user-login-code-input required onlineFocus" autocomplete="one-time-code"
+                                maxlength="6" placeholder="短信验证码" />
+                            </div>
+                          </div>
+                          <a href="javascript:;" class="func_sms_send user-sms-btn flr get-verification-code">获取验证码</a>
+                          <div class="user-signup-tips"></div>
+                        </div>
+                        <div class="user-control-group-default userReg-group fix outBox">
+                          <div class="user-signup-hori-controls">
+                            <div class="user-input-wrap" style="overflow: hidden">
+                              <input type="password" id="passwordMobile" name="passwordMobile"
+                                class="user-login-input required onlineFocus" autocomplete="new-password"
+                                placeholder="输入6～18位数字、字母组合" />
+                              <i class="font-icon block-icon block-iconmima front-icon" aria-hidden="true"></i>
+                              <i class="font-icon block-icon block-iconbiyan iconbiyan" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="user-signup-tips"></div>
+                          <span class="user-error-msg"><i
+                              class="font-icon block-icon block-icongantanhao-yuankuang shopHide"
+                              aria-hidden="true"></i>
+                            <span id="password-error">密码必须包含数字、字母，长度6-18位</span></span>
+                        </div>
+                        <div class="user-control-group-default userReg-group fix outBox hide">
+                          <div class="user-signup-hori-controls">
+                            <div class="user-input-wrap">
+                              <i class="font-icon block-icon block-iconmima front-icon" aria-hidden="true"></i>
+                              <input type="password" id="confirmPassword" name="confirmPassword"
+                                class="user-login-input required onlineFocus" placeholder="确认密码" />
+                              <i class="font-icon block-icon block-iconbiyan iconbiyan" aria-hidden="true"></i>
+                            </div>
+                          </div>
+                          <div class="user-signup-tips"></div>
+                          <span class="user-error-msg password-again-msg"><i
+                              class="font-icon block-icon block-icongantanhao-yuankuang shopHide"
+                              aria-hidden="true"></i>
+                            <span id="confirm-password-error">密码不一致</span></span>
+                        </div>
+                        <div class="fix regist-agreement">
+                          <input type="checkbox" id="registAgreement" name="registAgreement" />
+                          <span>阅读并同意
+                            <a href="/agreement.html" class="agreement-link" target="_blank">《用户协议》</a>和
+                            <a href="/privacy.html" class="agreement-link" target="_blank">《隐私策略》</a></span>
+                          <div id="checked-error" class="hide">
+                            <i class="font-icon block-icon block-icongantanhao-yuankuang shopHide"
+                              aria-hidden="true"></i>请先同意用户协议与隐私政策
+                          </div>
+                        </div>
+                      </div>
+                      <div class="user-control-group-default userReg-group button-group fix registeSubmitShop">
+                        <label class="user-signup-hori-label"><span class="user-label-placeholder"></span></label>
+                        <div class="user-signup-hori-controls">
+                          <div class="user-input-wrap">
+                            <button id="registeSubmit"
+                              class="user-grey-btn bgColorS0 bgColorS1hover gbBgColor0 gbBgColor1hover" type="button"
+                              data-successland="">
+                              创建帐户
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <script
+                    src="//5nrorwxhiqoiiij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/script/jquery-1.11.0.concat.js">
+                  </script>
+                  <script
+                    src="//5ororwxhiqoijij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/script/plugins/passwordHandle/checkList.js">
+                  </script>
+                  <script src="./index.js"></script>
+                  <script
+                    src="//5ororwxhiqoijij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/script/plugins/userRegiste/encryption.js">
+                  </script>
+                  <script
+                    src="//5ororwxhiqoijij.leadongcdn.com/static/assets/script/phoenix/il8n/phoenix_il8n_ZH_CN.js">
+                  </script>
+                  <script src="//5lrorwxhiqoirij.leadongcdn.com/static/assets/script/phoenix/phoenixsite.js"></script>
+                  <script>
+                    (phoenixSite.page = {}),
+                    console.log(phoenixSite.page),
+                      (phoenixSite.page._captcha_domain_prefix = {
+                        cdnUrl: "//5ororwxhiqoijij.leadongcdn.com",
+                        lanEdition: "ZH_CN",
+                        siteUrl: "https://www.leadongshop.com",
+                        _captcha_domain_prefix: "captcha.c",
+                        _menu_prefix: "",
+                        _menu_trans_flag: "",
+                        _pId: "gpAUKENCwRHB",
+                      });
+                    var urlParams = new URLSearchParams(
+                        window.location.search
+                      ),
+                      utmSource = urlParams.get("utm_source");
+                    document.cookie =
+                      "CIRT=" +
+                      utmSource +
+                      ";path=/;domain=leadongshop.com;max-age=6000;secure=https;samesite=strict";
+                  </script>
+                  <script>
+                    !(function (e, o) {
+                      try {
+                        (t = jQuery)(function () {
+                          t(
+                            "#component_vPAfCSdVnyFL #userPhoneRegFaptcha img[data-faptchaUuid=97fbff10-650b-45cb-b2a3-e0b8c44120b9][data-faptchaType=faptchaImg]"
+                          ).click();
+                        });
+                      } catch (e) {
+                        try {
+                          console && console.log && console.log(e);
+                        } catch (e) {}
+                      }
+                      var t, i, s;
+                      try {
+                        jQuery,
+                        o(function () {
+                          o(".userCountrySelect").blur(function () {
+                            var e = o(this);
+                            setTimeout(function () {
+                              (country = o("#userCountry option:selected")
+                                .val()
+                                .split("_")[0]),
+                              country.length ||
+                                e
+                                .siblings(".prompt")
+                                .removeClass("trTop");
+                            }, 100);
+                          });
+                        });
+                      }
+                      catch (e) {
+                        try {
+                          console && console.log && console.log(e);
+                        } catch (e) {}
+                      }
+                      try {
+                        console.log("4");
+                        var n = o(".sitewidget-userRegiste-20150211112953"),
+                          r = o("#registeContent").find(
+                            "select[title='country']"
+                          );
+                        0 < r.length &&
+                          o.ajax({
+                            url: "/phoenix/admin/user/getCountries",
+                            type: "post",
+                            dataType: "json",
+                            data: {},
+                            success: function (e) {
+                              var i;
+                              e.countriesList &&
+                                0 < e.countriesList.length &&
+                                (e.lanCode,
+                                  (i =
+                                    '<option disabled selected value class="select-placehloder">国家/地区</option>'),
+                                  !e.isTw && e.lanCode ?
+                                  o.each(e.countriesList, function (e, t) {
+                                    i +=
+                                      '<option value="' +
+                                      t.nameCN +
+                                      '" data-key="' +
+                                      t.key +
+                                      '">' +
+                                      t.nameCN +
+                                      "</option>";
+                                  }) :
+                                  e.lanCode ?
+                                  e.isTw &&
+                                  o.each(e.countriesList, function (e, t) {
+                                    i +=
+                                      '<option value="' +
+                                      t.nameTW +
+                                      '" data-key="' +
+                                      t.key +
+                                      '">' +
+                                      t.nameTW +
+                                      "</option>";
+                                  }) :
+                                  o.each(e.countriesList, function (e, t) {
+                                    i +=
+                                      '<option value="' +
+                                      t.nameEN +
+                                      '" data-key="' +
+                                      t.key +
+                                      '">' +
+                                      t.nameEN +
+                                      "</option>";
+                                  }),
+                                  r.html(i));
+                            },
+                          }),
+                          r.on("change", function () {
+                            0 < n.find(".province").length &&
+                              (n.find(".province").remove(),
+                                0 < n.find(".city").length &&
+                                n.find(".city").remove()),
+                              console.log(o(this)),
+                              o(this)
+                              .find("option:selected")
+                              .val(o(this).find("option:selected").text());
+                            var t,
+                              s = o(this);
+                            o(this).val() &&
+                              ((t = this),
+                                o.ajax({
+                                  url: "/phoenix/admin/user/getAllCountry",
+                                  type: "post",
+                                  dataType: "json",
+                                  data: {
+                                    province: o(this)
+                                      .find("option:selected")
+                                      .data("key"),
+                                  },
+                                  success: function (e) {
+                                    var i;
+                                    e.provinceList &&
+                                      0 < e.provinceList.length &&
+                                      (s
+                                        .siblings(".prompt")
+                                        .css("top", "calc(50% - 50px)"),
+                                        (i =
+                                          '<select class=" user-login-input user-country-border mt10 province" style="border: 1px solid #d4d4d4;" name="province" id="province"><option disabled selected value >州/省</option>'
+                                        ),
+                                        e.isTw ?
+                                        o.each(
+                                          e.provinceList,
+                                          function (e, t) {
+                                            i +=
+                                              '<option value="' +
+                                              t.parameterValueTW +
+                                              '" data-key="' +
+                                              t.parameterKey +
+                                              '">' +
+                                              t.parameterValueTW +
+                                              "</option>";
+                                          }
+                                        ) :
+                                        o.each(
+                                          e.provinceList,
+                                          function (e, t) {
+                                            i +=
+                                              '<option value="' +
+                                              t.parameterValue +
+                                              '" data-key="' +
+                                              t.parameterKey +
+                                              '">' +
+                                              t.parameterValue +
+                                              "</option>";
+                                          }
+                                        ),
+                                        (i += "</select>"),
+                                        o(t).after(i));
+                                  },
+                                }));
+                          }),
+                          n.on("change", ".province", function () {
+                            0 < n.find(".city").length &&
+                              n.find(".city").remove();
+                            var t,
+                              e = "";
+                            (e += r.find("option:selected").text()),
+                            o(this).val() &&
+                              ((e += "_" + o((t = this)).val()),
+                                "China" ==
+                                r.find("option:selected").data("key") &&
+                                o.ajax({
+                                  url: "/phoenix/admin/user/getCity",
+                                  type: "post",
+                                  dataType: "json",
+                                  data: {
+                                    city: o(this)
+                                      .find("option:selected")
+                                      .data("key"),
+                                  },
+                                  success: function (e) {
+                                    var i;
+                                    e.cityList &&
+                                      0 < e.cityList.length &&
+                                      (o(t)
+                                        .siblings(".prompt")
+                                        .css("top", "calc(50% - 75px)"),
+                                        (i =
+                                          '<select class="user-country-border user-login-input mt10 city" name="city" id="city" style="border: 1px solid #d4d4d4;"><option disabled selected value>城市</option>'
+                                        ),
+                                        e.isTw ?
+                                        o.each(
+                                          e.cityList,
+                                          function (e, t) {
+                                            i +=
+                                              '<option value="' +
+                                              t.parameterValueTW +
+                                              '" data-key="' +
+                                              t.parameterKey +
+                                              '">' +
+                                              t.parameterValueTW +
+                                              "</option>";
+                                          }
+                                        ) :
+                                        o.each(
+                                          e.cityList,
+                                          function (e, t) {
+                                            i +=
+                                              '<option value="' +
+                                              t.parameterValue +
+                                              '" data-key="' +
+                                              t.parameterKey +
+                                              '">' +
+                                              t.parameterValue +
+                                              "</option>";
+                                          }
+                                        ),
+                                        (i += "</select>"),
+                                        o(t).after(i));
+                                  },
+                                })),
+                              r.find("option:selected").val(e);
+                          }),
+                          n.on("change", ".city", function () {
+                            var e = "";
+                            (e +=
+                              r.find("option:selected").text() +
+                              "_" +
+                              n.find(".province").val()),
+                            o(this).val() && (e += "_" + o(this).val()),
+                              r.find("option:selected").val(e);
+                          });
+                      } catch (e) {
+                        try {
+                          console && console.log && console.log(e);
+                        } catch (e) {}
+                      }
+                      try {
+                        (i = e),
+                        (s = jQuery)(function () {
+                          s(".leadongRegiste .prompt").bind(
+                              "click",
+                              function () {
+                                s(this).prev("input").focus();
+                              }
+                            ),
+                            setTimeout(function () {
+                              s(".leadongRegiste .onlineFocus").each(
+                                function () {
+                                  "" != s(this).val() &&
+                                    s(this)
+                                    .next(".prompt")
+                                    .addClass("trTop");
+                                }
+                              );
+                            }, 50),
+                            s(".leadongRegiste .onlineFocus").bind(
+                              "focus",
+                              function () {
+                                s(this)
+                                  .parents(".outBox")
+                                  .removeClass("leadongErorBorderColor"),
+                                  s(this)
+                                  .siblings("div.shopLine")
+                                  .find(".mu-text-field-focus-line")
+                                  .addClass("focus"),
+                                  s(this)
+                                  .siblings("lable")
+                                  .addClass("trTop");
+                                var e = s(this)
+                                  .parents(".user-control-group-default")
+                                  .find("span.user-new-registe-error-msg");
+                                e.hasClass("show") && e.removeClass("show");
+                              }
+                            ),
+                            s(".leadongRegiste .onlineFocus").bind(
+                              "blur",
+                              function () {
+                                s(this)
+                                  .siblings("div.shopLine")
+                                  .find(".mu-text-field-focus-line")
+                                  .removeClass("focus"),
+                                  "" == s(this).val() ?
+                                  s(this)
+                                  .siblings("lable")
+                                  .removeClass("trTop") :
+                                  s(this)
+                                  .siblings("lable")
+                                  .addClass("trTop");
+                              }
+                            ),
+                            s(".leadongRegiste .iconbiyan").bind(
+                              "click",
+                              function () {
+                                s(this).hasClass("block-iconbiyan") ?
+                                  (s(this)
+                                    .removeClass("block-iconbiyan")
+                                    .addClass("block-iconzhengyan"),
+                                    s(this)
+                                    .siblings("input")
+                                    .attr("type", "text")) :
+                                  (s(this)
+                                    .removeClass("block-iconzhengyan")
+                                    .addClass("block-iconbiyan"),
+                                    s(this)
+                                    .siblings("input")
+                                    .attr("type", "password"));
+                              }
+                            ),
+                            s(".leadongRegiste1 .iconbiyan").bind(
+                              "click",
+                              function () {
+                                s(this).hasClass("block-iconbiyan") ?
+                                  (s(this)
+                                    .removeClass("block-iconbiyan")
+                                    .addClass("block-iconzhengyan"),
+                                    s(this)
+                                    .siblings("input")
+                                    .attr("type", "text")) :
+                                  (s(this)
+                                    .removeClass("block-iconzhengyan")
+                                    .addClass("block-iconbiyan"),
+                                    s(this)
+                                    .siblings("input")
+                                    .attr("type", "password"));
+                              }
+                            ),
+                            s(".leadongRegiste1 .userReg-group input").bind(
+                              "focus",
+                              function () {
+                                s(this).addClass("rightBorder"),
+                                  s(this).removeClass("errorBorder"),
+                                  s(this)
+                                  .parents(".user-input-wrap")
+                                  .find(".user-error-msg")
+                                  .hide(),
+                                  s(this)
+                                  .parents(".user-input-wrap")
+                                  .find(".front-icon")
+                                  .addClass("front-icon-active");
+                              }
+                            ),
+                            s(".leadongRegiste1 .userReg-group input").bind(
+                              "blur",
+                              function () {
+                                "" == s(this).val() &&
+                                  (s(this).removeClass("rightBorder"),
+                                    s(this)
+                                    .parents(".user-input-wrap")
+                                    .find(".front-icon")
+                                    .removeClass("front-icon-active"));
+                              }
+                            ),
+                            s(
+                              ".sitewidget-userRegiste-20150211112953 #confirm-password-error"
+                            ).html(
+                              phoenixSite.message(
+                                phoenixSite.lanEdition,
+                                "phoenix_validate_password_not_match"
+                              )
+                            ),
+                            s(
+                              ".sitewidget-userRegiste-20150211112953 #phone-error"
+                            ).html(
+                              phoenixSite.message(
+                                phoenixSite.lanEdition,
+                                "phoenix_validate_enter_valid_mobile"
+                              )
+                            ),
+                            s(
+                              ".sitewidget-userRegiste-20150211112953 #password-error"
+                            ).html(
+                              phoenixSite.message(
+                                phoenixSite.lanEdition,
+                                "phoenix_validate_enter_password_simple"
+                              )
+                            ),
+                            s(
+                              ".leadongRegiste1 .userReg-group input#mobile"
+                            ).bind("blur", function () {
+                              var e;
+                              "" == s(this).val() ?
+                                (s(this).removeClass("rightBorder"),
+                                  s(this).removeClass("errorBorder"),
+                                  s(this)
+                                  .parents(".outBox")
+                                  .find(".user-error-msg")
+                                  .hide()) :
+                                ((e = s(this)),
+                                  /(^1[0-9][0-9]{9}$)/i.test(e.val()) ?
+                                  (s(this).addClass("rightBorder"),
+                                    s(this).removeClass("errorBorder"),
+                                    s(this)
+                                    .parents(".outBox")
+                                    .find(".user-error-msg")
+                                    .hide()) :
+                                  (s(this).removeClass("rightBorder"),
+                                    s(this).addClass("errorBorder"),
+                                    s(this)
+                                    .parents(".outBox")
+                                    .find(".user-error-msg")
+                                    .show())),
+                                s(this)
+                                .parents(".user-input-wrap")
+                                .find(".front-icon")
+                                .removeClass("front-icon-active");
+                            }),
+                            s(
+                              ".leadongRegiste1 .userReg-group input#passwordMobile"
+                            ).bind("blur", function () {
+                              "" == s(this).val() ?
+                                (s(this).removeClass("rightBorder"),
+                                  s(this).removeClass("errorBorder"),
+                                  s(this)
+                                  .parents(".outBox")
+                                  .find(".user-error-msg")
+                                  .hide(),
+                                  s(this)
+                                  .parents(".user-input-wrap")
+                                  .find(".front-icon")
+                                  .removeClass("front-icon-active")) :
+                                /^(?=.*[A-Za-z])(?=.*[0-9]).{6,18}$/.test(
+                                  s(this).val()
+                                ) ?
+                                (s(this).addClass("rightBorder"),
+                                  s(this).removeClass("errorBorder"),
+                                  s(this)
+                                  .parents(".outBox")
+                                  .find(".user-error-msg")
+                                  .hide(),
+                                  s(this)
+                                  .parents(".user-input-wrap")
+                                  .find(".front-icon")
+                                  .addClass("front-icon-active")) :
+                                (s(this).removeClass("rightBorder"),
+                                  s(this).addClass("errorBorder"),
+                                  s(this)
+                                  .parents(".outBox")
+                                  .find(".user-error-msg")
+                                  .show(),
+                                  s(this)
+                                  .parents(".user-input-wrap")
+                                  .find(".front-icon")
+                                  .removeClass("front-icon-active"));
+                            }),
+                            t();
+                          var e = null;
+
+                          function t() {
+                            var e = s(
+                              ".sitewidget-userRegiste-20150211112953"
+                            ).width();
+                            e < 600 ?
+                              s(".sitewidget-userRegiste-20150211112953")
+                              .removeClass(
+                                "small-mode middle-mode large-mode"
+                              )
+                              .addClass("small-mode") :
+                              e < 900 ?
+                              s(".sitewidget-userRegiste-20150211112953")
+                              .removeClass(
+                                "small-mode middle-mode large-mode"
+                              )
+                              .addClass("middle-mode") :
+                              s(".sitewidget-userRegiste-20150211112953")
+                              .removeClass(
+                                "small-mode middle-mode large-mode"
+                              )
+                              .addClass("large-mode");
+                          }
+                          s(i).resize(function () {
+                            e && clearTimeout(e),
+                              (e = setTimeout(function () {
+                                t();
+                              }, 240));
+                          });
+                        });
+                      } catch (e) {
+                        try {
+                          console && console.log && console.log(e);
+                        } catch (e) {}
+                      }
+                      try {
+                        o(function () {
+                          phoenixSite.userRegiste.init({
+                            className: "sitewidget-userRegiste-20150211112953",
+                            verifyFlag: "1",
+                            invitationFlag: "0",
+                            settingId: "vPAfCSdVnyFL",
+                          });
+                        });
+                      } catch (e) {
+                        try {
+                          console && console.log && console.log(e);
+                        } catch (e) {}
+                      }
+                    })(window, $);
+                  </script>
+                </div>
+                <div class="backstage-stwidgets-settingwrap" id="component_hpULfDKRnJAZ" data-scope="0"
+                  data-settingid="hpULfDKRnJAZ" data-relationcommonid="gpAUKENCwRHB"
+                  data-classattr="sitewidget-text-20201104085314">
+                  <div class="sitewidget-text sitewidget-text-20201104085314 sitewidget-olul-liststyle">
+                    <div class="sitewidget-bd">
+                      <div style="text-align: center"></div>
+                      <div style="text-align: center">
+                        已经是会员？<a href="/login.html"><span style="color: #0089f5">点此登录</span></a>
+                      </div>
+                      <div style="text-align: center"></div>
+                    </div>
+                  </div>
+                  <script type="text/x-delay-script" data-id="hpULfDKRnJAZ" data-jslazyloadtype="0" data-alias="text"
+                    data-jslazyload="true" data-type="component"
+                    data-jsdepand="[ '//5ororwxhiqoijij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/script/compsettings/comp.text.settings.js ']"
+                    data-jsthreshold="5"
+                    data-cssdepand="[ '//5nrorwxhiqoiiij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/style/component/graphic/graphic.css ', '//5lrorwxhiqoirij.leadongcdn.com/static/t-7lBmBKiKqonoqllnknoij/assets/widget/script/plugins/picture/animate.css ']"
+                    data-cssthreshold="5">
+                    (function(window,$,undefined){})(window,$);
+                    </script>
+                  <script id="u_4a98b475fcf545acb3316a27bc73606e" guid="u_4a98b475fcf545acb3316a27bc73606e"
+                    type="text/javascript">
+                    try {
+                      $(function () {
+                        $(
+                          ".sitewidget-text-20201104085314 .sitewidget-bd a"
+                        ).each(function () {
+                          $(this).attr("href") &&
+                            -1 != $(this).attr("href").indexOf("#") &&
+                            (console.log("anchor-link", $(this)),
+                              $(this).attr("anchor-link", "true"));
+                        });
+                      });
+                    } catch (t) {
+                      try {
+                        console && console.log && console.log(t);
+                      } catch (t) {}
+                    }
+                  </script>
+                </div>
+                <div class="backstage-stwidgets-settingwrap" id="component_dgpVUAuFYvij" data-scope="0"
+                  data-settingid="dgpVUAuFYvij" data-relationcommonid="gpAUKENCwRHB"
+                  data-classattr="sitewidget-pluginCode-20201010152718">
+                  <div class="sitewidget-pluginCode sitewidget-pluginCode-20201010152718">
+                    <div class="sitewidget-bd">
+                      <style>
+                        .leadongRegiste1.sitewidget-userRegiste .verification-code-hori {
+                          float: left;
+                        }
+
+                        .outerContainer {
+                          height: calc(100vh - 57px);
+                          /* overflow-y: auto; */
+                          overflow-y: hidden;
+                        }
+
+                        .container {
+                          position: relative;
+                          top: 10vh;
+                        }
+
+                        @media (max-width: 500px) {
+                          .container {
+                            top: 3.6vh;
+                          }
+                        }
+
+                        #registeContent>div.func_account_regist_mobile>div:nth-child(6)>div.user-signup-hori-controls>div>input:nth-child(1) {
+                          left: unset !important;
+                          opacity: 0;
+                        }
+                      </style>
+                      <script>
+                        $(function () {
+                          function n(n) {
+                            for (
+                              var t = window.location.search
+                                .substring(1)
+                                .split("&"),
+                                e = 0; e < t.length; e++
+                            ) {
+                              var i = t[e].split("=");
+                              if (i[0] == n) return i[1];
+                            }
+                            return !1;
+                          }
+                          n("phone") &&
+                            $("#registeContent #mobile").val(n("phone"));
+                        });
+                      </script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" data-type="rows" data-level="rows">
+            <div class="col-md-12" id="column_1471312156785" data-type="columns" data-level="columns">
+              <div id="location_1471312156788" data-type="locations" data-level="rows">
+                <div class="backstage-stwidgets-settingwrap" id="component_yRUphnSVmPTL" data-scope="0"
+                  data-settingid="yRUphnSVmPTL" data-relationcommonid="gpAUKENCwRHB"
+                  data-classattr="sitewidget-placeHolder-20160816095006">
+                  <div class="sitewidget-placeholder sitewidget-placeHolder-20160816095006">
+                    <div class="sitewidget-bd">
+                      <div class="resizee" style="height: 85px"></div>
+                    </div>
+                  </div>
+                  <script type="text/x-delay-script" data-id="yRUphnSVmPTL" data-jslazyloadtype="0"
+                    data-alias="placeHolder" data-jslazyload="true" data-type="component" data-jsdepand=""
+                    data-jsthreshold="" data-cssdepand="" data-cssthreshold="">
+                    (function(window,$,undefined){})(window,$);
+                    </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  !(function (e, r, s) {
+    var i = e.phoenixSite || (e.phoenixSite = {}),
+      o = i.userRegiste || (i.userRegiste = {}),
+      a = {},
+      n = null == e.$_phoenix,
+      t = "email",
+      l = null,
+      d = null;
+    r.extend(o, {
+      init: function (e) {
+        if ((r.extend(a, e), n)) {
+          void 0 !== i.registLoginReferer && i.registLoginReferer.init();
+          var s = a.className,
+            l = r("." + s + " .func_account_regist_email").length,
+            d = r("." + s + " .func_account_regist_mobile").length;
+          1 == l && 1 == d && (t = "email"),
+            1 == l && 0 == d && (t = "email"),
+            0 == l && 1 == d && (t = "mobile");
+          var c = "";
+          null != i.page &&
+            null != i.page._menu_prefix &&
+            (c = i.page._menu_prefix),
+            (a._menu_prefix = c),
+            o.bindEvent(),
+            "1" == a.verifyFlag &&
+            1 == l &&
+            r("." + s + " #userRegisteFaptcha img[id=faptcha_image_img]")
+            .click()
+            .show();
+        } else o.tabChange();
+      },
+      tabChange: function () {
+        var e = a.className;
+        r("." + e + " .func_account_regist_navigate li")
+          .unbind("click")
+          .bind("click", function () {
+            var s = r(this);
+            s.addClass("on"),
+              s.siblings().removeClass("on"),
+              -1 != s.attr("class").indexOf("email") ?
+              ((t = "email"),
+                r("." + e + " .func_account_regist_email").removeClass(
+                  "hide"
+                ),
+                r("." + e + " .func_account_regist_mobile").addClass(
+                  "hide"
+                ),
+                r("." + e + " .func_account_regist_mobile")
+                .find(".user-control-group-default")
+                .find("span.user-new-registe-error-msg")
+                .removeClass("show")) :
+              -1 != s.attr("class").indexOf("mobile") &&
+              ((t = "mobile"),
+                r("." + e + " .func_account_regist_email").addClass("hide"),
+                r("." + e + " .func_account_regist_mobile").removeClass(
+                  "hide"
+                ),
+                r("." + e + " .func_account_regist_email")
+                .find(".user-control-group-default")
+                .find("span.user-new-registe-error-msg")
+                .removeClass("show"));
+          });
+      },
+      inputFocus: function () {
+        r(".sitewidget-userRegiste")
+          .not(".leadongRegiste")
+          .find(".user-control-group-default")
+          .find("input.user-login-input")
+          .unbind("focus")
+          .bind("focus", function () {
+            var e = r(this)
+              .parents(".user-control-group-default")
+              .find("span.user-new-registe-error-msg");
+            e.hasClass("show") && e.removeClass("show");
+          });
+      },
+      bindEvent: function () {
+        var s = a.className;
+        o.tabChange(), o.bindEvent4Mobile(), o.inputFocus();
+        var i = "1";
+        r("." + s + " #registeSubmit")
+          .unbind("click")
+          .bind("click", function () {
+            if (((i = r(this).attr("data-successland")), !d)) {
+              if (
+                ((time = !0),
+                  r(".leadongRegiste1 .userReg-group input").removeClass(
+                    "rightBorder"
+                  ),
+                  r(".leadongRegiste1 .userReg-group input").removeClass(
+                    "errorBorder"
+                  ),
+                  r(
+                    ".leadongRegiste1 .user-error-msg:not('.password-again-msg')"
+                  ).hide(),
+                  e._ldDataLayer && e._ldDataLayer.push)
+              ) {
+                var n = r.cookie("p_sid") || 0;
+                (l = n + "_" + a.settingId + "_" + new Date().getTime()),
+                e._ldDataLayer.push([
+                  "event",
+                  "action_regSubmit",
+                  "click",
+                  "submit",
+                  null,
+                  "",
+                  l,
+                ]);
+              }
+              if ("email" == t) {
+                if (
+                  (r(this)
+                    .parents(".sitewidget-userRegiste")
+                    .find(
+                      ".func_account_regist_email .user-control-group-default label"
+                    )
+                    .find("span.required")
+                    .each(function () {
+                      var e = r(this);
+                      "" ==
+                      r(e)
+                        .parents(".user-control-group-default")
+                        .find("input.user-login-input")
+                        .val() &&
+                        r(e)
+                        .parents(".user-control-group-default")
+                        .find("span.user-new-registe-error-msg")
+                        .removeClass("hide")
+                        .addClass("show");
+                    }),
+                    (c = r(this)
+                      .parents(".sitewidget-userRegiste")
+                      .find(
+                        ".func_account_regist_email .user-control-group-default"
+                      )
+                      .find("span.user-new-registe-error-msg.show")) &&
+                    0 !== c.length)
+                )
+                  return;
+                o.submitEmail(i);
+              } else if ("mobile" == t) {
+                var c;
+                if (
+                  (r(".leadongRegiste1 #registAgreement").is(":checked") ?
+                    r("." + s + " #checked-error").addClass("hide") :
+                    r("." + s + " #checked-error").removeClass("hide"),
+                    r(this)
+                    .parents(".sitewidget-userRegiste")
+                    .find(
+                      ".func_account_regist_mobile .user-control-group-default label"
+                    )
+                    .find("span.required")
+                    .each(function () {
+                      var e = r(this);
+                      "" ==
+                      r(e)
+                        .parents(".user-control-group-default")
+                        .find("input.user-login-input")
+                        .val() &&
+                        r(e)
+                        .parents(".user-control-group-default")
+                        .find("span.user-new-registe-error-msg")
+                        .removeClass("hide")
+                        .addClass("show");
+                    }),
+                    (c = r(this)
+                      .parents(".sitewidget-userRegiste")
+                      .find(
+                        ".func_account_regist_mobile .user-control-group-default"
+                      )
+                      .find("span.user-new-registe-error-msg.show")) &&
+                    0 !== c.length)
+                )
+                  return;
+                o.submitMobile(i);
+              }
+              d = setTimeout(function () {
+                d = null;
+              }, 1800);
+            }
+          });
+      },
+      bindEvent4Mobile: function () {
+        var s = a.className;
+        if (r("." + s + " .func_account_regist_mobile").length) {
+          var n = r("." + s + " .func_sms_send"),
+            t = r("." + s + " #userPhoneRegFaptcha #faptcha_response_field"),
+            l = r("." + s + " #userPhoneRegFaptcha #faptcha_challenge_field"),
+            d = !0,
+            c = null,
+            g = 60,
+            m = function () {
+              r(".leadongRegiste1 .get-verification-code").addClass(
+                  "get-verification-code-no"
+                ),
+                0 == g ?
+                (e.clearInterval(c),
+                  n.html("获取验证码"),
+                  (d = !0),
+                  (c = null),
+                  (g = 60),
+                  r(".leadongRegiste1 .get-verification-code").removeClass(
+                    "get-verification-code-no"
+                  )) :
+                0 != --g && n.html(g + "秒后重新获取");
+            };
+          r("." + s + " .func_sms_send")
+            .unbind("click")
+            .bind("click", function () {
+              if (((mobile = r("." + s + " #mobile")), !d))
+                return userPhoneRegFaptcha;
+              if (
+                (r(".leadongRegiste1 .user-error-msg").hide(),
+                  d && checkList.checkMobile(mobile).isChecked)
+              ) {
+                if (
+                  [
+                    "www.leadong.com",
+                    "jianzhan.leadong.com",
+                    "cn.leadong.ldyjz.com",
+                    "www.leadongshop.com",
+                    "cn.leadongshop.ldyjz.com",
+                    "cn.site94595717.ldwebsite.com",
+                  ].indexOf(document.domain) > -1
+                )
+                  try {
+                    i &&
+                      i.userRegiste &&
+                      i.userRegiste.focusCaptcha &&
+                      i.userRegiste.focusCaptcha.show();
+                  } catch (e) {
+                    console.log(e);
+                  }
+                else r("." + s + " #userPhoneRegFaptcha").show();
+                r(".errTitleShop").remove(), o.hideRegisteError(s, "mobile");
+              } else o.showRegisteError(s, "mobile", i.message(i.lanEdition,
+                "phoenix_validate_enter_valid_mobile"));
+            });
+          var u = function (n) {
+            new Date().getTime();
+            var t = (n && n.captchaVerification) || "",
+              l = mobile.val();
+            r.ajax({
+              url: a._menu_prefix + "/phoenix/admin/user/sms/verify/code/nvc",
+              data: {
+                mobile: l,
+                verifyCodeType: "0",
+                nvcValue: t
+              },
+              async: !1,
+              cache: !1,
+              type: "POST",
+              success: function (a) {
+                var n = a && JSON.parse(a);
+                if (n.success && "200" == n.success)
+                  return (
+                    r(".leadongRegiste1 #smsVerifyCode").removeClass(
+                      "errorBorder"
+                    ),
+                    o.hideRegisteError(s, "smsVerifyCode"),
+                    (d = !1),
+                    void(c = setInterval(function () {
+                      m();
+                    }, 1e3))
+                  );
+                if (n.nvc) {
+                  var t = parseInt(n.nvc.split("NVC_")[1]);
+                  if (800 === t || 900 === t)
+                    r(".leadongRegiste1 #smsVerifyCode").addClass(
+                      "errorBorder"
+                    ),
+                    o.showRegisteError(
+                      s,
+                      "smsVerifyCode",
+                      i.message(i.lanEdition, "phoenix_sms_send_error")
+                    );
+                  else if (400 === t) {
+                    r("." + s + " #userPhoneRegFaptchaNew").show(),
+                      r(
+                        "." +
+                        s +
+                        " #userPhoneRegFaptchaNew .aliVerifyCode #nc"
+                      ).html("");
+                    e.nvc.getNC({
+                      renderTo: "nc"
+                    });
+                  }
+                }
+                n.error &&
+                  ("mobile_blank" == n.error ?
+                    (r(".leadongRegiste1 #mobile").addClass("errorBorder"),
+                      o.showRegisteError(
+                        s,
+                        "mobile",
+                        i.message(
+                          i.lanEdition,
+                          "phoenix_validate_enter_valid_mobile"
+                        )
+                      )) :
+                    "smsVerifyCode_error" == n.error ?
+                    (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                        "errorBorder"
+                      ),
+                      o.showRegisteError(
+                        s,
+                        "smsVerifyCode",
+                        i.message(
+                          i.lanEdition,
+                          "phoenix_validate_enter_correct_sms_verify_code"
+                        )
+                      )) :
+                    "sms_send_error" == n.error ?
+                    (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                        "errorBorder"
+                      ),
+                      o.showRegisteError(
+                        s,
+                        "smsVerifyCode",
+                        i.message(i.lanEdition, "phoenix_sms_send_error")
+                      )) :
+                    "sms_send_time_limit_error" == n.error ?
+                    (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                        "errorBorder"
+                      ),
+                      o.showRegisteError(
+                        s,
+                        "smsVerifyCode",
+                        i.message(
+                          i.lanEdition,
+                          "phoenix_sms_send_time_limit_error"
+                        )
+                      )) :
+                    "sms_send_unit_time_limit_error" == n.error ?
+                    (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                        "errorBorder"
+                      ),
+                      o.showRegisteError(
+                        s,
+                        "smsVerifyCode",
+                        i.message(
+                          i.lanEdition,
+                          "phoenix_sms_send_unit_time_limit_error"
+                        )
+                      )) :
+                    "send_one_ip_registe_limit_error" == n.error ?
+                    (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                        "errorBorder"
+                      ),
+                      o.showRegisteError(
+                        s,
+                        "smsVerifyCode",
+                        i.message(
+                          i.lanEdition,
+                          "phoenix_sms_send_one_ip_registe_limit_error"
+                        )
+                      )) :
+                    "repeat_user" == n.error &&
+                    (r(".leadongRegiste1 #mobile").addClass("errorBorder"),
+                      o.showRegisteError(
+                        s,
+                        "mobile",
+                        i.message(i.lanEdition, "phoenix_mobile_regist_error")
+                      )));
+              },
+            });
+          };
+          r("." + s + " #userPhoneRegFaptcha #faptcha_response_field").bind(
+            "input propertychange",
+            function () {
+              4 == r(this).val().length &&
+                (function () {
+                  var e = r("." + s),
+                    n = !0,
+                    g = r("#mobile", e);
+                  if (
+                    (g.length && (n = checkList.checkMobile(g).isChecked), n)
+                  ) {
+                    var u = g.val();
+                    r.ajax({
+                      url: a._menu_prefix +
+                        "/phoenix/admin/user/sms/verify/code",
+                      dataType: "json",
+                      type: "post",
+                      data: {
+                        mobile: u,
+                        verifyCodeType: "0",
+                        faptcha_response_field: t.val(),
+                        faptcha_challenge_field: l.val(),
+                      },
+                      success: function (e) {
+                        if (!e.faptchaResult)
+                          return (
+                            o.showRegisteError(
+                              s,
+                              "userPhoneRegFaptcha #faptcha_response_field",
+                              i.message(
+                                i.lanEdition,
+                                "phoenix_verify_code_error"
+                              )
+                            ),
+                            r(
+                              "." +
+                              s +
+                              " #userPhoneRegFaptcha #faptcha_response_field"
+                            ).val(""),
+                            r(
+                              "." +
+                              s +
+                              " #userPhoneRegFaptcha .userPhoneReg.refreshImg"
+                            ).click(),
+                            !1
+                          );
+                        o.hideRegisteError(
+                            s,
+                            "userPhoneRegFaptcha #faptcha_response_field"
+                          ),
+                          r("." + s + " #userPhoneRegFaptcha").hide(),
+                          r(
+                            "." +
+                            s +
+                            " #userPhoneRegFaptcha #faptcha_response_field"
+                          ).val(""),
+                          r(
+                            "." +
+                            s +
+                            " #userPhoneRegFaptcha .userPhoneReg.refreshImg"
+                          ).click(),
+                          e.hasOwnProperty("error") ?
+                          "mobile_blank" == e.error ?
+                          o.showRegisteError(
+                            s,
+                            "mobile",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_validate_enter_valid_mobile"
+                            )
+                          ) :
+                          "smsVerifyCode_error" == e.error ?
+                          o.showRegisteError(
+                            s,
+                            "smsVerifyCode",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_validate_enter_correct_sms_verify_code"
+                            )
+                          ) :
+                          "sms_send_error" == e.error ?
+                          o.showRegisteError(
+                            s,
+                            "smsVerifyCode",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_sms_send_error"
+                            )
+                          ) :
+                          "sms_send_time_limit_error" == e.error ?
+                          o.showRegisteError(
+                            s,
+                            "smsVerifyCode",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_sms_send_time_limit_error"
+                            )
+                          ) :
+                          "sms_send_unit_time_limit_error" == e.error ?
+                          o.showRegisteError(
+                            s,
+                            "smsVerifyCode",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_sms_send_unit_time_limit_error"
+                            )
+                          ) :
+                          "send_one_ip_registe_limit_error" == e.error ?
+                          o.showRegisteError(
+                            s,
+                            "smsVerifyCode",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_sms_send_one_ip_registe_limit_error"
+                            )
+                          ) :
+                          "repeat_user" == e.error &&
+                          o.showRegisteError(
+                            s,
+                            "mobile",
+                            i.message(
+                              i.lanEdition,
+                              "phoenix_mobile_regist_error"
+                            )
+                          ) :
+                          (o.hideRegisteError(s, "smsVerifyCode"),
+                            (d = !1),
+                            (c = setInterval(function () {
+                              m();
+                            }, 1e3)));
+                      },
+                    });
+                  }
+                })();
+            }
+          );
+          !(function () {
+            try {
+              i.page._captcha_domain_prefix;
+            } catch (e) {
+              console.log(e);
+            }
+            r.getScript(
+              "//captcha.c.ldycdn.com/js/FCaptcha-3.0.5.min.js",
+              function () {
+                var e = FCaptcha({
+                  captchaId: "37ad62f7-3da0-44c0-9a3b-63e8464f3c8a",
+                  protocol: "//",
+                  apiServer: "captcha.c.ldycdn.com",
+                  staticResourceDomain: "//captcha.c.ldycdn.com",
+                  product: "pop",
+                  containerId: "get-verification-code",
+                  lan: "zh-CN",
+                  beforeCheck: function () {
+                    return !0;
+                  },
+                  onReady: function () {
+                    console.log("加载完毕的回调");
+                  },
+                  onSuccess: function (e) {
+                    console.log("验证成功！", e, "params"), u(e);
+                  },
+                  onError: function () {},
+                  onInitError: function (e) {
+                    console.error("初始化失败", JSON.stringify(e));
+                  },
+                  onClose: function () {
+                    console.log("用户关闭了验证码");
+                  },
+                });
+                try {
+                  i && i.userRegiste && (i.userRegiste.focusCaptcha = e);
+                } catch (e) {
+                  console.log(e);
+                }
+              }
+            );
+          })();
+        }
+      },
+      submitEmail: function (s) {
+        var n = r("." + a.className),
+          d = !0,
+          c = r("#email", n),
+          g = r("#password", n),
+          m = r("#confirmPassword", n),
+          u = a.className;
+        if (c.length) {
+          if (!(d = checkList.checkEmail(c).isChecked))
+            return void o.showRegisteError(
+              u,
+              "email",
+              i.message(i.lanEdition, "phoenix_validate_enter_valid_email")
+            );
+          o.hideRegisteError(u, "email", i.message(i.lanEdition));
+        }
+        if (g.length) {
+          var _ = checkList.checkPwd(g);
+          if (!(d = d && _.isChecked))
+            return void o.showRegisteError(u, "password", _.msg);
+          o.hideRegisteError(u, "password", i.message(i.lanEdition));
+        }
+        if (m.length) {
+          if (!m.val().length)
+            return void o.showRegisteError(
+              u,
+              "confirmPassword",
+              i.message(i.lanEdition, "phoenix_validate_enter_password_again")
+            );
+          if (!(d = d && checkList.checkCpwd(m, g.val()).isChecked))
+            return void o.showRegisteError(
+              u,
+              "confirmPassword",
+              i.message(i.lanEdition, "phoenix_validate_password_not_match")
+            );
+          o.hideRegisteError(u, "confirmPassword");
+        }
+        var h = r("." + u + " #verifyFlag").val();
+        !(function () {
+          var n = a.className,
+            d = a.className + " .func_account_regist_email",
+            c = r("." + d + " #email").val(),
+            g = r("." + d + " #password").val(),
+            m = r("." + d + " #confirmPassword").val(),
+            u = r("." + d + " #emailTestFlag").val(),
+            _ = "",
+            p = "",
+            f = "",
+            v = "",
+            w = "",
+            R = "",
+            y = "",
+            b = "",
+            C = "",
+            E = [];
+          null != r("." + d + " #invitationCode")[0] &&
+            (_ = r("." + d + " #invitationCode").val()),
+            null != r("." + d + " #birthdayTime")[0] &&
+            (p = r("." + d + " #birthdayTime").val()),
+            null != r("." + d + " input[name^='sexFlag']")[0] &&
+            (C = r("." + d + " input[name^='sexFlag']:checked").val()),
+            null != r("." + d + " input[name='fax']")[0] &&
+            (w = r("." + d + " input[name='fax']").val()),
+            null != r("." + d + " input[name='address']")[0] &&
+            (R = r("." + d + " input[name='address']").val()),
+            null != r("." + d + " input[name='telephone']")[0] &&
+            (v = r("." + d + " input[name='telephone']").val()),
+            null != r("." + d + " input[name='webUrl']")[0] &&
+            (f = r("." + d + " input[name='webUrl']").val()),
+            null != r("." + d + " input[name='companyName']")[0] &&
+            (y = r("." + d + " input[name='companyName']").val()),
+            null != r("." + d + " select[name='userCountry']")[0] &&
+            (b = r("." + d + " #userCountry option:selected").attr(
+              "data-key"
+            )),
+            null != r("." + d + " select[name='province']")[0] &&
+            ((b =
+                b +
+                "," +
+                r("." + d + " #province option:selected").attr("data-key")),
+              null != r("." + d + " select[name='city']")[0] &&
+              (b =
+                b +
+                "," +
+                r("." + d + " #city option:selected").attr("data-key"))),
+            r("." + d + " [name^='cus_']") &&
+            r("." + d + " [name^='cus_']").each(function () {
+              E.push({
+                id: r(this).attr("id"),
+                value: r(this).val()
+              });
+            });
+          var x = "";
+          void 0 !== i.registLoginReferer && (x = i.registLoginReferer.get());
+          var k = {
+              email: c,
+              password: g,
+              confirmPassword: m,
+              emailTestFlag: u,
+              invitationCode: _,
+              verifyFlag: h,
+              registStyle: t,
+              birthdayTime: p,
+              fax: w,
+              address: R,
+              telephone: v,
+              webUrl: f,
+              companyName: y,
+              country: b,
+              sex: C,
+              refererHold: x,
+              cusField: JSON.stringify(E),
+            },
+            P = a._menu_prefix + "/phoenix/admin/user/registe";
+          if ("1" == h) {
+            var F = r(
+                "." + d + " #userRegisteFaptcha #faptcha_challenge_field"
+              ).val(),
+              V = r(
+                "." + d + " #userRegisteFaptcha #faptcha_response_field"
+              ).val();
+            (k.faptcha_challenge_field = F),
+            (k.faptcha_response_field = V),
+            (P += "/verify");
+          }
+          l && ((k._eventUid = l), (k._eventReferer = document.referrer)),
+            r.ajax({
+              url: P,
+              dataType: "json",
+              type: "post",
+              data: k,
+              success: function (t) {
+                if (t.hasOwnProperty("error"))
+                  "repeat_user" == t.error ?
+                  t.hasOwnProperty("user_status") &&
+                  "account_active" == t.user_status ?
+                  o.showRegisteError(
+                    n,
+                    "email",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_email_regist_active_error"
+                    ) +
+                    "<a href='/find-password.html' style='line-height: 1.2em;'>" +
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_email_regist_reset_pwd"
+                    ) +
+                    "</a>"
+                  ) :
+                  t.hasOwnProperty("user_status") &&
+                  "account_inactive" == t.user_status ?
+                  o.showRegisteError(
+                    n,
+                    "email",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_email_regist_inactive_error"
+                    ) +
+                    "<a href='/find-password.html'>" +
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_email_regist_reset_pwd"
+                    ) +
+                    "</a>"
+                  ) :
+                  o.showRegisteError(
+                    n,
+                    "email",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_email_regist_error"
+                    )
+                  ) :
+                  "email_blank" == t.error ?
+                  o.showRegisteError(
+                    n,
+                    "email",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_validate_enter_valid_email"
+                    )
+                  ) :
+                  "password_blank" == t.error ?
+                  o.showRegisteError(
+                    n,
+                    "password",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_validate_required_password"
+                    )
+                  ) :
+                  "password_check_error" == t.error ?
+                  employeeList.showError(
+                    widgetClass,
+                    "password",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_validate_enter_password_simple"
+                    )
+                  ) :
+                  "confirmPassword_blank" == t.error ?
+                  o.showRegisteError(
+                    n,
+                    "confirmPassword",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_validate_required_password"
+                    )
+                  ) :
+                  "password_not_equal" == t.error ?
+                  o.showRegisteError(
+                    n,
+                    "confirmPassword",
+                    i.message(
+                      i.lanEdition,
+                      "phoenix_validate_password_not_match"
+                    )
+                  ) :
+                  "email_check_error" == t.error ?
+                  o.showRegisteError(
+                    n,
+                    "email",
+                    i.message(i.lanEdition, "phoenix_email_check_error")
+                  ) :
+                  "verify_code_error" == t.error &&
+                  (o.showRegisteError(
+                      n,
+                      "userRegisteFaptcha #faptcha_response_field",
+                      i.message(i.lanEdition, "phoenix_verify_code_error")
+                    ),
+                    r("#userRegisteFaptcha #faptcha_response_field").val(
+                      ""
+                    ),
+                    r("#userRegisteFaptcha .refreshImg").click()),
+                  "1" == h &&
+                  r(
+                    "." +
+                    d +
+                    " #userRegisteFaptcha img[id=faptcha_image_img]"
+                  )
+                  .click()
+                  .show(),
+                  t.hasOwnProperty("verifyFlag") &&
+                  (r("." + d + " #userRegisteFaptcha").show(),
+                    r(
+                      "." +
+                      d +
+                      " #userRegisteFaptcha img[id=faptcha_image_img]"
+                    )
+                    .click()
+                    .show(),
+                    r("." + d + " #verifyFlag").val("1"));
+                else if (t.hasOwnProperty("send_success")) {
+                  var l = t.send_success;
+                  if ("send_success" == l) {
+                    var g =
+                      '<h2 class="userRegSucessTitle"><strong>' +
+                      i.message(
+                        i.lanEdition,
+                        "phoenix_email_send_success_title"
+                      ) +
+                      "</strong></h2>";
+                    r("." + n + " .sitewidget-hd").html(g);
+                    var m =
+                      '<div class="userRegSucessCont">' +
+                      i.message(i.lanEdition, "phoenix_email_send_success") +
+                      "</div>";
+                    r("." + n + " #registeContent").html(m);
+                  } else e.location = a._menu_prefix + l + "?e=" + c;
+                } else
+                  t.hasOwnProperty("registe_success_online") ?
+                  (e.location = "/phoenix/admin/sso/online") :
+                  t.hasOwnProperty("registe_success") &&
+                  o.jumpOtherPage(s, a);
+              },
+            });
+        })();
+      },
+      jumpOtherPage: function (r, s) {
+        console.log(s._menu_prefix),
+          "3" == r ?
+          e.history.back() :
+          (e.location =
+            "2" == r ? "/" : s._menu_prefix + "/regist-success.html");
+      },
+      submitMobile: function (s) {
+        var n = r("." + a.className),
+          d = !0,
+          c = r("#mobile", n),
+          g = r("#passwordMobile", n),
+          m = r("#smsVerifyCode", n),
+          u = a.className;
+        if (c.length) {
+          if (!(d = checkList.checkMobile(c).isChecked))
+            return (
+              r(".leadongRegiste1 #mobile").addClass("errorBorder"),
+              void o.showRegisteError(
+                u,
+                "mobile",
+                i.message(i.lanEdition, "phoenix_validate_enter_valid_mobile")
+              )
+            );
+          r(".leadongRegiste1 #mobile").removeClass("errorBorder"),
+            o.hideRegisteError(u, "mobile", i.message(i.lanEdition));
+        }
+        if (m.length) {
+          var _ = checkList.checkMobCode(m);
+          if (!(d = d && _.isChecked))
+            return (
+              r(".leadongRegiste1 #smsVerifyCode").addClass("errorBorder"),
+              void o.showRegisteError(u, "smsVerifyCode", _.msg)
+            );
+          r(".leadongRegiste1 #smsVerifyCode").removeClass("errorBorder"),
+            o.hideRegisteError(u, "smsVerifyCode", i.message(i.lanEdition));
+        }
+        if (g.length) {
+          _ = checkList.checkPwd(g);
+          if (!(d = d && _.isChecked))
+            return (
+              r(".leadongRegiste1 #passwordMobile").addClass("errorBorder"),
+              void o.showRegisteError(u, "passwordMobile", _.msg)
+            );
+          if (
+            (r(".leadongRegiste1 #passwordMobile").removeClass("errorBorder"),
+              o.hideRegisteError(u, "passwordMobile", i.message(i.lanEdition)),
+              r("#confirmPassword-0").length)
+          ) {
+            if ((console.log(123321), "" == r("#confirmPassword-0").val()))
+              return void o.showRegisteError(
+                u,
+                "confirmPassword-0",
+                i.message(
+                  i.lanEdition,
+                  "phoenix_validate_enter_password_again"
+                )
+              );
+            if (r("#confirmPassword-0").val() !== g.val())
+              return void o.showRegisteError(
+                u,
+                "confirmPassword-0",
+                i.message(i.lanEdition, "phoenix_validate_password_not_match")
+              );
+          }
+        }
+        if (
+          0 == r(".leadongRegiste1 #registAgreement").length ||
+          r(".leadongRegiste1 #registAgreement").is(":checked")
+        ) {
+          var h = a.className + " .func_account_regist_mobile",
+            p =
+            ((c = r("." + u + " #mobile").val()),
+              r("." + h + " #passwordMobile").val()),
+            f = r("." + h + " #smsVerifyCode").val(),
+            v = "",
+            w = "",
+            R = "",
+            y = "",
+            b = "",
+            C = "",
+            E = "",
+            x = "",
+            k = "",
+            P = [];
+          null != r("." + h + " #invitationCode")[0] &&
+            (v = r("." + h + " #invitationCode").val()),
+            null != r("." + h + " input[name='fax']")[0] &&
+            (y = r("." + h + " input[name='fax']").val()),
+            null != r("." + h + " input[name='address']")[0] &&
+            (b = r("." + h + " input[name='address']").val()),
+            null != r("." + h + " input[name='telephone']")[0] &&
+            (R = r("." + h + " input[name='telephone']").val()),
+            null != r("." + h + " input[name='webUrl']")[0] &&
+            (w = r("." + h + " input[name='webUrl']").val()),
+            null != r("." + h + " input[name='companyName']")[0] &&
+            (C = r("." + h + " input[name='companyName']").val()),
+            null != r("." + h + " select[name='userCountry']")[0] &&
+            (E = r("." + h + " #userCountry option:selected").attr(
+              "data-key"
+            )),
+            null != r("." + h + " select[name='province']")[0] &&
+            ((E =
+                E +
+                "," +
+                r("." + h + " #province option:selected").attr("data-key")),
+              null != r("." + h + " select[name='city']")[0] &&
+              (E =
+                E +
+                "," +
+                r("." + h + " #city option:selected").attr("data-key"))),
+            null != r("." + h + " #birthdayTime")[0] &&
+            (x = r("." + h + " #birthdayTime").val()),
+            null != r("." + h + " input[name^='sexFlag']")[0] &&
+            (k = r("." + h + " input[name^='sexFlag']:checked").val()),
+            r("." + h + " [name^='cus_']") &&
+            r("." + h + " [name^='cus_']").each(function () {
+              P.push({
+                id: r(this).attr("id"),
+                value: r(this).val()
+              });
+            });
+          var F = "";
+          void 0 !== i.registLoginReferer && (F = i.registLoginReferer.get());
+          var V = {
+            mobile: c,
+            passwordMobile: p,
+            smsVerifyCode: f,
+            invitationCode: v,
+            fax: y,
+            address: b,
+            telephone: R,
+            webUrl: w,
+            companyName: C,
+            country: E,
+            sex: k,
+            birthdayTime: x,
+            registStyle: t,
+            refererHold: F,
+            cusField: JSON.stringify(P),
+          };
+          l && ((V._eventUid = l), (V._eventReferer = document.referrer)),
+            r.ajax({
+              url: a._menu_prefix + "/phoenix/admin/user/registe",
+              dataType: "json",
+              type: "post",
+              data: V,
+              success: function (n) {
+                n.hasOwnProperty("error") ?
+                  "repeat_user" == n.error ?
+                  (r(".leadongRegiste1 #mobile").addClass("errorBorder"),
+                    o.showRegisteError(
+                      u,
+                      "mobile",
+                      i.message(i.lanEdition, "phoenix_mobile_regist_error")
+                    )) :
+                  "mobile_blank" == n.error ?
+                  (r(".leadongRegiste1 #mobile").addClass("errorBorder"),
+                    o.showRegisteError(
+                      u,
+                      "mobile",
+                      i.message(
+                        i.lanEdition,
+                        "phoenix_validate_enter_valid_mobile"
+                      )
+                    )) :
+                  "passwordMobile_blank" == n.error ?
+                  (r(".leadongRegiste1 #passwordMobile").addClass(
+                      "errorBorder"
+                    ),
+                    o.showRegisteError(
+                      u,
+                      "passwordMobile",
+                      i.message(
+                        i.lanEdition,
+                        "phoenix_validate_required_password"
+                      )
+                    )) :
+                  "smsVerifyCode_error" == n.error ?
+                  (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                      "errorBorder"
+                    ),
+                    o.showRegisteError(
+                      u,
+                      "smsVerifyCode",
+                      i.message(
+                        i.lanEdition,
+                        "phoenix_validate_enter_correct_sms_verify_code"
+                      )
+                    )) :
+                  "smsVerifyCode_blank" == n.error &&
+                  (r(".leadongRegiste1 #smsVerifyCode").addClass(
+                      "errorBorder"
+                    ),
+                    o.showRegisteError(
+                      u,
+                      "smsVerifyCode",
+                      i.message(
+                        i.lanEdition,
+                        "phoenix_validate_enter_correct_sms_verify_code"
+                      )
+                    )) :
+                  n.hasOwnProperty("registe_success_online") ?
+                  (e.location = "/phoenix/admin/sso/online") :
+                  n.hasOwnProperty("registe_success") &&
+                  o.jumpOtherPage(s, a);
+              },
+            });
+        }
+      },
+      showError: function (e, s, i) {
+        r("." + e + " #" + s)
+          .parent()
+          .parent()
+          .siblings(".user-signup-tips")
+          .html(
+            '<span class="user-error-msg"><span class="user-signup-msgs">' +
+            i +
+            "</span></span>"
+          );
+      },
+      hideError: function (e, s) {
+        r("." + e + " #" + s)
+          .parent()
+          .parent()
+          .siblings(".user-signup-tips")
+          .html("");
+      },
+      showRegisteError: function (e, s, i) {
+        var a =
+          '<span class="user-registe-error-msg"><i class="font-icon block-icon block-icongantanhao-yuankuang shopHide" aria-hidden="true"></i>' +
+          i +
+          "</span>";
+        "3" == r("." + e).attr("data-style") &&
+          ((a =
+              '<div class="errTitleShop" style="width: 100%;left: 10px!important;right: unset!important;">'),
+            (a +=
+              '<i class="font-icon block-icon block-icongantanhao-yuankuang shopBlock" aria-hidden="true" style="position: absolute;top: 0px;left: 0!important;right: unset!important;"></i>'
+            ),
+            (a +=
+              '<span class="user-registe-error-msg" style="line-height: 12px;height: 32px;left: 5px!important;right: unset!important;text-align: left;width: 97%;">' +
+              i +
+              "</span>"),
+            (a += "</div>")),
+          r("." + e + " #" + s)
+          .parent()
+          .find(".user-registe-error-msg").length ?
+          r("." + e + " #" + s)
+          .parent()
+          .find(".user-registe-error-msg")
+          .text() != i &&
+          r("." + e + " #" + s)
+          .parent()
+          .find(".user-registe-error-msg")
+          .text(i) :
+          ("3" == r("." + e).attr("data-style") &&
+            r("." + e + " #" + s)
+            .parent()
+            .parents(".outBox")
+            .addClass("leadongErorBorderColor"),
+            r("." + e + " #" + s)
+            .parent()
+            .append(a)),
+          setTimeout(function () {
+            r("." + e + " #" + s)
+              .siblings(".user-registe-error-msg")
+              .addClass("show");
+          }, 50),
+          o.inputBind(e, s);
+      },
+      hideRegisteError: function (e, s) {
+        r("." + e + " #" + s)
+          .siblings(".user-registe-error-msg")
+          .removeClass("show"),
+          r("." + e + " #" + s)
+          .siblings(".user-registe-error-msg")
+          .remove(),
+          r("." + e + " #" + s)
+          .siblings(".shopBlock")
+          .remove();
+      },
+      inputBind: function (e, s) {
+        r("." + e + " #" + s)
+          .unbind("focusin")
+          .bind("focusin", function () {
+            o.hideRegisteError(e, s);
+          });
+      },
+    });
+  })(window, jQuery);
+</script>
+<style>
+  #ne-one-login_auth-iframe {
+    margin-top: -82px !important;
+    padding-bottom: 82px !important;
+  }
+</style>
+<script>
+  !(function (e, r, s) {
+    $.getScript(
+      // "https://6835-h5demo-3gm5brke2db16055-1317181479.tcb.qcloud.la/test/NEOneLogin.umd.min2.0.1.js?sign=66d4577bca4e9aaf27b85529f1ccaa21&t=1678416570",
+      "./NEOneLogin.umd.min2.0.1.js",
+      function () {
+        console.log("开始初始化NEOneLogin");
+        var neOneLogin = new NEOneLogin({
+          businessId: "2571ab5e30bb40749f8c8e67e3c8999d",
+          logo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAABLCAYAAADZCa3+AAAAAXNSR0IArs4c6QAAESFJREFUeF7tXc1uXUkR/tr2zYbFZJ5gkicgWSEhodg7SAZNvIgjxGIcxZFYMQ5LBMIRSKwQyQ4pNuOsEJ7F2DCOZjf2AiHY4DwB9hNgSwgBub6N6tTp03/V5/T9cbDv7SONNPE93ae76uvqr6urqxXKUyQwRRJQU9SX0pUiARRAFxBMlQQKoKdKnaUzBdAFA1MlgQLoqVJn6UwBdMHAVEmgAHqq1Fk6UwBdMDBVEiiAnip1ls4UQBcMTJUECqCnSp2lM+2AXtPaEdEzbKqNKy+yNX0A4E7dj+noU6iUnbu3oNXHULhV/3QMpXfx4PWeqL+duweAqmWiD7HyevGq6rkAehoGqYu+z+5tQ+PjBCAP0OstY3n31Pu9APqqjl8A02yh28FcK03vYuX1cgE0MB3T87QCmmgG1N8aoCo8xYP959W/P7u3Do1fWxDr21h5fdT8u1joYqEvnQR+/+EGlP5Z3a43WNk3/Jn/tHPvGMAH1f9r9QwPv7DroQLoIdW5pmmRYRZiR+jjENvK53FhlU80KeQ9aPACRYHeP8RLZS1Lqhlc9g40rtdlD/BSHVb/n2uhf6Bv4C3uQOFG57f9/gGb6ln9Ldvv3PZT2zU+Evv8RK9C16AkWWyqA3x+/zr6//0EUGcYKO4v9D8xp7/miUfjFlT9u8YxoI7QW3hV8WkJ0L/79g0szH0dqBeWA3WMwfkhvvclDYz2p5ot5u5ADag9R+gP3iTL7dxdhTIDDSdYeb3NA9CpY4hvX+yicE2vAyCrUQvak8NGo3j3z481TZMfVUCSnyMoPBKBzWCgqTVepVdKxFMoUJvSXg4GJ7U5XceW2vWatqbJ2hnrSD8tQeNTsQ8a29hSj6KuUdsH+DxR5hhzWIYGycZv+849astHgH6BldfUN35y+LTCKzzYX/UBjTfQ+KqWk6ABtY6VL16IqiFwQpH8JX0f4Pz8UQTscDDp+edQA6pD0L/eRe/ao2hR6zTm4gC9pmmkpVbbtSERlLumyRK/12UEoHDbAzVZ1D6IQ0rCdKuj+s07/rqALeCnnd8OQRkDur0KjRfYUhZ8PIg+72i7mdH8tltAnKLXu+kp+7MPF4GqTwk91C46D1SdvQf03DIe/tEf1DkDCDiFnnvklfW/7eom1ZAj9HpLKVBfDKDZMjuLEJwA4KmELZ+xMvTvp9hUvHihx1ICKnMMDbLIRCGYgpiHLO6WuimUM386AwGPp3oqy9O4/1hAM6i+Cn4nvy1RHKm8bbcM6DMAu9A4hcL9hr+aDyzgJn6jjrGqr2MBfw/AfAKN3brtZKkkQHLbfUDIyq7ow/xGDOxWQJ8AereiKbpqv2tkjrGyb2W/c/c5oD5xZHcGhV0QVVCayhJ1Mc8poJeaRWlqMNHsQeXn9A2h3f5s5FQ+eUDHCtpDH6seZ17T9TRZteQUm+p9B5iLlSJDrsz10qBwgblU8cgQjApv8BaL3jdl6+sC2i6aAFLIojAD0KYML6zoMaCMAX2CBSxWgKWH2059tgOZadM2wnbJbScqRd92QSUBmr5GRmADD/dfRcOXPSHUjroPSUDvoddbbawg8fS3b2lg276fn9+s6APNAlo7hkAfonftvmdBmYq4M98BVvaXqvbFgD4D9GLghaF2+/033w86OXlAh9bZKN39MNMDskr8GOVGGgj+wMD4h/NXVmpMbxjo4UP8XMG1JFw+BhWDLXzCgWOoQwhoqT/xDGDa7u5c2kESfzuc9VKANiVPqxlqcP7C460MThpo7wEJQEtgCV1/Si3hwRcHaDh8/dle732RDvheGFq4suswBLTrbnRlEJZPvHcRgHatL63E5W1U19sQcso2YPsc2wDyCLqe1sjCvVS+y8rUFw4k41v3Z4wTbKrUgtT3khjaEwK6j/dFL44USuD3Jy2v1GDO4b+0mHy4/7QRawMOEdAnWNmP+x9aYgtoGx5hFpmS/nggWWNkXId++8+wsi+vgbyBWH1gDyv7RGe85yIAbadu4lGoVubxQ9Oi9SRYRbLiyIpSYy0w2UtB1owoiRG4sXJuzMkeNlXU0aYBa9qlFvGAYHdYOpYhBO+mUpD+JvVZBnR+vMwTbQeuGYwWEG+AakFNU56/3uBZ0NloMTRBAnQilkMCNNXr0g1psejKQXIPDuMDz3j3IgDtKqjN1rq/MYjY7UZ8rMtTYcpKgG7f0ZT80MMEYYX05F0CWmq7UbKxmCSZaHoPNlMacE4Y0G4bJM3PHKB9hZFIXjmrfePpcFfckwd0F/0J1wiTBXTX7BJb8wYk+lGzKUFejfl5WsSZReQZzs9vNVy64cMF0N3ho/60SLtz3WXYtQboyo9sHt+dZ/7abWG7KIPr574MlMNdFJ6ij5si/469NOGi0HoOSFbk0VBqHbqiIdty7MaYgNaD02T8iGihne13w4EzaERT1c49GqS1C1CmRhdBOeyiMPQVtxGQx/o+VLW5wE96YRXHM/sgT4Mi7WlwN4HS5aldPgfnwTMeh/a9F7TueKn8aDh500jwcjhWOiVrz1sxJqDZy+EaCH9QuW3gWcP1bDGnDxe1CXccwvLhzmj9rckDOrQkGssIt4pNR0lRxlebA4q02y7cepZ5dExp+L1wMKUiC2MrybNITtt5MMSUgftUu9EaBNCgJRcjud5ogUqgD9cVsttO6Q0sXHsRuc5MzId2D2lMANDhDmGKR4fvGeBGXhohvJXEEu1EyoM3H9Dk05xrdvtS4/+s2ozwrRgp5ZEHauvJ2Gi2sGPrGVOO2N/MSo3dcbSqX8dLxTEH9L15/BoKq0HDLfB9quSXZzCG29Nn6ONGRQ/GATTVnbvl7je+yw9N07MbACZ4biYA6Mhy0s6oWq581OaJfcgcQ8LUyDktY8xsMCjjRW7SvZcP6Da6YH8zU7C0jewK2AqXaMk5btfA8OM4aBCRq47ddL4bj7/p7vSFVpp+p/rI+sl+abc8e1jC3TgqT64yirgLfbN282ZcQFtQk4tTjmOhxeocFht/e+y2y9OQ99YEAM3WM4i3rj5i9E2yd2eXE/R6t5oZpN2Pzm7a6ElTq4sBdI6CbCOtJc6zVBQjYZTuU4uugCjadKHHbMKE1EIGdSzPcCdwEoA2M8lCNYu4fvTdatucqJlEWXI2VpJQnxCg2dKG8RzSV8lXvpo+XFDF/BD408FpbZs3lbu97fEFmGMBfA8DUwGynFJwzR4UNqKYDZ7ayTLbuAH6MoFxAKIoXeGf9Dv955bn4Kg+ngcxFTHXtm0OA3KoFXtYwHrD+41EJgXodl34s54ZVBwnkbbs6TrPoOdWq8i3HE9DaqfQrb96Z7BhD9w2P55Aq21cW3jeeZ7xfLAqB1LhBHpuPYryC/r37tIYMFD56eOoM8CfgcXTfM77oeLY2vKCyyw8c4ak+86wbR62fjsgiEp8gC0VBxRZy00bTpY6STEyo35/0uWq6L4F1h259tzjXuG32gZTFf5K+u8fZx0s6LTQk+5oqU+WgIklofUEhwtQyOlBfeKGlEo0xOWhr7CpwgXu1ZRuzuwwRM/enYUeolEz9WrsimzvvhReepUFVgB9lbUntJ0BTZyfLK6/bghfJ0/HOTY66dpVElEB9FXS1pBt5cO9xP3plMb1+sQKeWWOcI6DqQKyEU3lHWnWBkfeucghxUevF8oxgtBKkcsrgQLoy6ub0rIRJFAAPYLQSpHLK4EC6Murm9KyESRwNQDNh1vtUXjy187hhbfLyLt1bnoEWRwab7ycGOatDT3XKr8NNYh+N+1K1TmMQtgX7adpOMfT4LR8vIMqfSPVHivHM/GYmk3Uw0e2crJUDdPHd/Du5Qe0FEnHggnTH7hnBdtEFx8AWKtywnUdRFjDptryKjahAV2nXLoUGYevmhIH2FR83H84f3XcR1eOqfb6EY/yyfmuvvyff7/8gHbjJCi2mqPeOImNGyTkblOzUI3Fo+1km5JAyvmxpv8E4JsduvAB7QIkNw1D6gP21DkFXt2vEruYdAt+Qhr30DC59cyBCDrRbXP+yX0M0yCMC732k0Hj1j5i+asAaGN5rQBtvLW1YK4AXEsTpgyTBPVYf7dTfhr/wQB/Ra+hPuQv5hPtHDBlAMUx4bmPZDlzrKkbmZg63ePLxE+k4w4A854CZUliakc7kpT1KfWQb9xNZ5bb3wt+73ID2p2KfWtsY5+lIB0brD9ZK5KmBqGa5IEmKdM9dOv2xVptn1pZ+mHSh3XHdcSHJ2S5FMpxwcPNxjfTIsYG5/i8Wjromm7YOHw3zryU/g6dBs95zGwTJsgJB/M8DjKTUdLOon/sLY4T54ML8UMyNrQmPPHivz2JhXCOfIZ8J0/oQ1Y6sdcNL5Y4oQkPlU+MtzVhdKttvsm1G47unmyneAyO/c4HNIdISmGupv/0G4fShskkU/300yFYOT53DjeMq6bR5Tjul1vKX25Auw13p8MQLDlTpV1c+oqQs47KInO/aw8/yMfAcgE9Sh9TddtDwClKwSfmmR/bdL62DWSdTdZYf6EZSkQyMhcI1NyqpxfQVrkmGY3h3b6yR6ERqQHkemR88H8LGt+AQh8D/AW/VX8WFZQ7aE3ddlCZLKwmxUM7oDnuOk5GyWcnOc6aUxGns/UrnIgJLXORd0HvXW5A5ycSJ1+tmY5D5bYD2tKIbutkMpqmF3J2seoC+rH+ORR+UgPlx9hSv2z06SeKTKnZ0Bru47iAngyYCuUYWo5xHo1UFaMD2tSYsq7SF61V9xerqToe619B4Uc1oH+BLfVTB9A5NxZMGtBuAnq3h25ydfLft1no42Khh0Z0S4Fw2h/VQltAt0/XPteV300B+on+EMB3MABtn+9jS32ZJQqX9/NO5qQsNN2KIHNo2bcuNXc4f3tWh8d/6XJTjrb+TRLQ/rZy932MJqdzfFeKTDlG1dPkAe3m7h61VaZcoRzjStAr3w1oszPWzqGpUn/DxMYwSBs0bVvew9CWHGG0AdofhHmLQl4vkGVOJ3TPaRe9U3YKcyWV+Z4FIcc/uJSD0h7YqytyAG2vqvC9E5zE0U062eYifJeAltrR5bbz7znMFHTiteLlGE9+UWm7+0U3VVFMhfVycPoovjeQQ03pjj8CPf0tnipTW+WuN8PES7SBdtKAtu2iizyJt1sO7XtH6DLTJSeJTrvbbjKqKJRjZDmam1rNDa08dZpc0ktVIpqFZsv2HMAfgjwW5En4PoB/RTdstfFn2QoaHhrfxTIOoPlbt5or7tzgI4rx+DdOmz5SxGF8nyJtVf8QwLx4ixgJ378yL/ZD5ynInE4vgM6TV/AWc1aTjf5ZfW8hXRFGcQfSFq+5wJKvZqPQUY4gI0DcjrIopfiz9X6YFLhhzEicbX9UQMfrAdcnHubvs2GgdsfPbMMfYVPdTsq5i5LkKGgSdeR8Z8R3roaXI77Ik7p7iD7uVyc62MoSkE26MXvPIP9m7tiLo+D8zRspIMfUyQCWtrwt+Ef3csg7ljaSjmclGsgcPOQmnHFnrLbgKwvGlNuuG0bs1qM2FAvdLa2WN9ounfeThh+CMni6+excKxxHorUFvtOCk0B+p+LiFMJqeKyUyN3y+var4aRu+gOP3vBPjPgRhq/Qx3pwPKs9pJYpR3HbjQXCSRZmhTLvoziE8GJM5pzH4oWbVIYtIFkWstL+cSueAaSr4Ph6Yt0kSqdyXDYcNAwYah+5xOJv5MiCqYdp20bUF+ojDbDUAQIGLFGxXe+6afNttuRUf+4tY+lWF7ddjkbLO0UC40nganDo8fpYSs+QBAqgZ0jZs9DVAuhZ0PIM9bEAeoaUPQtdLYCeBS3PUB8LoGdI2bPQ1QLoWdDyDPWxAHqGlD0LXS2AngUtz1AfC6BnSNmz0NX/AVj1duIgu4lXAAAAAElFTkSuQmCC",
+          logoStyles: "top:0",
+          phoneInputStyle: "square",
+          mode: "float", //popup/float
+          policy: [{
+              content: "用户协议",
+              url: "https://www.leadongshop.com/agreement.html",
+            },
+            {
+              content: "隐私政策",
+              url: "https://www.leadongshop.com/privacy.html",
+            },
+          ],
+          elements: [
+            // "back",
+            "logo",
+            "slogan",
+            "phone",
+            "policy",
+            "loginButton",
+            "switchButton",
+          ],
+          sloganAppName: "领动·领售",
+          loginBtnText: "本机号码一键注册",
+        });
+
+        console.log("neOneLogin", neOneLogin);
+        console.log("开始执行getToken()");
+        try {
+          neOneLogin.getToken();
+        } catch (error) {
+          console.log("neOneLogin.getToken()初始化失败");
+          $("#outerContainer_1423625418750").css("display", "block");
+        }
+
+        neOneLogin.on("ready", () => {
+          console.log("授权页面成功挂载");
+
+          // 当预取号->授权页面成功挂载时触发
+        });
+        neOneLogin.on("success", (data) => {
+          console.log("位置1success", data);
+          //   成功拿到 token 和 accessToken 后像服务端发起校验
+          // $("#popup_input").val(JSON.stringify(data));
+          // alert("拿到token,准备发起请求--" + JSON.stringify(data));
+          if (data.token && data.accessToken) {
+            $.ajax({
+              url: "/phoenix/admin/user/h5/oneCheckLogin",
+              dataType: "json",
+              type: "post",
+              data: {
+                token: data.token,
+                accessToken: data.accessToken,
+              },
+              success: function (res) {
+                console.log("oneCheckLogin=>res", res);
+                if (res.code == "200") {
+                  if (res.data && res.data.phone != "") {
+                    if (res.data.success == "success") {
+                      alert("注册成功！");
+                      window.location = res.redirectUrl;
+                    } else if (res.data.success == "repeat_user") {
+                      alert(
+                        "您已是领动领售用户，网站开通及搭建请至电脑端操作"
+                      );
+                      window.location =
+                        "https://www.leadongshop.com/login.html";
+                    } else if (res.data.success == "error") {
+                      neOneLogin.dispose();
+                      $("#outerContainer_1423625418750").css(
+                        "display",
+                        "block"
+                      );
+                    } else {
+                      // window.location = res.redirectUrl;
+                    }
+                  } else {
+                    neOneLogin.dispose();
+                    $("#outerContainer_1423625418750").css(
+                      "display",
+                      "block"
+                    );
+                  }
+                } else {
+                  neOneLogin.dispose();
+                  $("#outerContainer_1423625418750").css("display", "block");
+                }
+              },
+            });
+          }
+        });
+        neOneLogin.on("error", (err) => {
+          // err.data 中可以拿到错误信息
+          console.log("error", err.data);
+          neOneLogin.dispose();
+          neOneLogin = null;
+          $("#outerContainer_1423625418750").css("display", "block");
+          // alert("失败,准备重定向到注册页--" + err.data);
+          // window.location = "/leadongshop-regist/index.html";
+        });
+        neOneLogin.on("close", () => {
+          console.log("返回按钮点击了");
+          // 当授权页通过返回按钮关闭时触发
+        });
+        neOneLogin.on("switch", () => {
+          // 当授权页点击切换按钮时触发
+          // 与 close 事件不同的是，close 事件触发时意味着授权页已经被关闭
+          // 但 switch 事件不会关闭授权页，如果需要关闭，需要开发调用 disposeAuthFrame 方法
+          neOneLogin.disposeAuthFrame();
+          $("#outerContainer_1423625418750").css("display", "block");
+        });
+        neOneLogin.on("tip", ({
+          code,
+          text
+        }) => {
+          // 根据　code　或者　text　在⻚面中给出提示文案
+          console.log("code", code);
+          console.log("text", text);
+        });
+      }
+    );
+  })(window, jQuery);
+</script>
+
+</html>

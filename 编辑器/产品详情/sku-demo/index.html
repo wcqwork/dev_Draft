@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./spec.css">
+</head>
+
+<body>
+  <script type="module" defer>
+    import { html, render, useReducer, Component,useState,useMemo } from '../preact/standalone.js'
+    import SpecAdjoinMatrix from "./utils/spec-adjoin-martix.js";
+
+    const initialState = {
+      specList: [
+        { title: "颜色", list: ["白色", "粉色"] },
+        { title: "体重", list: ["G", "KG"] },
+        { title: "尺寸", list: ["1寸", "2寸", "3寸"] },
+        { title: "形状", list: ["圆", "正方", "三角"] },
+      ],
+      specCombinationList: [
+        { id: "1", specs: ["G", "1寸", "白色", "正方"] },
+        { id: "2", specs: ["G", "1寸", "白色", "圆"] },
+        { id: "3", specs: ["G", "1寸", "粉色", "圆"] },
+        { id: "4", specs: ["G", "1寸", "粉色", "正方"] },
+        { id: "5", specs: ["KG", "3寸", "白色", "圆"] },
+        { id: "6", specs: ["KG", "2寸", "粉色", "正方"] },
+      ],
+    };
+    class Clock extends Component {
+      componentDidMount() {
+      }
+
+      render() {
+        const { specList, specCombinationList } = initialState;
+        // 已选择的规格，长度为规格列表的长度
+        const [specsS, setSpecsS] = useState(Array(specList.length).fill(""));
+
+        // 创建一个规格矩阵
+        const specAdjoinMatrix = useMemo(() => new SpecAdjoinMatrix(specList, specCombinationList), [specList, specCombinationList]);
+        // 获得可选项表
+        const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS);
+
+        const handleClick = function (bool, text, index) {
+          // 排除可选规格里面没有的规格
+          if (specsS[index] !== text && !bool) return;
+          // 根据text判断是否已经被选中了
+          specsS[index] = specsS[index] === text ? "" : text;
+          setSpecsS(specsS.slice());
+        };
+
+        const classNames = (...args) => {
+          let strClass = ''
+          debugger
+          for(let itemObj of args){
+            for(let [key,val] of Object.entries(itemObj)){
+              if(val){
+                strClass += key + ' '
+              }
+            }
+          }
+          return strClass
+        }
+
+        const skuItem = ({ value,i,index }) => {
+          const isOption = optionSpecs.includes(value); // 当前规格是否可选
+          const isActive = specsS.includes(value); // 当前规格是否被选
+          return html`<span
+                key=${i}
+                className=${classNames({
+                  specOption: isOption,
+                  specAction: isActive,
+                  specDisabled: !isOption,
+                })}
+                onClick=${() => handleClick(isOption, value, index)}
+              >
+            ${value}
+          </span>`
+        }
+        return html`
+          <div className="container">
+            ${specList.map(({ title, list }, index) => html`
+              <div key=${index}>
+                <p className="title">${title}</p>
+                <div className="specBox">
+                  ${list.map((value, i) => html`<${skuItem} value="${value}" i="${i}" index="${index}" />`)}
+                </div>
+              </div>
+            `)}
+          </div>
+        `;
+      }
+    }
+
+    render(html`<${Clock} />`, document.body);
+    debugger
+  </script>
+</body>
+
+</html>

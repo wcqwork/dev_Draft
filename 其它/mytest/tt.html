@@ -1,0 +1,63 @@
+<!--请将以下码嵌入到您网页源代码的最后面，通常是</body></HTML>之后,这样在服务器升级维护的时候也不会影响您的网页打开呈现速度。-->
+<script
+  language="javascript"
+  src="http://pdt.zoosnet.net/JS/LsJS.aspx?siteid=PDT93447636&float=1&lng=cn"
+></script>
+
+
+<script>
+    onloadHack(function(){
+        setTimeout(function(){
+            var script = document.createElement('script');
+            script.src = 'http://pdt.zoosnet.net/JS/LsJS.aspx?siteid=PDT93447636&float=1&lng=cn';
+            script.type = 'text/javascript'
+            script.async = true
+            document.head.appendChild(script);
+        },3000)
+    })
+</script>
+
+
+
+<script>
+    /**
+    * @params $selector Jquery对象
+    * @params Array  { tag: 'img', attrs:['src', 'data-origin'] }
+    */
+    // 
+    function replaceAttr($selector, tags = []) {
+        if (!tags.length) return
+        try {
+            tags.forEach(function (item) {
+                $selector.find(item.tag).each(function () {
+                    var _this = $(this)
+                    item.attrs.forEach(function (attr) {
+                        var smallimage = _this.attr(attr);
+                        if (smallimage && smallimage.length) {
+                            smallimage = smallimage.replace(/\-[0-9]+\-[0-9]+/g, '');
+                            _this.attr(attr, smallimage);
+                        }
+                    })
+                })
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    // 例子
+    var replaceTags = [{
+        tag: 'img',
+        attrs: ['src','data-lazy', 'data-src']
+    }, {
+        tag: 'source',
+        attrs: ['srcset']
+    }]
+    console.log('.sitewidget-touchgraphicslider','======================')
+    replaceAttr($('.sitewidget-touchgraphicslider'), replaceTags)
+    $(window).scroll(function () {
+        replaceAttr($('.sitewidget-touchgraphicslider'), replaceTags);
+        });
+    onloadHack(function () {
+        replaceAttr($('.sitewidget-touchgraphicslider'), replaceTags);
+    })
+</script>

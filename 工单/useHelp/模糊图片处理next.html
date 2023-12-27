@@ -1,0 +1,41 @@
+<script>
+    /**
+    * @params $selector Jquery对象
+    * @params Array  { tag: 'img', attrs:['src', 'data-origin'] }
+    */
+    // 
+    function replaceAttr($selector, tags = []) {
+        if (!tags.length) return
+        try {
+            tags.forEach(function (item) {
+                $selector.find(item.tag).each(function () {
+                    var _this = $(this)
+                    item.attrs.forEach(function (attr) {
+                        var smallimage = _this.attr(attr);
+                        if (smallimage && smallimage.length) {
+                            smallimage = smallimage.replace(/\-[0-9]+\-[0-9]+/g, '');
+                            _this.attr(attr, smallimage);
+                        }
+                    })
+                })
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    // 例子
+    var replaceTags = [{
+        tag: 'img',
+        attrs: ['src', 'data-src']
+    }, {
+        tag: 'source',
+        attrs: ['srcset']
+    }]
+    replaceAttr($('#outerContainer_1566828030461,#outerContainer_1571217252995'), replaceTags)
+    $(window).scroll(function () {
+        replaceAttr($('#outerContainer_1566828030461,#outerContainer_1571217252995'), replaceTags);
+        });
+    onloadHack(function () {
+        replaceAttr($('#outerContainer_1566828030461,#outerContainer_1571217252995'), replaceTags);
+    })
+</script>

@@ -1,0 +1,29 @@
+<script>
+  onloadHack(function () {
+    $("body").on("click", "#formsubmitClone", function () {
+      console.log("General联系表单");
+      dataLayer.push({
+        event: "general-form-submitted",
+        "event-type": "sprsun-heat-pump",
+      });
+    });
+  });
+
+  $(".brz-ed-draggable__column").on('click drag dragend mousedown mousemove mouseout mouseover',function(event){
+    console.log('触发了事件：', event.type);
+    $('.gjs-resizer-h-cr').trigger(event.type)
+    event.preventDefault();
+    event.stopPropagation()
+    return false
+  })
+</script>
+
+<script data-type="unUseTemplate">
+  setTimeout(function () {
+    var eventMouse = new Event("mousemove");
+    var eventTouch = new Event("touchmove");
+    window.dispatchEvent(eventMouse);
+    window.dispatchEvent(eventTouch);
+  }, 500);
+</script>
+

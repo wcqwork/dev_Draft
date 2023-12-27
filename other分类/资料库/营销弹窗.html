@@ -1,0 +1,53 @@
+<script>
+    function handlerMarking(){
+        var isTrue = /phoenix\/admin\/checkout/.test(location.href);
+        if(!isTrue){
+            return false;
+        }
+        var _css = `
+        <style>
+            p {
+                word-break: break-word;
+            }
+            #close-btn{
+                background-image: url(https://a2.leadongcdn.com/cloud/ljBprKkjlmSRqjjmpqpiip/close.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 16px;
+                height: 16px;
+            }
+            div#close-btn span::before {
+                display: none;
+            }
+        </style>
+        `;
+        var _csstow = `
+        <style>
+            div .v2-moz-input-group label{
+                    z-index: 5;
+            }
+        </style>
+        `
+        try{
+            var iframeEl = document.querySelector("iframe[data-type='marketing']");
+            iframeEl.parentElement.append($(_csstow)[0])
+            iframeEl.classList.add("showIframe");
+            var _iframebody = iframeEl.contentDocument.body;
+
+            _iframebody.append($(_css)[0]);
+            $(_iframebody).find("#resetBtn").click(function(){
+                iframeEl.classList.add("hide");
+            })
+            return false;
+        }catch(e){
+            return true;
+        }
+    }
+
+    $(window).scroll(function () {
+        var _isresult = handlerMarking();
+    });
+    onloadHack(function () {
+        var _isresult = handlerMarking();
+    })
+</script>

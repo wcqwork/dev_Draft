@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css">
+    <style>
+        .ld-slick-slider{
+            min-height: 350px;
+            background-color: #684c4cbd;
+        }
+        .ld-slick-slider .slick-prev{
+            left: 10px;
+        }
+        .ld-slick-slider .slick-next{
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div data-gjs-type="rowContainer"></div>
+    <section data-block-id="block2kit2130">
+        <div class="ld-slick-slider ld-slick-slider__section">
+            <div class="ld-slick-item">
+                <div class="ld-section_content">
+                    <div class="ld-container">
+                        内容1111111
+                    </div>
+                </div>
+            </div>
+            <div class="ld-slick-item">
+                <div class="ld-section_content">
+                    <div class="ld-container">
+                        内容222222222
+                    </div>
+                </div>
+            </div>
+            <div class="ld-slick-item">
+                <div class="ld-section_content">
+                    <div class="ld-container">内容3333333</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick-1.8.1/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+         $(document).on('ready', function(){
+            console.log(2222222222);
+            $('.ld-slick-slider').slick({
+                dots: true,
+                infinite: true,
+            });
+         })
+    </script>    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<script>
+      // 轮播图组件
+  const ldSlickSliderContainers = $('.ldSlickSliderContainer');
+  for (const item of ldSlickSliderContainers) {
+    const _id = $(item).attr('id');
+    if (_id) {
+      const _sliderLeftEl = $('[data-id=' + _id + ']');
+      const sliderHrefs = $(item).find('.ld-slick-item .slider_href');
+      for (const hrefItem of sliderHrefs) {
+        const curreIndexNumber = $(hrefItem).parent().attr('data-index');
+        const _src = $(hrefItem).find('.backstage-settings-wrap >img').attr('src');
+        const _currentIndex = _sliderLeftEl.find('[data-index=' + curreIndexNumber + ']').index();
+        const _model = editorEl.getWrapper().find('#' + _id)[0].find('.slider_href')[_currentIndex];
+
+        debugger;
+        const _linkJson = $(hrefItem).find('input[name="linkJson"]').val();
+        _model && _model.set({ linkJson: _linkJson });
+        _model && _model.setStyle({ 'background-image': 'url(' + _src + ')' });
+        if (_linkJson) {
+          const res = await component.component_galleryCommonLink.getNormalUrl({ linkData: _linkJson });
+          if (res) {
+            debugger;
+            _model && _model.setAttributes({ href: res.url });
+          }
+        }
+      }
+    }
+  }
+</script>

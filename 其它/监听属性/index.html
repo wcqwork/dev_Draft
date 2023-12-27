@@ -1,0 +1,39 @@
+<body>
+    <a href="#" data-blocksetting-color="{&quot;color&quot;:&quot;colorVal-0-#0089F5-1&quot;}"
+        style="color: rgb(0, 137, 245);">链接文字 </a>
+    <span data-blocksetting-color="{&quot;color&quot;:&quot;colorVal-1-rgb(255, 0, 255)-1&quot;}"
+        style="color: rgb(255, 0, 255);">文字 </span>
+
+        <div class="data-blockStyle-color0"></div>
+        <div class="data-blockStyle-color1"></div>
+</body>
+
+<script>
+    function mountMatchColor(blockContainer) {
+        var targetAll = blockContainer.querySelectorAll("[data-blocksetting-color]");
+        console.log(targetAll);
+        targetAll.forEach(function (item) {
+            // 实例化MutationObserver
+            let attrListener = new MutationObserver((mutations) => {
+                let _target = mutations[0].target;
+                let _style = _target.getAttribute('style');
+                try {
+                    let _num = _target.getAttribute("data-blocksetting-color").match(/.*-(\d)-.*/)[1];
+                    let _setTar = blockContainer.querySelectorAll('.data-blockStyle-color' + _num);
+                    if (_setTar.length > 0) {
+                        _setTar.forEach(function (item) {
+                            item.setAttribute('style', _style);
+                        })
+                    }
+                } catch (e) {
+                    console.log(e);
+                }
+            })
+            // 监听dom的属性，仅监听fill属性的改变。
+            attrListener.observe(item, { attributes: true });
+        });
+    }
+    setTimeout(() => {
+        mountMatchColor(document);
+    },3000);
+</script>

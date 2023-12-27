@@ -1,0 +1,33 @@
+<div class="exportSettingStyle">
+    <div class="exportSetingClose"></div>
+    <div class="export-title">
+        <div>导出代码</div>
+    </div>
+    <div class="export-body">
+        <textarea id="exportInnerHtml"></textarea>
+    </div>
+    <div class="export-bottom">
+        <button>取消</button>
+        <button>一键复制</button>
+    </div>
+    <textarea id="exportInnerHtml"></textarea>
+</div>
+
+
+<script>
+    var arr = [];
+    document.querySelectorAll("#timezone option").forEach((item) => 
+        arr.push(`"${item.value}":"${item.text}"`)
+    )
+</script>
+<script>
+    var arr = [];
+    document.querySelectorAll("#timezone option").forEach((item) => {
+        var itemObj = {
+           value:`${item.value}`,
+           label:`this.$t("backend.common.timezone.${item.value}")`
+           }
+        arr.push(itemObj);
+        }
+    )
+</script>

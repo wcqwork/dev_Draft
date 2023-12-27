@@ -1,0 +1,8 @@
+{
+  "data": {
+    "main": ["#FF7A00"],
+    "Auxiliary": ["#3990e0", "#ffffff", "#000000"]
+  },
+  "code": 200,
+  "msg": "success"
+}

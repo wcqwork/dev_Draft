@@ -1,0 +1,33 @@
+<script>
+  $(function () {
+    onloadHack(function () {
+      var _options = {
+        widgetClass: "sitewidget-form-20210813000241",
+      };
+      var element = ".sitewidget-form-20210813000241";
+      var $_widgetClass = $("." + _options.widgetClass);
+      var _initOffsetTop = $_widgetClass.offset().top;
+      function scrollHandle(offsetTop, offsetWidth) {
+        var _leftHeight = $(
+          ".sitewidget-articleDetail-20141127154728"
+        ).height();
+        var _pageScroolTop = $(window).scrollTop() + _initOffsetTop;
+        if (_pageScroolTop >= _leftHeight) {
+          $("." + _options.widgetClass + ".style3").addClass(
+            "fixed_window_top_bottom"
+          );
+        } else {
+          $("." + _options.widgetClass + ".style3").removeClass(
+            "fixed_window_top_bottom"
+          );
+        }
+        console.log(_leftHeight, _pageScroolTop);
+      }
+      $(window).on("scroll", function () {
+        var offsetTop = $_widgetClass.offset().top;
+        var offsetWidth = $_widgetClass.width();
+        scrollHandle(offsetTop, offsetWidth);
+      });
+    });
+  });
+</script>

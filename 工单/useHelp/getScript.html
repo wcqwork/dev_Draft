@@ -1,0 +1,75 @@
+<!--脚本代码可放于页面底部，等到页面最后执行。-->
+<script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
+<script type="text/javascript">
+    onloadHack(function () {
+        YQV5.trackMulti({
+            //必须，指定承载内容的容器ID。
+            YQ_ContainerId: "YQContainer",
+            //可选，指定查询结果高度，最大为800px，默认为560px。
+            YQ_Height: 560,
+            //可选，指定UI语言，默认根据浏览器自动识别。
+            YQ_Lang: "en"
+        });
+    });
+
+</script>
+
+
+<!--用于显示查询输入框的容器。-->
+<div id="YQContainer"></div>
+<script>
+    $.getScript("//www.17track.net/externalcall.js", function () {
+        YQV5.trackMulti({
+            //必须，指定承载内容的容器ID。
+            YQ_ContainerId: "YQContainer",
+            //可选，指定查询结果高度，最大为800px，默认为560px。
+            YQ_Height: 560,
+            //可选，指定UI语言，默认根据浏览器自动识别。
+            YQ_Lang: "en"
+        });
+    })
+</script>
+
+
+<script>
+    onloadHack(function () {
+        console.log(1111111111);
+        $.getScript("//res.wx.qq.com/open/js/jweixin-1.0.0.js", function () {
+            wx.config({
+                debug: false,
+                appId: '111',
+                timestamp: '111',
+                nonceStr: '111',
+                signature: '111',
+                jsApiList: []
+            })
+            wx.ready(() => {
+                console.log(333333333333);
+                let video = document.querySelectorAll("video")[0];
+                video.play();
+            });
+        })
+    });
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W9283BL');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RM490F69SY"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RM490F69SY');
+
+</script>

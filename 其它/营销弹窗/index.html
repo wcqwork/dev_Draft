@@ -1,0 +1,29 @@
+<script>
+    onloadHack(function(){
+        var _styleEl =  $(`
+        <style>
+            .l-checkbox, .l-radio, .l-password, .l-email, .l-select, .l-phone, .l-input, .l-textarea{
+                border: 1px solid rgb(246, 206, 60) !important; 
+            }
+        </style>
+        `);
+
+        try{
+            $(document.querySelector("#fAUpKfKBHPJn").contentWindow.document.body).append(_styleEl);
+            var isFlag = false;
+            $(window).scroll(function(){
+                if(isFlag){return;}
+                $(document.querySelector("#fAUpKfKBHPJn").contentWindow.document.body).append(_styleEl);
+                isFlag = true;
+            })
+        }catch(e){
+
+        }
+    })
+</script>
+
+<script>
+    onloadHack(function(){
+    $("#orderModel").prepend('<div style="    margin-top: -15px;padding-bottom:20px;">Please notice that all products on the website do not include postage, and customer service will contact you after placing an order</div>');
+    });
+</script>

@@ -1,0 +1,185 @@
+<div id="i77y">
+    <h1 id="iu3o">ss
+    </h1>
+    <div id="i2zl" class="row-container">
+      <div id="i2up">
+        <div class="gjs-lory-frame" id="ixr4">
+          <div class="gjs-lory-slides" id="i9ch">
+            <div class="gjs-lory-slide" id="i5ld">
+              <div id="iu0sb">
+                <div class="ql-editor">
+                  <h1>
+                    <u>Insert your text here  4111
+                    </u>
+                    <strong style="color: rgb(255, 235, 204);"><u>111111111
+                      </u></strong>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="gjs-lory-slide" id="irgl">
+              <div id="i1eod">
+                <div class="ql-editor">
+                  <h1>
+                    <span style="background-color: rgb(230, 0, 0);">2222222222222222222222</span>   Insert your text here
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div class="gjs-lory-slide" id="i66l">
+              <div id="i8v5m">
+                <div class="ql-editor">
+                  <h1>Insert your text here33333333333333333333
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="gjs-lory-prev" id="ih1nr"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5" id="i7wkr">
+          <g>
+            <path fill="#2E435A" d="M302.67 90.877l55.77 55.508L254.575 250.75 358.44 355.116l-55.77 55.506L143.56 250.75z">
+            </path>
+          </g>
+          </svg></span>
+        <span class="gjs-lory-next" id="ia4e7"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 501.5 501.5" id="ihwt9">
+          <g>
+            <path fill="#2E435A" d="M199.33 410.622l-55.77-55.508L247.425 250.75 143.56 146.384l55.77-55.507L358.44 250.75z">
+            </path>
+          </g>
+          </svg></span>
+      </div>
+    </div>
+  </div>
+  <script>var items = document.querySelectorAll('#i2up');
+    for (var i = 0, len = items.length; i < len; i++) {
+      (function(){
+        var el = this;
+        var deps = 'js/lory.min.js';
+        var falsies = ['0', 'false'];
+        var infinite = '';
+        infinite = infinite == 'true' ? 1 : parseInt(infinite, 10);
+        var options = {
+          slidesToScroll: parseInt('1', 10),
+          enableMouseEvents: falsies.indexOf('') >= 0 ? 0 : 1,
+          infinite: isNaN(infinite) ? false : infinite,
+          rewind: falsies.indexOf('') >= 0 ? false : true,
+          slideSpeed: parseInt('300', 10),
+          rewindSpeed: parseInt('600', 10),
+          snapBackSpeed: parseInt('200', 10),
+          ease: 'ease',
+          classNameFrame: 'gjs-lory-frame',
+          classNameSlideContainer: 'gjs-lory-slides',
+          classNamePrevCtrl: 'gjs-lory-prev',
+          classNameNextCtrl: 'gjs-lory-next',
+        };
+        var initSlider = function() {
+          window.sliderLory = lory(el, options);
+        };
+        if (deps && typeof lory == 'undefined') {
+          var script = document.createElement('script');
+          script.src = deps;
+          script.onload = initSlider;
+          document.head.appendChild(script);
+        }
+        else {
+          initSlider();
+        }
+      }
+       .bind(items[i]))();
+    }
+  </script>
+  <style>* {
+    box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+    #i2zl{
+      height:100%;
+      width:100%;
+      min-height:75px;
+      display:flex;
+      flex-wrap:wrap;
+      position:relative;
+      max-width:100%;
+      padding:10px;
+    }
+    #i2up{
+      position:relative;
+      width:100%;
+      margin:0 auto;
+    }
+    #ixr4{
+      width:100%;
+      margin:0 auto;
+      position:relative;
+      overflow:hidden;
+      white-space:nowrap;
+    }
+    #i9ch{
+      display:block;
+      transition-delay:1ms;
+    }
+    #i5ld{
+      display:inline-block;
+      position:relative;
+      color:#fff;
+      width:100%;
+      vertical-align:top;
+      height:0;
+      padding-bottom:30%;
+      white-space:normal;
+      background-color:rgba(0, 0, 0, 0.1);
+    }
+    #irgl{
+      display:inline-block;
+      position:relative;
+      color:#fff;
+      width:100%;
+      vertical-align:top;
+      height:0;
+      padding-bottom:30%;
+      white-space:normal;
+      background-color:rgba(0, 0, 0, 0.1);
+    }
+    #i66l{
+      display:inline-block;
+      position:relative;
+      color:#fff;
+      width:100%;
+      vertical-align:top;
+      height:0;
+      padding-bottom:30%;
+      white-space:normal;
+      background-color:rgba(0, 0, 0, 0.1);
+    }
+    #ih1nr{
+      position:absolute;
+      display:block;
+      cursor:pointer;
+      top:50%;
+      left:0;
+      margin-top:-25px;
+    }
+    #ia4e7{
+      position:absolute;
+      display:block;
+      cursor:pointer;
+      top:50%;
+      right:0;
+      margin-top:-25px;
+    }
+    #ihwt9{
+      height:50px;
+    }
+    #iu0sb{
+      padding:10px;
+    }
+    #i1eod{
+      padding:10px;
+    }
+    #i8v5m{
+      padding:10px;
+    }
+  </style>

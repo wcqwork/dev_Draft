@@ -1,0 +1,205 @@
+{
+  "isCustomized": true,
+  "postType": "NOW",
+  "custom": {
+    "FB": {
+      "post": "<p>1111111111111111111</p>",
+      "attachments": [
+        {
+          "fileObject": {
+            "type": "image/png",
+            "height": 1234,
+            "width": 2497,
+            "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png",
+            "size": 370474
+          },
+          "format": "png",
+          "id": "87zwdm",
+          "type": "image",
+          "uploadType": "FILE",
+          "uploaded": true,
+          "object": {},
+          "preview": {
+            "name": "111111.png",
+            "type": "image",
+            "format": "png",
+            "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png"
+          },
+          "control": {
+            "isEditEnabled": true,
+            "isViewEnabled": true,
+            "isRetryEnabled": false,
+            "deleteEnabled": true,
+            "progress": { "display": false, "value": 0 },
+            "cancelUpload": {}
+          },
+          "progress": { "value": 100, "display": false },
+          "uploadedPutData": {
+            "url": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png?Content-Type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3HYONI7J2XWJN7YI%2F20230811%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20230811T063738Z&X-Amz-Expires=86400&X-Amz-Signature=315ce3d4d55eb9097da8afefb6dd3994fe7cde486fcbdd66bf71e12787b2f588&X-Amz-SignedHeaders=host%3Bx-amz-acl&x-amz-acl=public-read"
+          },
+          "name": "oOK3BcBMW.png",
+          "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png",
+          "metaDone": true,
+          "uploadStarted": true,
+          "warning": false,
+          "warningText": ""
+        }
+      ],
+      "linkInfo": { "content": null },
+      "gmbBtn": null,
+      "pinitBtn": null,
+      "uploadInProgress": false,
+      "selectedProfiles": ["64d09d52e42a1c1934e9ee62"],
+      "meta": {
+        "tiktokExtras": {
+          "comment": "",
+          "disableComment": false,
+          "disableDuet": false,
+          "disableStitch": false,
+          "pushNotification": false
+        },
+        "instaFirstComment": "",
+        "fbFirstComment": "",
+        "fbFirstCommentMedia": null,
+        "linkedinFirstComment": "",
+        "linkedinFirstCommentMedia": null,
+        "linkedinVideoTitle": null,
+        "linkedinDocument": { "url": "", "title": "" },
+        "locations": null,
+        "linkedinPrivacyStatus": "PUBLIC",
+        "linkedinCaptions": { "url": "" },
+        "ytExtras": null,
+        "selectedVideoFrame": {
+          "garbageThumbnails": [],
+          "isCustomVideoThumbnail": false,
+          "file": null,
+          "base64Image": null,
+          "time": null,
+          "thumbnail": null
+        },
+        "twitterThreads": [],
+        "mstThreads": [],
+        "reelType": null,
+        "fbExtras": { "isReel": false }
+      },
+      "postError": {},
+      "profile": {
+        "id": "64d09d52e42a1c1934e9ee62",
+        "account": "64d09c3c41517865558fa3e4",
+        "workspaceId": "64d09c3c41517865558fa3e5",
+        "name": "TEST",
+        "screenName": "TEST",
+        "socialType": {
+          "slug": "FB_PAGE",
+          "name": "Facebook page",
+          "group": "FB",
+          "icon": "fbIcon",
+          "color": "#3b5998"
+        },
+        "profileImage": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/socialAccounts/106636192162923/iUeLZvz7cN.jpg",
+        "timetable": true,
+        "authorized": true,
+        "isLocked": false,
+        "isChecked": false,
+        "location": null,
+        "isEngage": true,
+        "isEngageLocked": false,
+        "isEngageProfile": true,
+        "isLoading": false,
+        "alias": null,
+        "userId": "106636192162923",
+        "analyticsAuthorized": true,
+        "tiktokAccountType": "BUSINESS",
+        "expireTime": 56,
+        "permissions": {
+          "MANAGE_PROFILE_SETTINGS": true,
+          "POST_APPROVAL_REQUIRED": true,
+          "MANAGE_POSTS": true,
+          "MANAGE_PROFILE": true
+        }
+      }
+    },
+    "IN": {
+      "post": "<p>1111111111111111111</p>",
+      "attachments": [
+        {
+          "fileObject": {
+            "type": "image/png",
+            "height": 1234,
+            "width": 2497,
+            "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png",
+            "size": 370474
+          },
+          "format": "png",
+          "id": "87zwdm",
+          "type": "image",
+          "uploadType": "FILE",
+          "uploaded": true,
+          "object": {},
+          "preview": {
+            "name": "111111.png",
+            "type": "image",
+            "format": "png",
+            "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png"
+          },
+          "control": {
+            "isEditEnabled": true,
+            "isViewEnabled": true,
+            "isRetryEnabled": false,
+            "deleteEnabled": true,
+            "progress": { "display": false, "value": 0 },
+            "cancelUpload": {}
+          },
+          "progress": { "value": 100, "display": false },
+          "uploadedPutData": {
+            "url": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png?Content-Type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA3HYONI7J2XWJN7YI%2F20230811%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20230811T063738Z&X-Amz-Expires=86400&X-Amz-Signature=315ce3d4d55eb9097da8afefb6dd3994fe7cde486fcbdd66bf71e12787b2f588&X-Amz-SignedHeaders=host%3Bx-amz-acl&x-amz-acl=public-read"
+          },
+          "name": "oOK3BcBMW.png",
+          "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/oOK3BcBMW.png",
+          "metaDone": true,
+          "uploadStarted": true,
+          "warning": false,
+          "warningText": ""
+        }
+      ],
+      "linkInfo": { "content": null },
+      "gmbBtn": null,
+      "pinitBtn": null,
+      "uploadInProgress": false,
+      "selectedProfiles": ["64d34cbc9c97e21900fa3f7b"],
+      "meta": {
+        "tiktokExtras": {
+          "comment": "",
+          "disableComment": false,
+          "disableDuet": false,
+          "disableStitch": false,
+          "pushNotification": false
+        },
+        "instaFirstComment": "",
+        "fbFirstComment": "",
+        "fbFirstCommentMedia": null,
+        "linkedinFirstComment": "",
+        "linkedinFirstCommentMedia": null,
+        "linkedinVideoTitle": "",
+        "linkedinDocument": { "url": "", "title": "" },
+        "locations": null,
+        "linkedinPrivacyStatus": "PUBLIC",
+        "linkedinCaptions": { "url": "" },
+        "ytExtras": null,
+        "selectedVideoFrame": {
+          "garbageThumbnails": [],
+          "isCustomVideoThumbnail": false,
+          "file": null,
+          "base64Image": null,
+          "time": null,
+          "thumbnail": null
+        },
+        "twitterThreads": [],
+        "mstThreads": [],
+        "reelType": null,
+        "fbExtras": { "isReel": false }
+      },
+      "postError": {}
+    }
+  }
+}

@@ -1,0 +1,225 @@
+[#assign color0 = '#F5A623']
+[#assign color1 = '#F5F5F5']
+[#if componentBlock.blockStyleClass??]
+[#if componentBlock.blockStyleClass.colorVal0?? ]
+[#assign color0 = componentBlock.blockStyleClass.colorVal0 /]
+[/#if]
+[#if componentBlock.blockStyleClass.colorVal1?? ]
+[#assign color1 = componentBlock.blockStyleClass.colorVal1 /]
+[/#if]
+[/#if]
+
+[@web_style collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .pagetab.active{background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .nr .pagetab1{border-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .bt
+.pagetab:hover{background-color:${color0!}}
+#siteblocks-setting-wrap-${componentBlock.settingId!} .QX-11226199 .zh_yq .bgc {background-color:${color1!}}
+[/@web_style]
+
+[@web_backend]
+<i data-blocksetting-color="{'background-color':'colorVal-0-${color0!}'}">
+</i>
+[/@web_backend]
+<div class="QX-11226199">
+    <div class="tip">
+        <div class="backstage-blocksEditor-wrap zh_lc" data-wrap-type="1" data-storage="0"
+            data-blocksEditor-type="phoenix_blocks_text" data-auto_uuid=75ce22b2-7811-42ac-93d6-9bdd21313d64>公司历程</div>
+        <div class="prevArrow">
+            <i class="font-icon fa fa-angle-left">
+            </i>
+        </div>
+        <div class="nextArrow">
+            <i class="font-icon fa fa-angle-right">
+            </i>
+        </div>
+    </div>
+    <div class="page_tab_tpl">
+        <div class="backstage-blocksEditor-wrap zh_yq" data-wrap-type="1" data-relate-appId="YWfpAKUKNmwO"
+            data-storage="1" data-blocksEditor-type="phoenix_blocks_gallery"
+            data-auto_uuid=b9fb37d2-b4fd-4e86-9fb6-dc2117d5ba84>[#if graphicDescs??]
+            <ul class="bt">
+                [@json json="${graphicDescs!''}" jsonArrayFlag="1" ]
+                [#list result as jsonObject]
+                <li class="pagetab">
+                    <div class="title">
+                        ${jsonObject.title!''}
+                    </div>
+                </li>
+                [/#list]
+                [/@json]
+            </ul>
+            [@web_javascript collect="true" pm_script="${settingId!}" jumpTo="${settingId!}"]
+            $(function(){
+            window._block_namespaces_['QX11226199'].init({'settingId':'${settingId!}','nodeId':'${nodeId!}'});
+            });
+            [/@web_javascript]
+            <div class="bgc" [@web_backend]data-blocksetting-color="{'background-color':'colorVal-1-${color1!}'}"
+                [/@web_backend]>
+                <ul class="nr">
+                    [@json json="${graphicDescs!''}" jsonArrayFlag="1" ]
+                    [#list result as jsonObject]
+                    <li data-te="${jsonObject!''}" class="pagetab1"
+                        [@web_backend]data-blocksetting-color="{'border-color':'colorVal-0-${color0!}'}"
+                        [/@web_backend]>
+                        <div class="cont">
+                            ${jsonObject.cont!''}
+                        </div>
+                    </li>
+                    [/#list]
+                    [/@json]
+                </ul>
+                [#else]
+                <p>
+                    [@s.m "phoenix_no_content" /]
+                </p>
+                [/#if]
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 产品详情主图模糊替换代码块 -->
+<script>
+    $(function () {
+        function lsResetImgSrc() {
+            var $img = $(".sitewidget-video source");
+            $img.each(function (index, item) {
+                isFlagImg = false;
+                var imgSrc = $(item).attr("srcset");
+                if (imgSrc) {
+                    var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320)-(460|400|350|300|206|640|480|320).", "ig");
+                    var r = re.exec(imgSrc);
+                    if (r) {
+                        var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                        var src = r[1] + Imgtype;
+                        $(item).attr("srcset", src);
+                        // $(item).attr("data-original", src);
+                    }
+                }
+            });
+        }
+        $(window).scroll(function () {
+            lsResetImgSrc();
+        });
+        onloadHack(function () {
+            lsResetImgSrc();
+        })
+    })
+</script>
+
+<script>
+    onloadHack(function () {
+        $(".sitewidget-common-gallery3d-detail .thumb-creative-link").text("了解更多");
+    })
+</script>
+
+
+<script>
+    onloadHack(function () {
+        $(window).scroll(function () {
+            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+            if (scrollTop > 300) {
+                $(".sitewidget-logo-20220706135839 .mobile-imgBox img").css("height", "50px");
+            } else if (scrollTop > 250) {
+                $(".sitewidget-logo-20220706135839 .mobile-imgBox img").css("height", "60px");
+            } else if (scrollTop > 200) {
+                $(".sitewidget-logo-20220706135839 .mobile-imgBox img").css("height", "70px");
+            } else if (scrollTop > 100) {
+                $(".sitewidget-logo-20220706135839 .mobile-imgBox img").css("height", "80px");
+            } else {
+                $(".sitewidget-logo-20220706135839 .mobile-imgBox img").css("height", "auto");
+            }
+        })
+    })
+</script>
+
+<script>
+    onloadHack(function () {
+        $(".newStyle7 .proddetail-bigpic .ms-thumb-list .ms-thumb-frame:last-child").click()
+    })
+</script>
+
+
+
+<!--脚本代码可放于页面底部，等到页面最后执行。-->
+<script type="text/javascript" src="//www.17track.net/externalcall.js"></script>
+<script type="text/javascript">
+    onloadHack(function () {
+        YQV5.trackMulti({
+            //必须，指定承载内容的容器ID。
+            YQ_ContainerId: "YQContainer",
+            //可选，指定查询结果高度，最大为800px，默认为560px。
+            YQ_Height: 560,
+            //可选，指定UI语言，默认根据浏览器自动识别。
+            YQ_Lang: "en"
+        });
+    });
+
+</script>
+
+
+<!--用于显示查询输入框的容器。-->
+<div id="YQContainer"></div>
+<script>
+    $.getScript("//www.17track.net/externalcall.js", function () {
+        YQV5.trackMulti({
+            //必须，指定承载内容的容器ID。
+            YQ_ContainerId: "YQContainer",
+            //可选，指定查询结果高度，最大为800px，默认为560px。
+            YQ_Height: 560,
+            //可选，指定UI语言，默认根据浏览器自动识别。
+            YQ_Lang: "en"
+        });
+    })
+</script>
+
+
+<script>
+    var arr = [{ a: 1, b: 1 }, { a: 2, b: 1 }, { a: 1, b: 1 }, { a: 1, b: 1 }]
+    let newArr = arr.filter((item, index, array) => arr.indexOf(item) == index);
+
+    var arr = [{ a: 1, b: 1 }, { a: 2, b: 1 }, { a: 1, b: 1 }, { a: 1, b: 1 }];
+    var newArr = Array.from(new Set(arr));
+    var newArr = [...new Set(arr)];
+</script>
+
+<script>
+    // 限制请求并发的数量
+    function limitRequest(urls = [], limit = 3) {
+        return new Promise((resolve, reject) => {
+            const len = urls.length
+            let count = 0
+
+            // 同时启动limit个任务
+            while (limit > 0) {
+                start()
+                limit -= 1
+            }
+
+            function start() {
+                const url = urls.shift() // 从数组中拿取第一个任务
+                if (url) {
+                    axios.post(url).then(res => {
+                        // todo
+                    }).catch(err => {
+                        // todo
+                    }).finally(() => {
+                        if (count == len - 1) {
+                            // 最后一个任务完成
+                            resolve()
+                        } else {
+                            // 完成之后，启动下一个任务
+                            count++
+                            start()
+                        }
+                    })
+                }
+            }
+        })
+    }
+
+    // 测试
+    limitRequest(['http://design.ldwebsitebuilder.com:6540/article/list', 'http://design.ldwebsitebuilder.com:6540/video/list', 'http://design.ldwebsitebuilder.com:6540/inquiryNew/list', 'http://design.ldwebsitebuilder.com:6540/gallery/list', 'http://design.ldwebsitebuilder.com:6540/faq/list'])
+</script>

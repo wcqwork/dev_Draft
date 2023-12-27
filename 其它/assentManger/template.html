@@ -1,0 +1,20 @@
+<div id="gjs">
+    <div style="padding: 25px">Double click on the image below to open the custom Asset Manager</div>
+    <img src="https://via.placeholder.com/350x250/78c5d6/fff/image1.jpg" />
+  </div>
+  
+  <div style="display: none;">
+    <!-- Vue app for assets -->
+    <div class="assets-wrp">
+      <div class="assets">
+        <div v-for="asset in assets" :key="asset.getSrc()" class="asset" @click="select(asset)" @dblclick="select(asset, true)">
+          <img class="asset-img" :src="asset.getSrc()" />
+          <div class="asset-over">
+            <div>Select</div>
+            <div class="asset-name">{{ asset.getFilename() }}</div>
+          </div>
+          <div class="asset-remove" @click.stop="remove(asset)">Remove</div>
+        </div>
+      </div>
+    </div>
+  </div>

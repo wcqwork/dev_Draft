@@ -1,0 +1,41 @@
+{
+    "data": [
+        {
+            "uploadImgs": [
+                {
+                    "pid": "39092293",
+                    "url": "//a12.leadongcdn.cn:6540/cloud/liBqmKmiSRmkmrjjkmk/Snipaste_2022-03-18_18.png"
+                }
+            ],
+            "courseTitle": "网站交付后应该如何维护网站？",
+            "trans_descJson": "88888888888",
+            "productDaterange": [
+                "2022-05-06",
+                "2022-05-20"
+            ],
+            "coursePrice": "免费",
+            "courseTag": "线上培训",
+            "linkJson": ""
+        },
+        {
+            "uploadImgs": [
+                {
+                    "pid": "39092293",
+                    "url": "//a12.leadongcdn.cn:6540/cloud/liBqmKmiSRmkmrjjkmk/Snipaste_2022-03-18_18.png"
+                }
+            ],
+            "courseTitle": "网站交付后应该如何维护网站？",
+            "trans_descJson": "88888888888",
+            "productDaterange": [
+                "2022-05-06",
+                "2022-05-20"
+            ],
+            "coursePrice": "免费",
+            "courseTag": "线上培训",
+            "linkJson": ""
+        }
+    ],
+    "jsonName": "blocks_gallery",
+    "isSettingJson": true,
+    "componentName": "编辑图片集"
+}

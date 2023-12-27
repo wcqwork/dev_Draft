@@ -1,0 +1,39 @@
+{
+    "isCustomized": true,
+    "custom": [{
+        "img_attachments": {
+            "photoId": "string",
+            "photoName": "string",
+            "altDesc": "string"
+        },
+        "video_attachments": {
+            "photoId": "string",
+            "photoTitle": "string",
+            "photoName": "string",
+            "previewVideoLink": "string",
+            "previewVideoThumbnail": "string",
+            "thumbnail": {
+                "photoId": "string",
+                "photoName": "string"
+            }
+        },
+        "link_upload": {
+            "img": "string",
+            "original_url": "string",
+            "title": "string",
+            "desc": "string"
+        },
+        "post": "string",
+        "FB_config": {
+            "firstComment": "string"
+        },
+        "IN_config": {
+            "firstComment": "string"
+        }
+    }],
+    "selectAllAccount": [
+        "string"
+    ],
+    "dateTime": "string",
+    "pulishType": "string"
+}

@@ -1,0 +1,122 @@
+[
+	{
+		"pageTitle": "测试页面1888"
+	},
+	{
+		"banner": [
+			{
+				"pname": "template.png",
+				"pid": "39093687",
+				"cid": "4919"
+			}
+		]
+	},
+	{
+		"pageDesc": "这是一个简单的测试页面1"
+	},
+	{
+		"relateProd": [
+			{
+				"prodId": 26421996,
+				"prodName": "产品名称",
+				"prodUrl": "产品详情URL",
+				"photoIds": "产品图片"
+			},
+			{
+				"prodId": 26421995,
+				"prodName": "产品名称",
+				"prodUrl": "产品详情URL",
+				"photoIds": "产品图片"
+			}
+		]
+	},
+	{
+		"randomProd": [
+			{
+				"prodId": 26421993,
+				"prodName": "产品名称",
+				"prodUrl": "产品详情URL",
+				"photoIds": "产品图片"
+			},
+			{
+				"prodId": 26421992,
+				"prodName": "产品名称",
+				"prodUrl": "产品详情URL",
+				"photoIds": "产品图片"
+			}
+		]
+	},
+	{
+		"relateArticle": {
+			"privateArticle": [
+				{
+					"articleContent": "文章内容",
+					"articleTitle": "12222888",
+					"articleId": 30
+				}
+			],
+			"siteArticle": [
+				{
+					"articleId": 10463337,
+					"articleTitle": "文章标题",
+					"articleContent": "文章内容",
+					"articleUrl": "文章详情URL"
+				}
+			]
+		}
+	},
+	{
+		"relateVideo": {
+			"siteVideo": [
+				{
+					"videoId": 545,
+					"videoTitle": "视频名称",
+					"videoUrl": "视频URL",
+					"videoDetailUrl": "视频详情URL"
+				}
+			],
+			"privateVideo": [
+				{
+					"videoUrl": "2323",
+					"videoId": 44,
+					"videoTitle": "2323"
+				}
+			]
+		}
+	},
+	{
+		"relateComment": [
+			{
+				"discussId": 6,
+				"discusser": "David",
+				"star": "5",
+				"time": "2020-10-23 06:29:16",
+				"discussContent": "88998444"
+			},
+			{
+				"discussId": 5,
+				"discusser": "jack",
+				"star": "5",
+				"time": "2022-02-05 12:46:57",
+				"discussContent": "8899111"
+			}
+		]
+	},
+	{
+		"relateKeyword": [
+			{
+				"infoId": 12,
+				"cpKeyword": "test page",
+				"cpUrl": "test.imwork.net/"
+			},
+			{
+				"infoId": 2,
+				"cpKeyword": "red am 绿色 test 43 3吨",
+				"cpUrl": "test.imwork.net/"
+			}
+		]
+	},
+	{
+		"form": 1801623
+	}
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+
+    <script>
+        window.onload = function(){
+            setTimeout(() => {
+                var longtitude = 0;
+                var latitude = 0;
+                function GetPostion(address) {
+                    //通过百度获取经纬度
+                    var url = "http://api.map.baidu.com/geocoder/v2/?address=" + address + "&output=json&ak=b5rykTxZnTjGW3LQ1PmuUH9Qqu6tzgds&callback=?";
+
+                    $.getJSON(url, function (data) {
+                        debugger;
+                        longtitude = data.result.location.lng;
+                        latitude = data.result.location.lat;
+                    });
+                    console.log(longtitude);
+                    console.log(latitude); 
+                }
+                var address = "中国江苏省盐城市建湖县客运站";
+                GetPostion(address);
+
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

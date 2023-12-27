@@ -1,0 +1,24 @@
+{ path: '/publish', redirect: '/publish/post', name: 'example', meta: { title:
+'发布贴文', icon: 'icon-shezhi', selectIcon: 'icon-shezhi-select' }, component:
+Layout, children: [ { path: '/post', name: 'Publish', meta: { title: '发布贴文'
+}, component: () => import('@/views/publish/src/index.vue') }, ] }
+
+<script>
+  $(function () {
+    onloadHack(function () {
+      try {
+        $("#hopKfAUThNHM").contents().find("#close-btn").css("color", "white");
+      } catch (e) {
+        e;
+      }
+    });
+
+    $("#hopKfAUThNHM").load(function () {
+      try {
+        $("#hopKfAUThNHM").contents().find("#close-btn").css("color", "white");
+      } catch (e) {
+        e;
+      }
+    });
+  });
+</script>

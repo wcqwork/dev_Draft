@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preload" as="image"
+    href="http://website.leadong.com/phoenix2/composite/blockEditorUI/phxBlockEditor/images/defaultheader.png"
+    fetchpriority="high">
+
+
+</head>
+
+<body class="frontend-body-canvas">
+  <div id="global_setting_fontLink">
+    <link rel="stylesheet" href="//a5.leadongcdn.cn/font?family=Helvetica">
+  </div>
+
+  <div id="global_setting_html">
+    <div id="pageBackground_gbawy" class="pageBackground_gbawy">
+      <div id="bgLayers_pageBackground_gbawy" class="colorSeting">
+
+        <div class="colorUnderlay"></div>
+      </div>
+    </div>
+  </div>
+
+  <script id="global_animation_js">
+    function blockContainerLoadEffect(loadEffect) {
+      var animationEls = document.querySelectorAll('.global-animation');
+      let observer = new IntersectionObserver((entries) => {
+        // 观察所有
+        entries.forEach(entry => {
+          let animationEl = entry.target;
+          if (entry.isIntersecting) {
+            animationEl.classList.add(loadEffect);
+            setTimeout(() => {
+              animationEl.style.visibility = 'visible';
+            }, 200)
+            // 取消观察
+            observer.unobserve(animationEl)
+          } else {
+            // animationEl.style.visibility = 'hidden';
+            // animationEl.classList.remove('animate__fadeInUp', 'animate__fadeIn');
+          }
+        })
+      })
+
+      animationEls.forEach(el => {
+        var theSection = el;
+        theSection.classList.remove('animate__fadeInUp', 'animate__fadeIn');
+        theSection.style.visibility = 'hidden';
+        observer.observe(theSection)
+      })
+    }
+    // window.onload = function (){
+    //   blockContainerLoadEffect('animate__fadeIn')
+    // }
+    blockContainerLoadEffect('animate__fadeIn')
+  </script>
+
+</body>
+
+</html>

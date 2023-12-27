@@ -1,0 +1,35 @@
+<script>
+    onloadHack(function(){
+        var isFlagTrue = true;
+        function setTikTall(){
+           var _talkEl = $(".widget-visible>iframe:first-child");
+           var _windowWidth = $(window).width();
+           if(_talkEl.length > 0 && isFlagTrue){
+                if(timerTik){
+                    clearInterval(timerTik)
+                }
+                if(_windowWidth > 500){
+                    _talkEl.css("right","120px");
+                    _talkEl.css("bottom","68px");
+
+                }else{
+                    _talkEl.css("bottom","68px");
+                    _talkEl.css("right","20px");
+                }
+                _talkEl.css("min-width","67px");
+                _talkEl.css("min-height","64px");
+           }
+        }
+        $(window).scroll(function () {
+            setTikTall();
+        });
+
+        var timerTik = setInterval(function(){
+            setTikTall();
+        },500);
+        $(window).resize(function(){
+            isFlagTrue = true;
+            setTikTall();
+        })
+    });
+</script>

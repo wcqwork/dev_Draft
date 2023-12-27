@@ -1,0 +1,89 @@
+<script>
+  const mockData = {
+    isCustomized: true,
+    custom: {
+      ALL: {
+        img_attachments: [
+          {
+            name: "image1.jpg",
+            percentage: 100,
+            status: "success",
+            size: 1024,
+            raw: null,
+            uid: 1,
+            url: "https://example.com/image1.jpg",
+            response: "Image upload successful",
+          },
+          {
+            name: "image2.jpg",
+            percentage: 100,
+            status: "success",
+            size: 2048,
+            raw: null,
+            uid: 2,
+            url: "https://example.com/image2.jpg",
+            response: "Image upload successful",
+          },
+        ],
+        video_attachments: {
+          title: "Sample Video",
+          thumbnail: "https://example.com/thumbnail.jpg",
+          name: "video.mp4",
+          percentage: 100,
+          status: "success",
+          size: 20480,
+          raw: null,
+          uid: 3,
+          url: "https://example.com/video.mp4",
+          response: "Video upload successful",
+        },
+        link_upload: {
+          img: "https://example.com/link-image.jpg",
+          title: "Sample Link",
+          desc: "This is a sample link description",
+        },
+        post: "Hello world! This is a sample post.",
+        selectedProfiles: ["profile1", "profile2"],
+        FB_config: {
+          firstComment: "First comment on Facebook",
+        },
+        IN_config: {
+          firstComment: "First comment on LinkedIn",
+        },
+        additionalField: "Additional field value",
+      },
+    },
+    selectAllAccount: ["FB", "IN"],
+    dateTime: "2023-08-31T12:00:00Z",
+  };
+//  1、请选择至少一个社媒账号
+// 2、
+  const FB = {
+    post: {
+      maxLeng: 2200,
+      erroeMessage: "贴文内容超出Facebook限定的字符数，最多可输入2200个字符",
+    },
+    img_attachments: {
+      maxLeng: 10,
+      erroeMessage: "FaceBook最多上传10张图片",
+    },
+    video_attachments: {
+      title: "require",
+    },
+    link_upload: {},
+  };
+  const IN = {
+    post: {
+      maxLeng: 3000,
+      erroeMessage: "贴文内容超出LinkedIn限定的字符数，最多可输入3000个字符",
+    },
+    img_attachments: {
+      maxLeng: 9,
+      erroeMessage: "LinkIn最多上传9张图片",
+    },
+    video_attachments: {
+      title: "require",
+    },
+    link_upload: {},
+  };
+</script>

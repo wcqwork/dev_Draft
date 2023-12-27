@@ -1,0 +1,116 @@
+{
+    "dynamicComponents": [
+        {
+            "component": "uploadImg",
+            "props": {
+                "dynamicProps": {
+                    "data": {
+                        "uploadImgs": []
+                    },
+                    "isShowButton": false,
+                    "name": "uploadImgs",
+                    "title": "图片上传前景图",
+                    "pictureNum": 2
+                }
+            }
+        },
+        {
+            "component": "commonForm",
+            "props": {
+                "dynamicProps": {
+                    "name": "contentForm",
+                    "data": {
+                        "courseTitle": ""
+                    },
+                    "items": [
+                        {
+                            "label": "课程标题",
+                            "name": "courseTitle",
+                            "type": "input",
+                            "placeholder": "请输入标题"
+                        }
+                    ],
+                    "rules": {
+                        "courseTitle": [
+                            {
+                                "required": true,
+                                "message": "请输入标题",
+                                "trigger": "blur"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "component": "editorComponent",
+            "props": {
+                "dynamicProps": {
+                    "data": {
+                        "trans_descJson": ""
+                    },
+                    "isShowButton": false,
+                    "name": "editorContent",
+                    "title": "课程内容"
+                }
+            }
+        },
+        {
+            "component": "commonForm",
+            "name": "courseData",
+            "props": {
+                "dynamicProps": {
+                    "name": "courseData",
+                    "data": {
+                        "productDaterange": [],
+                        "coursePrice":"",
+                        "courseTag":""
+                    },
+                    "items": [
+                        {
+                            "label": "测试日期区间",
+                            "name": "productDaterange",
+                            "type": "dateTime",
+                            "dateType": "daterange",
+                            "placeholder": "请选择日期"
+                        },
+                        {
+                            "label": "课程价格",
+                            "name": "coursePrice",
+                            "type": "input",
+                            "placeholder": "请输入课程价格"
+                        },
+                        {
+                            "label": "课程标签",
+                            "name": "courseTag",
+                            "type": "input",
+                            "placeholder": "请输入课程标签"
+                        }
+                    ],
+                    "rules": {
+                        "productDaterange": [
+                            {
+                                "required": true,
+                                "message": "日期必填",
+                                "trigger": "blur"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "component": "linkContain",
+            "props": {
+                "dynamicProps": {
+                    "data": {
+                        "linkJson": ""
+                    },
+                    "isShowButton": false,
+                    "name": "linkContain",
+                    "title": "图片链接"
+                }
+            }
+        }
+    ]
+}

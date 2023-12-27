@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- <link rel="stylesheet" href="//unpkg.com/grapesjs/dist/css/grapes.min.css">
+        <script src="//unpkg.com/grapesjs"></script> -->
+        <link rel="stylesheet" href="./grapesjs/dist/css/grapes.min.css">
+        <script src="./grapesjs/dist/grapes.min.js"></script>
+        <style>
+            /* Let's highlight canvas boundaries */
+            #gjs {
+            border: 3px solid #444;
+            }
+
+            /* Reset some default styling */
+            .gjs-cv-canvas {
+            top: 0;
+            width: 100%;
+            height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="gjs">
+            
+        </div>
+        <script>
+        const editor = grapesjs.init({
+            // Indicate where to init the editor. You can also pass an HTMLElement
+            container: '#gjs',
+            // Get the content for the canvas directly from the element
+            // As an alternative we could use: `components: '<h1>Hello World Component!</h1>'`,
+            fromElement: true,
+            // Size of the editor
+            height: '300px',
+            width: 'auto',
+            // Disable the storage manager for the moment
+            storageManager: false,
+            // Avoid any default panel
+            panels: { defaults: [] },
+            });
+        </script>
+    </body>
+</html>
+
+<script>
+    $.ajax({
+        url: '/phoenix/component/module/get/nodeValue',
+        method: "POST",
+        data: {
+            settingId: 'qAKCZjhoHbNt',
+            nodeId: '58d3973a-08c3-4d0b-aaf6-177ba573c594'
+        },
+        success: function(response) {
+            console.log(response);
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    });
+</script>
+<script>
+  <#assign pagedata = [
+  {
+    "type": "wrapper",
+    "stylable": [
+        "background",
+        "background-color",
+        "background-image",
+        "background-repeat",
+        "background-attachment",
+        "background-position",
+        "background-size"
+    ],
+    "attributes": {
+        "id": "i4nr"
+    }
+  }
+  ]>
+</script>

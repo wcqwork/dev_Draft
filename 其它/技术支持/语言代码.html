@@ -1,0 +1,136 @@
+<script data-type="unUseTemplate">
+    // var ls_reg = /^http(s)?:\/\/(.*?)(:\d+)?\/.*$/;
+    var lsReferrer = document.referrer;
+    // var ls_cur_host = lsReferrer.replace(ls_reg, '$2'); // 正则匹配取顶级域名 
+    // var allowJumps = ['www.baidu.com', 'www.google.com', 'www.google.com.hk']; // 允许跳转的第三方搜索引擎列表
+    // var hrefFlag = allowJumps.includes(ls_cur_host); // 判断ls_cur_host是否在allowJumps中
+    if (window.parent == window && !lsReferrer) { // 判断能否跳转执行条件
+        var curLang = window.navigator.language ? window.navigator.language.toUpperCase() : '';
+        var lsLangObj = {
+            'ZH-CN': 'https://www.boreasa.com/cn/',
+            'ZH': 'https://www.boreasa.com/cn/',
+            'EN': 'https://www.boreasa.com/',
+            'FR': 'https://www.boreasa.com/fr/',
+            'ES': 'https://www.boreasa.com/es/',
+            'RU': 'https://www.boreasa.com/ru/',
+            'IT': 'https://www.boreasa.com/it/',
+        }
+        if (curLang && lsLangObj[curLang]) {
+            window.location.href = lsLangObj[curLang];
+        }
+    }
+</script>
+
+
+<style>
+    #imgVarifyCode>div {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<script>
+    $(function () {
+        $(".blockquote__20191002 .blockquote__con>div>div div span:first-child").html("Şirket Haberleri");
+    });
+</script>
+
+<script>
+    $(function () {
+        $(".proddetail-wrap img").each((index, item) => {
+            if ($(item).attr('org-src')) {
+                $(item).attr('org-src', $(item).attr('org-src').replace('-400-400', ''));
+                $(item).attr('org-src', $(item).attr('org-src').replace('-100-100', ''));
+            }
+            $(item).attr('src', $(item).attr('src').replace('-400-400', ''));
+            $(item).attr('src', $(item).attr('src').replace('-100-100', ''));
+        })
+        var attrbuteArr = ['smallimage', 'largeimage', 'rel'];
+        $(".proddetail-wrap a").each((index, item) => {
+            attrbuteArr.forEach((_item, i) => {
+                if ($(item).attr(_item)) {
+                    $(item).attr(_item, $(item).attr(_item).replace('-400-400', ''));
+                    $(item).attr(_item, $(item).attr(_item).replace('-100-100', ''));
+                }
+            })
+        })
+    });
+</script>
+
+<script data-type="unUseTemplate">
+    setTimeout(function () {
+        var eventMouse = new Event('mousemove');
+        var eventTouch = new Event('touchmove');
+        window.dispatchEvent(eventMouse);
+        window.dispatchEvent(eventTouch);
+    }, 500)
+</script>
+
+<style>
+    @media (max-width: 768px){
+        #capture {
+            width: 357px !important;
+            height: auto !important;
+        }
+        .popup_20494 > form{
+            padding-left: 0 !important;
+        }
+        form .form-btn{
+            text-align: center !important;
+        }
+
+        form .list-group>div>div{
+            display: flex !important;
+            justify-content: center !important;
+        }
+        #filed107 *{
+            font-size:28 !important;
+        }
+    }
+</style>
+
+<script>
+    var style = $('<style></style>').html(
+`
+@media (max-width: 768px){
+        #capture {
+            width: 357px !important;
+            height: auto !important;
+        }
+        .popup_20494 > form{
+            padding-left: 0 !important;
+        }
+        form .form-btn{
+            text-align: center !important;
+        }
+
+        form .list-group>div>div{
+            display: flex !important;
+            justify-content: center !important;
+        }
+        #filed107 *{
+        }
+    }
+#capture {
+            height: auto !important;
+        }
+        .popup_20494 > form{
+            padding-left: 0 !important;
+        }
+        form .form-btn{
+            text-align: center !important;
+        }
+
+        form .list-group>div>div{
+            display: flex !important;
+            justify-content: center !important;
+        }
+`
+    );
+    onloadHack(function(){
+        if($(document.querySelector("#boAfUKKgtpjS")).length > 0){
+            $(document.querySelector("#boAfUKKgtpjS").contentDocument.head).append(style);
+        }
+    });
+</script>
+

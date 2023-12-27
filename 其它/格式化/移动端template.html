@@ -1,0 +1,70 @@
+<script>
+    $(function(){
+     // 取消页面template
+     $('div.PDataLazyLoad_Module[data-lazyload-type][data-settingId]').each(function () {
+         try{
+             loadModule2($(this), false)
+         }catch(err) {
+             console.log(err)
+         }
+       })
+       
+       function loadModule2(module, isAboveTheFold) {
+         var $el = module, lazyloadUuid = $el.data('lazyload-uuid'), encodeSettingId = $el.data('settingid');
+         var dataUuid = $el.data('uuid');
+         var $template = $el.find('template[data-lazyload-template=true][data-settingId=' + encodeSettingId + '][data-uuid=' + dataUuid + ']');
+         if($template.length && mobileLazyload) {
+             $el.data('_bigRender_loading', true);
+             // 如果是动态刷新组件,直接执行
+             if ($el.data('dynamic-js-lazyload') == true) {
+                 requestAnimationFrame(function(){
+                 mobileLazyload.insertScript($el, encodeSettingId, lazyloadUuid, $template.html());
+                 requestAnimationFrame(function(){
+                 // logo pictureNew回调
+                 $(window).triggerHandler('scroll.' + encodeSettingId);
+                 // fullPageReBuild
+                 $(window).triggerHandler("fullPageReBuild");
+                 });                                            
+                 });                                    
+                 return;
+             }
+         
+             // 正常组件
+             requestAnimationFrame(function(){
+                 mobileLazyload.insertTxt($el, encodeSettingId, lazyloadUuid, $template.html());
+                 var options = {};
+                 var hackScript = $('script[type=text\\/x-delay-script][data-jsLazyload=true][data-id=' + encodeSettingId + ']');
+                 if (!!hackScript.length) {
+                 options['js_depand'] = hackScript.attr('data-jsdepand');
+                 options['css_depand'] = hackScript.attr('data-cssdepand');
+                 options['_func_'] = hackScript.html();
+                 }
+                 requestAnimationFrame(function(){
+                 // 后期可以再改进,控制回调加载css/js,保证css优先加载
+                 mobileLazyload.loadCss(lazyloadUuid, options['css_depand']);
+                 // 函数回调
+                 var func = typeof options._func_ != "undefined" ? function() { $.globalEval(options._func_) } : function(){};
+                 callback = function() {
+                 requestAnimationFrame(function(){
+                     // 搜集回调
+                     func();
+                 });                                                        
+                 }
+                 mobileLazyload.loadJs(lazyloadUuid, encodeSettingId, options['js_depand'], callback);
+                 })
+                 if (!!!$('body').data('isLoadUnAboveTheFold') && !isAboveTheFold) {
+                 $('body').data('isLoadUnAboveTheFold', true);
+                 // 非首屏组件加载后来移除unAboveTheFoldHeight样式
+                 setTimeout(function(){
+                 $('style[data-type=unAboveTheFoldHeight]').remove();
+                 }, 3000)                                    
+                 }
+                 
+           })
+         }
+       }
+    })
+ </script>
+ 
+ 
+ 

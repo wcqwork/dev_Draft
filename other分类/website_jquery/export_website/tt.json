@@ -1,0 +1,151 @@
+{
+  "title": [
+    {
+      "font-family": "Helvetica",
+      "color": "rgba(255, 0, 133, 1)",
+      "font-size": "43px",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "400",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {
+        "color": "#000000d9",
+        "font-weight": "700",
+        "text-decoration": "none",
+        "text-style": "normal"
+      },
+      "isFontWeight": false,
+      "fontType": "0",
+      "isShow": false
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#000000d9",
+      "font-size": "1.5em",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "700",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#000000d9",
+      "font-size": "1.5em",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "700",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#000000d9",
+      "font-size": "1.5em",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "700",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#000000d9",
+      "font-size": "1.5em",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "700",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#000000d9",
+      "font-size": "1.5em",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "700",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    }
+  ],
+  "text": [
+    {
+      "font-family": "Helvetica",
+      "color": "#333333",
+      "font-size": "14px",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "400",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#333333",
+      "font-size": "14px",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "400",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    },
+    {
+      "font-family": "Helvetica",
+      "color": "#333333",
+      "font-size": "14px",
+      "line-height": "normal",
+      "letter-spacing": "normal",
+      "font-weight": "400",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    }
+  ],
+  "link": [
+    {
+      "font-family": "Helvetica",
+      "color": "#FF7A00",
+      "font-weight": "normal",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {},
+      "isFontWeight": false,
+      "fontType": "1"
+    }
+  ]
+}

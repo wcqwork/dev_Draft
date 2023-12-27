@@ -1,0 +1,167 @@
+{
+  "data": {
+    "drafts": [
+      {
+        "pub_msg_key": 164992759,
+        "is_draft": true,
+        "created_epoch": 1691719879,
+        "last_updated_epoch": 1691719879,
+        "customer_id": 2060294,
+        "profiles": [
+          {
+            "customer_profile_id": 5941284,
+            "network_id": 7928516,
+            "profile_id": "149291163",
+            "profile_type": "linkedin"
+          }
+        ],
+        "group_id": 2138105,
+        "creator_id": 2480437,
+        "updater_id": 2480437,
+        "msg_format": 7,
+        "msg_version": 1691719879,
+        "tag_ids": [],
+        "network_data": {
+          "text": "fsfdsfsfdsfs\ud83d\ude04 \ud83d\ude36 \u263a\ufe0f \ud83d\ude19 +5+959595995959559559959",
+          "media_attachments": {
+            "images": [
+              {
+                "key": "ttl999days/55a0c0ff7ba8493683b94b30123e16c14db9409f9fe5f569035921a05300a1c0/image/96ecf35e-0273-4478-aba4-15b732515af3",
+                "id": "eb465bfe-f398-4590-a2b0-956bfe5d9c8a",
+                "size": 22008,
+                "image_width": 497,
+                "image_height": 767,
+                "extension": "png",
+                "thumbnail_url": "/api/compose/customer/2060294/media/thumbnail/?s3_key=ttl999days/55a0c0ff7ba8493683b94b30123e16c14db9409f9fe5f569035921a05300a1c0/image/96ecf35e-0273-4478-aba4-15b732515af3",
+                "expiring_url": "https://publishing-media.s3.amazonaws.com/ttl999days/55a0c0ff7ba8493683b94b30123e16c14db9409f9fe5f569035921a05300a1c0/image/96ecf35e-0273-4478-aba4-15b732515af3?AWSAccessKeyId=AKIAJIOH32K7WGH34RSA&Signature=gqdhEl44p1nxjPTsVyymg7Tm%2B%2Bs%3D&Expires=1691806473"
+              }
+            ]
+          }
+        },
+        "creator": {
+          "id": 2480437,
+          "first_name": "cheng",
+          "last_name": "kong",
+          "initials": "CK",
+          "email": "w2869942783@gmail.com",
+          "image": "https://app.sproutsocial.com/api/avatar/user/27d579051b89e82c43a0e1ca1436fb3d6c71c36b90008ac7910f826cbda24ef9/2480437/",
+          "online": false
+        },
+        "updater": {
+          "id": 2480437,
+          "first_name": "cheng",
+          "last_name": "kong",
+          "initials": "CK",
+          "email": "w2869942783@gmail.com",
+          "image": "https://app.sproutsocial.com/api/avatar/user/27d579051b89e82c43a0e1ca1436fb3d6c71c36b90008ac7910f826cbda24ef9/2480437/",
+          "online": false
+        },
+        "actions": {
+          "update": {
+            "url": "api/customers/drafts/164992759/edit/",
+            "method": "POST"
+          },
+          "update_fields": {
+            "url": "api/customers/2060294/posts/164992759/",
+            "method": "PATCH"
+          },
+          "delete": {
+            "url": "api/customers/2060294/posts/164992759/",
+            "method": "DELETE"
+          },
+          "approve": {
+            "url": "api/customers/drafts/164992759/approve/",
+            "method": "POST"
+          }
+        },
+        "msg_type": "draft",
+        "collaboration_status": {}
+      },
+      {
+        "pub_msg_key": 164992758,
+        "is_draft": true,
+        "created_epoch": 1691719878,
+        "last_updated_epoch": 1691719878,
+        "customer_id": 2060294,
+        "profiles": [
+          {
+            "customer_profile_id": 5937420,
+            "network_id": 7922884,
+            "profile_id": "149285959",
+            "profile_type": "facebook"
+          }
+        ],
+        "group_id": 2138105,
+        "creator_id": 2480437,
+        "updater_id": 2480437,
+        "msg_format": 7,
+        "msg_version": 1691719878,
+        "tag_ids": [],
+        "network_data": {
+          "text": "fsfdsfsfdsfs\ud83d\ude04 \ud83d\ude36 \u263a\ufe0f \ud83d\ude19 +5+959595995959559559959",
+          "media_attachments": {
+            "images": [
+              {
+                "key": "ttl999days/55a0c0ff7ba8493683b94b30123e16c14db9409f9fe5f569035921a05300a1c0/image/6571b8ba-fa39-428d-9b49-9677e9e1601a",
+                "id": "eb465bfe-f398-4590-a2b0-956bfe5d9c8a",
+                "size": 22008,
+                "image_width": 497,
+                "image_height": 767,
+                "extension": "png",
+                "thumbnail_url": "/api/compose/customer/2060294/media/thumbnail/?s3_key=ttl999days/55a0c0ff7ba8493683b94b30123e16c14db9409f9fe5f569035921a05300a1c0/image/6571b8ba-fa39-428d-9b49-9677e9e1601a",
+                "expiring_url": "https://publishing-media.s3.amazonaws.com/ttl999days/55a0c0ff7ba8493683b94b30123e16c14db9409f9fe5f569035921a05300a1c0/image/6571b8ba-fa39-428d-9b49-9677e9e1601a?AWSAccessKeyId=AKIAJIOH32K7WGH34RSA&Signature=zFkBkF1VQNPtYY7ejyqDT5wZksw%3D&Expires=1691806473"
+              }
+            ]
+          },
+          "facebook_options": {
+            "is_published": 1,
+            "fb_location": {
+              "id": "1163768790326569",
+              "name": "Dr. G\u00f6tz Fr\u00f6mming, MdB",
+              "address": "Platz der Republik 1, 10557, Berlin, Germany"
+            },
+            "breaking_news": false
+          }
+        },
+        "creator": {
+          "id": 2480437,
+          "first_name": "cheng",
+          "last_name": "kong",
+          "initials": "CK",
+          "email": "w2869942783@gmail.com",
+          "image": "https://app.sproutsocial.com/api/avatar/user/27d579051b89e82c43a0e1ca1436fb3d6c71c36b90008ac7910f826cbda24ef9/2480437/",
+          "online": false
+        },
+        "updater": {
+          "id": 2480437,
+          "first_name": "cheng",
+          "last_name": "kong",
+          "initials": "CK",
+          "email": "w2869942783@gmail.com",
+          "image": "https://app.sproutsocial.com/api/avatar/user/27d579051b89e82c43a0e1ca1436fb3d6c71c36b90008ac7910f826cbda24ef9/2480437/",
+          "online": false
+        },
+        "actions": {
+          "update": {
+            "url": "api/customers/drafts/164992758/edit/",
+            "method": "POST"
+          },
+          "update_fields": {
+            "url": "api/customers/2060294/posts/164992758/",
+            "method": "PATCH"
+          },
+          "delete": {
+            "url": "api/customers/2060294/posts/164992758/",
+            "method": "DELETE"
+          },
+          "approve": {
+            "url": "api/customers/drafts/164992758/approve/",
+            "method": "POST"
+          }
+        },
+        "msg_type": "draft",
+        "collaboration_status": {}
+      }
+    ]
+  }
+}

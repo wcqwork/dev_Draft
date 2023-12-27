@@ -1,0 +1,285 @@
+[@table_select selectCateIds="${component.productGroup_ids!''}" serviceName="phoenixGroupService" selectGroupType="${component.selectProdGroupType!'0'}"]
+	[#assign cateStyle="with-submenu"]
+	[#assign firstUlStyle="slight-submenu-wrap"]
+	[#assign cateUlId=""]
+	[#assign cateStyleDefault=""]
+
+	[#-- 横向样式 --]
+	[#if component.prodCateShowStyle?? && component.prodCateShowStyle != '0']
+		[#if component.prodCateShowStyle != '6' && component.prodCateShowStyle != '9']
+			[#--<!--样式一-->--]
+			[#assign cateStyle="sm sm-vertical"]
+			[#if component.prodCateShowStyle == '1']
+				[#assign cateUlId="menu-mint-vertical"]
+				[#assign firstUlStyle="sm-mint sm-mint-vertical"]
+			[#elseif component.prodCateShowStyle == '2']
+				[#assign cateUlId="menu-blue-vertical"]
+				[#assign firstUlStyle="sm-blue sm-blue-vertical"]
+			[#elseif component.prodCateShowStyle == '3']
+				[#assign cateUlId="menu-clean-vertical"]
+				[#assign firstUlStyle="sm-clean sm-clean-vertical"]
+			[#elseif component.prodCateShowStyle == '4' || component.prodCateShowStyle == '15']
+				[#assign cateUlId="menu-simple-vertical"]
+				[#assign firstUlStyle="sm-simple sm-simple-vertical"]
+			[#elseif component.prodCateShowStyle == '5']
+				[#assign cateUlId="menu-simple-vertical"]
+				[#assign firstUlStyle="sm-tile"]
+				[#assign cateStyle=""]
+			[#elseif component.prodCateShowStyle == '21']
+				[#assign cateStyle="submenu-default-gray"]
+			[#elseif component.prodCateShowStyle == '8'] [#-- 风格8: 一级带点无边框 --]
+				[#assign cateStyle="submenu-default-simple"]
+			[#elseif component.prodCateShowStyle == '10']
+				[#assign cateStyle="submenu-default-simple"]
+				[#assign firstUlStyle="slight-submenu-wrap sm-slide-style10"]
+			[/#if]
+		[#elseif component.prodCateShowStyle == '6']
+			[#assign cateStyle="with-submenu"]
+			[#assign cateStyleDefault="default-style-icons"]
+		[#elseif component.prodCateShowStyle == '9']
+			[#assign cateStyle="with-submenu"]
+			[#assign cateStyleDefault="default-style-icons"]
+			[#assign firstUlStyle="slight-submenu-wrap sm-box-slide-style9"]
+		[/#if]
+	[/#if]
+	[#if component.prodCateShowStyle?? && component.prodCateShowStyle == '15']
+	[@web_style pm_style="${component.widgetClass!}" collect="true"]
+	.${component.widgetClass} .sm-simple ul a span.sub-arrow:before,
+	.${component.widgetClass} .sm-simple-vertical a span.sub-arrow:before {content: "\f067";}
+	.${component.widgetClass} .sm-simple a{padding-left:30px;}
+	.${component.widgetClass} .sm-simple ul a span.sub-arrow,.${component.widgetClass} .sm-simple-vertical a span.sub-arrow{
+	transform: translateX(-6px);
+	}
+	[/@web_style]
+	[/#if]
+<style>
+    @media screen and (max-width: 768px){
+        #gbBgColorAll  span.sub-arrow  {
+            display: block !important;
+			width: 20px;
+			height: 20px;
+            text-align: center;
+        }
+        #gbBgColorAll .prodCate-jump {
+            width: 100%;
+            margin-left: 5px;
+        }
+        
+        #gbBgColorAll.gb-style4 .prodCate-jump {
+            margin-left: 10px;
+        }
+    }
+</style>
+<script>
+    $(function(){
+        $('#gbBgColorAll .prodCate-jump').click(function(){
+            var jumpUrl = $(this).attr('data-jump')
+            if(jumpUrl) {
+                var _menu_prefix = ''
+                if (phoenixSite.page != undefined && phoenixSite.page._menu_prefix != undefined) {
+                    _menu_prefix = phoenixSite.page._menu_prefix;
+                }
+                window.open(_menu_prefix + jumpUrl, '_self')
+            }
+            return false;
+        })
+		$('#gbBgColorAll').on('click', '.sub-arrow', function (){
+			$(this).parent().click()
+			return false;
+		})
+    })
+</script>
+    [#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '2' || component.prodCateShowStyle == '3' || component.prodCateShowStyle == '4' || component.prodCateShowStyle == '1' || component.prodCateShowStyle == '15')]
+        <div id="gbBgColorAll" class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='4']gb-style4[/#if]">
+    [/#if]
+
+  
+	<ul id="${cateUlId}" class="${cateStyle} ${firstUlStyle} fix ${cateStyleDefault} [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor0[/#if]  prodCateShowStyle21" >
+		[#if component.prodCateShowStyle?? && component.prodCateShowStyle != '5']
+			[#if table_data??]
+				[#list table_data as group]
+					[#if productGroupId?? && productGroupId == group.prodGroupId ]
+					<li class="prodli on [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+					[#else]
+					<li class="prodli [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover second-cate-container[/#if]">
+					[/#if]
+						[#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '8' || component.prodCateShowStyle == '10')]
+						<a href="[#if prodShowType=='1' && group.hasSub??]${group.cateListUrl}[#else]${group.groupUrl}[/#if]" title="${group.groupName!?html}">${group.groupName!?html}</a>
+						<i class="list-mid-dot"></i>
+						[#else]
+							<div class="prodCataName">
+								[#if group.photoUrls??]
+								[#list group.photoUrls as photourlItem]
+								<div class="prodImg_Url">
+									<img src="${photourlItem!?html}" alt="" >
+								</div>
+								[/#list]
+								[/#if]
+								<a class="groupName"  href="[#if prodShowType=='1' && group.hasSub??]${group.cateListUrl}[#else]${group.groupUrl}[/#if]" title="${group.groupName!?html}">${group.groupName!?html}</a>
+							</div>
+
+						[/#if]
+
+						[#if group.hasSub??] [#-- 二级菜单 --]
+						    [#if component.prodCateShowStyle?? && component.prodCateShowStyle != '0']
+						        [#if component.prodCateShowStyle != '6' &&  component.prodCateShowStyle != '21' &&  component.prodCateShowStyle != '8' &&  component.prodCateShowStyle != '9' &&  component.prodCateShowStyle != '10']
+									<ul class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor2[/#if]">
+								[#else]
+						  			<ul class="${cateStyle}">
+						  		[/#if]
+						  [#else]
+						  	<ul class="${cateStyle}">
+						  [/#if]
+								[#list group.subGroups as subGroup]
+									[#if productGroupId?? && productGroupId == subGroup.prodGroupId ]
+									<span class="list_child_item" style="display:inline-block;">
+									<li class="prodli on [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+									[#else]
+									<li class="prodli [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]  999999999988">
+									[/#if]
+                                        [#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '2' || component.prodCateShowStyle == '3' || component.prodCateShowStyle == '4' || component.prodCateShowStyle == '1' || component.prodCateShowStyle == '15') ]
+                                            <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="javascript:;" title="${subGroup.groupName!?html}">
+                                                <span data-jump="[#if prodShowType=='1' && subGroup.hasSub??]${subGroup.cateListUrl}[#else]${subGroup.groupUrl}[/#if]" class="prodCate-jump">${subGroup.groupName!?html}</span>
+                                            </a>
+                                        [#else]
+                                           <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="[#if prodShowType=='1' && subGroup.hasSub??]${subGroup.cateListUrl}[#else]${subGroup.groupUrl}[/#if]" title="${subGroup.groupName!?html}">${subGroup.groupName!?html}</a>
+                                        [/#if]
+										
+										[#if subGroup.hasSub??] [#-- 三级菜单 --]
+											[#if component.prodCateShowStyle?? && component.prodCateShowStyle != '0']
+											    [#if component.prodCateShowStyle != '6' &&  component.prodCateShowStyle != '21' &&  component.prodCateShowStyle != '8' &&  component.prodCateShowStyle != '9' &&  component.prodCateShowStyle != '10']
+													<ul class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor2[/#if]">
+												[#else]
+										  			<ul class="${cateStyle}">
+										  		[/#if]
+											[#else]
+											  	<ul class="${cateStyle}">
+											[/#if]
+												[#list subGroup.subGroups as thirdGroup]
+												[#if productGroupId?? && productGroupId == thirdGroup.prodGroupId ]
+												<li class="prodli on [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+												[#else]
+												<li class="prodli [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+												[/#if]
+                                                [#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '2' || component.prodCateShowStyle == '3' || component.prodCateShowStyle == '4' || component.prodCateShowStyle == '1' || component.prodCateShowStyle == '15') ]
+                                                    <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="javascript:;" title="${thirdGroup.groupName!?html}">
+                                                        <span data-jump="[#if prodShowType=='1' && thirdGroup.hasSub??]${thirdGroup.cateListUrl}[#else]${thirdGroup.groupUrl}[/#if]" class="prodCate-jump">${thirdGroup.groupName!?html}</span>
+                                                    </a>
+                                                [#else]
+                                                <!-- <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="[#if prodShowType=='1' && subGroup.hasSub??]${subGroup.cateListUrl}[#else]${subGroup.groupUrl}[/#if]" title="${subGroup.groupName!?html}">${subGroup.groupName!?html}</a> -->
+													<a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="[#if prodShowType=='1' && thirdGroup.hasSub??]${thirdGroup.cateListUrl}[#else]${thirdGroup.groupUrl}[/#if]" title="${thirdGroup.groupName!?html}">${thirdGroup.groupName!?html}</a>
+
+                                                [/#if]
+													[#if thirdGroup.hasSub??] [#-- 四级菜单 --]
+														[#if component.prodCateShowStyle?? && component.prodCateShowStyle != '0']
+															[#if component.prodCateShowStyle != '6' &&  component.prodCateShowStyle != '21' &&  component.prodCateShowStyle != '8' &&  component.prodCateShowStyle != '9' &&  component.prodCateShowStyle != '10']
+																<ul class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor2[/#if]">
+															[#else]
+													  			<ul class="${cateStyle}">
+													  		[/#if]
+														[#else]
+														  	<ul class="${cateStyle}">
+														[/#if]
+														[#list thirdGroup.subGroups as forthGroup]
+															[#if productGroupId?? && productGroupId == forthGroup.prodGroupId ]
+															<li class="prodli on [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+															[#else]
+															<li class="prodli [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+															[/#if]
+                                                            [#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '2' || component.prodCateShowStyle == '3' || component.prodCateShowStyle == '4' || component.prodCateShowStyle == '1' || component.prodCateShowStyle == '15') ]
+                                                    <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="javascript:;" title="${forthGroup.groupName!?html}">
+                                                        <span data-jump="[#if prodShowType=='1' && forthGroup.hasSub??]${forthGroup.cateListUrl}[#else]${forthGroup.groupUrl}[/#if]" class="prodCate-jump">${forthGroup.groupName!?html}</span>
+                                                    </a>
+                                                [#else]
+                                                <!-- <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="[#if prodShowType=='1' && subGroup.hasSub??]${subGroup.cateListUrl}[#else]${subGroup.groupUrl}[/#if]" title="${subGroup.groupName!?html}">${subGroup.groupName!?html}</a> -->
+													<!-- <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="[#if prodShowType=='1' && thirdGroup.hasSub??]${thirdGroup.cateListUrl}[#else]${thirdGroup.groupUrl}[/#if]" title="${thirdGroup.groupName!?html}">${thirdGroup.groupName!?html}</a> -->
+                                                    <a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="[#if prodShowType=='1' && forthGroup.hasSub??]${forthGroup.cateListUrl}[#else]${forthGroup.groupUrl}[/#if]" title="${forthGroup.groupName!?html}">${forthGroup.groupName!?html}</a>
+
+                                                [/#if]
+																[#if forthGroup.hasSub??] [#-- 五级菜单 --]
+																	[#if component.prodCateShowStyle?? && component.prodCateShowStyle != '0']
+																		[#if component.prodCateShowStyle != '6' &&  component.prodCateShowStyle != '21' &&  component.prodCateShowStyle != '8' &&  component.prodCateShowStyle != '9' &&  component.prodCateShowStyle != '10']
+																			<ul class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor2[/#if]">
+																		[#else]
+																  			<ul class="${cateStyle}">
+																  		[/#if]
+																	[#else]
+																	  	<ul class="${cateStyle}">
+																	[/#if]
+																	[#list forthGroup.subGroups as lastGroup]
+																		[#if productGroupId?? && productGroupId == lastGroup.prodGroupId ]
+																		<li class="prodli on [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+																		[#else]
+																		<li class="prodli [#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]">
+																		[/#if]
+																			<a class="[#if component.prodCateShowStyle?? && component.prodCateShowStyle=='2']gbBgColor1hover[/#if]" href="${lastGroup.groupUrl}" title="${lastGroup.groupName!?html}">${lastGroup.groupName!?html}</a>
+																		</li>
+																	[/#list]
+																	</ul>
+																[/#if]
+															</li>
+														[/#list]
+														</ul>
+													[/#if]
+												</li>
+												[/#list]
+											</ul>
+										[/#if]
+									</li>
+								</span>
+								[/#list]
+							</ul>
+						[/#if]
+					</li>
+				[/#list]
+			[#else]
+				[@web_backend]
+					[@phoenix_directive_i18n code="component_cont_txt_prod_cate" es="false" txt="<p>请进入“内容”》“产品管理”》“添加产品分类”，进行产品分类数据的添加，添加好的产品分类会自动展示出来。</p>"/]
+				[/@web_backend]
+			[/#if]
+		[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '5']
+			[#if table_data??]
+				[#list table_data as group]
+					[#if productGroupId?? && productGroupId = group.prodGroupId ]
+					<li class="prodli on">
+					[#else]
+					<li class="prodli">
+					[/#if]
+						<a href="${group.groupUrl}" title="${group.groupName!?html}">${group.groupName!?html}</a>
+						<span class="arrow-icon">></span>
+						[#if group.hasSub?? == true]
+						    [#if component.prodCateShowStyle?? && component.prodCateShowStyle != '0']
+						        [#if component.prodCateShowStyle != '6' &&  component.prodCateShowStyle != '9']
+									<ul>
+								[#else]
+						  			<ul class="${cateStyle}">
+						  		[/#if]
+						  [#else]
+						  	<ul class="${cateStyle}">
+						  [/#if]
+								[#list group.subGroups as subGroup]
+									[#if productGroupId?? && productGroupId == subGroup.prodGroupId]
+									<li class="prodli on">
+									[#else]
+									<li class="prodli">
+									[/#if]
+										<a href="${subGroup.groupUrl}" title="${subGroup.groupName!?html}">${subGroup.groupName!?html}</a>
+									</li>
+								[/#list]
+							</ul>
+						[/#if]
+					</li>
+				[/#list]
+			[#else]
+				[@web_backend]
+					[@phoenix_directive_i18n code="component_cont_txt_prod_cate" es="false" txt="<p>请进入“内容”》“产品管理”》“添加产品分类”，进行产品分类数据的添加，添加好的产品分类会自动展示出来。</p>"/]
+				[/@web_backend]
+			[/#if]
+		[/#if]
+	</ul>
+    [#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '2' || component.prodCateShowStyle == '3' || component.prodCateShowStyle == '4' || component.prodCateShowStyle == '1' || component.prodCateShowStyle == '15')]
+
+    </div>
+    [/#if]
+
+[/@table_select]

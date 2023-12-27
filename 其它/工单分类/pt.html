@@ -1,0 +1,41 @@
+
+
+
+
+
+<script>
+    // 分页对应页码：(pageNum - 1)*8 + 1 => pageNum*8
+    // 选择的第几个分类 如：椅子分类（1），product（3）
+    function tempbmKWgsqBVFLt(settingId, pageNum, ajaxParam) {
+        if (pageNum == undefined)
+            pageNum = "1";
+        var ajaxUrl = "/phoenix/admin/component/dynamic/node/bmKWgsqBVFLt/83a0386f-bee1-4565-94e1-978ee8313483/byUAfpKCZmBt";
+        var ajaxOption = {
+            url: ajaxUrl,
+            type: "post",
+            cache: false,
+            data: {
+                appIsDev: "1",
+                pageNum: pageNum,
+                groupId: "9518884"
+            },
+            dataType: "html"
+        };
+        $.ajax(ajaxOption).done(function(response, textStatus, jqXHR) {
+            getCateNumberProd(response);
+            // $("#siteblocks-setting-wrap-bmKWgsqBVFLt  .wra").html(response)
+        }).always(function(response, textStatus, jqXHR) {})
+
+        function getCateNumberProd(pageNum){
+            var pageStart = (pageNum - 1)*8 + 1;
+            var pageEnd = pageNum*8;
+            var pageCateNumber = 2;// 默认第二个 
+
+            var prodCateProdAll = $(response).find(".BoxBottom .tab-container-inner").eq(pageCateNumber - 1);
+            var prodList = prodCateProdAll.find(`.sitewidget-prodTabList-cont li:nth-child(n+${pageStart}):nth-child(-n+${pageEnd})`);
+
+            // 替换数据
+            $("#siteblocks-setting-wrap-bmKWgsqBVFLt").find(".BoxBottom .tab-container-inner").eq(pageCateNumber - 1).find(".sitewidget-prodTabList-cont").html(prodList)
+        }
+    }
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.js"></script>
+      <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=b5rykTxZnTjGW3LQ1PmuUH9Qqu6tzgds"></script>
+    <script>
+        var defaultPosition="121.48479060028a31.234309729773";
+        if ($.cookie("appPoi") == null || $.cookie("appPoi") == "undefined" || $.cookie("appPoi") == undefined) {
+            var geolocation = new BMap.Geolocation();
+            geolocation.getCurrentPosition(function (r) {
+                if (r.point != undefined) {
+                    $lng = r.point.lng;
+                    $lat = r.point.lat;
+                }
+                if (r.longitude != undefined) {
+                    $lng = r.longitude;
+                    $lat = r.latitude;
+                }
+                if ($lng != 0) {
+                    $.cookie("appPoi", $lng + "a" + $lat, { expires: 1 });
+                }
+                if (this.getStatus() == BMAP_STATUS_SUCCESS) {
+                    appPoi = $lng + "a" + $lat;
+                } else {
+                    appPoi = defaultPosition;
+                }
+
+            }, {
+                enableHighAccuracy: true,
+                timeout: 3000,
+                maximumAge: 5000 * 60
+            });
+        } else {
+            appPoi = $.cookie("appPoi");
+        }
+    </script>
+</body>
+</html>

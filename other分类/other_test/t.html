@@ -1,0 +1,91 @@
+<script>
+  document
+    .querySelector('[name="articleText"]')
+    .addEventListener("input", function () {
+      debugger;
+    });
+</script>
+
+<script>
+  UE.getEditor("web_editor").on(
+    "fullscreenchanged",
+    function (event, isFullScreen) {
+      debugger;
+      console.log(1111111);
+      var editor = $("#web_editor");
+      if (editor.hasClass("fullscreen")) {
+        editor.removeClass("fullscreen");
+        editor.children().css({
+          position: "static",
+        });
+      } else {
+        editor.addClass("fullscreen");
+        editor.children().css({
+          position: "fixed",
+          top: 0,
+          left: 0,
+        });
+      }
+    }
+  );
+</script>
+
+<script>
+  const textarea = document.querySelector('[name="articleText"]');
+
+  textarea.addEventListener("input", function () {
+    console.log(88888);
+    debugger;
+    // This event will be triggered whenever the textarea value changes
+    const newValue = textarea.value;
+    console.log("Textarea value changed:", newValue);
+  });
+</script>
+
+<style>
+  .selectTdClass {
+    background-color: #edf5fa !important;
+  }
+  table.noBorderTable td,
+  table.noBorderTable th,
+  table.noBorderTable caption {
+    border: 1px dashed #ddd !important;
+  }
+  table {
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    display: table;
+  }
+  td,
+  th {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+  }
+  caption {
+    border: 1px dashed #ddd;
+    border-bottom: 0;
+    padding: 3px;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  th {
+    border-top: 1px solid #bbb;
+    background-color: #f7f7f7;
+  }
+  table tr.firstRow th {
+    border-top-width: 2px;
+  }
+  .sitewidget-articledetail .ue-table-interlace-color-single {
+    background-color: #fcfcfc;
+  }
+  .sitewidget-articledetail .ue-table-interlace-color-double {
+    background-color: #f7faff;
+  }
+  td p {
+    margin: 0;
+    padding: 0;
+  }
+</style>

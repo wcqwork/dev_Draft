@@ -1,0 +1,53 @@
+<style>
+.zhongqiu_footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    padding-bottom: 14%;
+    background-image: url(//g0.leadongcdn.cn/cloud/ljBprKkjlmSRnjpnmllqip/zhongqiufengge2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: translateY(100%);
+    animation: goSlideUp 1.4s ease forwards;
+}
+.close_btn {
+    z-index: 2;
+    position: absolute;
+    right: 14px;
+    width: 32px;
+    height: 32px;
+    background-image: url(//g0.leadongcdn.cn/cloud/moBqiKimRimSkokipljq/wulongshi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+@keyframes goSlideUp {
+    0% {
+        transform: translateY(100%)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+</style>
+
+<script>
+    (function(window, $, undefined) {
+        $(function() {
+            if (window.location.pathname !== "/")
+                return;
+            var zhongqiu_footer = '<div class="zhongqiu_footer zhongqiu_footer1"><section class="bg_img"><span class="close_btn"></span></section></div>';
+            $(".backstage-body-canvas,.frontend-body-canvas").append(zhongqiu_footer);
+            $(".zhongqiu_footer .close_btn").on("click", function() {
+                $(".zhongqiu_footer").hide()
+            })
+        })
+    }
+    )(window, jQuery);
+</script>

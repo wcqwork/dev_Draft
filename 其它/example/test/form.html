@@ -1,0 +1,15 @@
+<script>
+    onloadHack(function(){
+        var $form = $(".sitewidget-prodSearchNew-20191230093504 form");
+        function checkSubmit(){
+          var $inputVal =  $form.find("input[name='searchValue']").val();
+          if($inputVal){
+              return true;
+          }else {
+            return false;
+          }
+        }
+        window.checkSubmit = checkSubmit;
+        $form.attr('onsubmit',`return checkSubmit()`)
+    })
+</script>

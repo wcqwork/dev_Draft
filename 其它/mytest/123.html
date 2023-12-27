@@ -1,0 +1,45 @@
+<meta name="google-site-verification" content="xlrVSUaLlKlwiNwqMFMHsVZ56LIyeP9uBHBj45y-BK0" />
+<meta name="robots" content="noarchive">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<script>
+function stylefixes(){
+$('.sitewidget-navnew span').css('font-family','Roboto Condensed,Oswald');
+$('.sitewidget-navnew span').css('font-weight','bold');
+$('.sitewidget-navnew .navnew ul li a').css('text-transform','capitalize');
+$('.sitewidget-navnew span').css('font-family','Roboto Condensed,Oswald');
+$('.sitewidget-navnew .navnew ul li a').css('text-transform','capitalize');
+$('.sitewidget-navnew .navnew ul li a').css('font-family','Roboto Condensed,Oswald');
+$('.sitewidget-navnew .navnew ul li a').css('line-height','1.8em');
+$('.prodli a').css('font-family','Roboto Condensed,Oswald');
+$('.pro-this-prodBrief').css('padding','1em');
+$('.pro-this-prodBrief span').css('line-height','1.5em');
+$('.sitewidget-bd span a').css('font-family','Roboto Condensed,Oswald');
+$('.sitewidget-relatedProducts-title a').css('font-weight','bold');
+$('.sitewidget-relatedProducts-title a').css('line-height','1.3em');
+$('.this-description-name').css('line-height','1.3em');
+if($(location).attr('hash')){$($(location).attr('hash'))[0].scrollIntoView();}
+}
+const observerConfig = {
+  childList: true,
+  subtree: true,
+};
+const callback = function (mutationsList, observer) {
+  $.each(mutationsList, function (_, mutation) {
+    if (mutation.type === 'childList') {
+       observer.disconnect();
+      const $container = $('body');
+      if ($container.length) {
+	stylefixes();
+      }
+    }
+    observer.observe(document, observerConfig);
+  });
+};
+const observer = new MutationObserver(callback);
+observer.observe(document, observerConfig);
+</script>
+
+

@@ -1,0 +1,179 @@
+<script>
+    onloadHack(function () {
+        console.log('发送埋点');
+        //订单号
+        var orderNo = $(".base-information .order-id").text();
+        var purchase = {
+            id: orderNo
+        }
+        buyOrderProduct(purchase)
+        gtag('event', 'conversion', {
+            'send_to': 'AW-10827405410/2dgiCKybp6oDEOKw9Koo',
+            'value': grandTotal || '1',
+            'currency': 'USD',
+            'transaction_id': ''
+        });
+        gtag('event', 'buyOrder', {
+            'event_label': '购买成功',
+            'event_category': '购买'
+        });
+
+    });
+
+    function getCartProducts() {
+        var cartArryList = [];
+        $(".order-wrapper .order-list ul li").each(function () {
+            var obj = {};
+            obj.id = $(this).find("p.id").text();
+            obj.name = $(this).find("p.name").text();
+            cartArryList.push(obj);
+        });
+        return cartArryList;
+    }
+
+    function buyOrderProduct(purchase) {
+        var cart = getCartProducts();
+        buyProduct(cart, purchase);
+    }
+
+    // 付款
+    function buyProduct(cart, purchase) {
+        ga("require", "ec");
+        for (var i = 0; i < cart.length; i++) {
+            var product = cart[i];
+            ga('ec:addProduct', {
+                'id': product.id,
+                'name': product.name
+            });
+        }
+        ga('ec:setAction', 'purchase', {
+            'id': purchase.id,
+            'revenue': purchase.revenue
+        });
+        ga('send', 'event', 'purchase', 'click', 'purchase');
+
+    }
+</script>
+
+
+<script>
+    onloadHack(function () {
+        $(".prodlist-lists-style li").each(function (index, item) {
+            var _btn = $(item).find(".alternative_Btn");
+            $(item).find(".prodlist-box-hover .prodlist-parameter-wrap").append(_btn);
+        });
+    });
+</script>
+
+<script>
+    ga("require", "ec");
+    gtag('event', 'conversion', {
+            'send_to': 'AW-10827405410/2dgiCKybp6oDEOKw9Koo',
+            'value': '1',
+            'currency': 'ccc',
+            'transaction_id': ''
+        });
+
+        ga("require", "ec");
+        gtag('event', 'conversion', {'send_to': 'AW-11016422078/yID8CJT4ooEYEL6FhYUp','currency': 'ccc',});
+</script>
+
+
+<script>
+    (function (window, $, undefined) {
+        var _block_namespaces_ = window._block_namespaces_ || (window._block_namespaces_ = {});
+        var name = "leadong23244";
+        var leadong23244 = _block_namespaces_[name] || (_block_namespaces_[name] = {});
+        $.extend(leadong23244, {
+            "init": init
+        })
+        function init(nodeObj) {
+        }
+    })(window, jQuery)
+    onloadHack(function () {
+        var isFlagTrue = false;
+        $(window).scroll(function () {
+            if (window._block_namespaces_ && window._block_namespaces_["leadong23244"] && !isFlagTrue) {
+                window._block_namespaces_["leadong23244"].init({
+                    "settingId": "FTUgSHqBnJwO",
+                    "nodeId": ""
+                });
+            }
+        });
+    })
+</script>
+
+<script>
+    onloadHack(function () {
+        $("#siteblocks-setting-wrap-uZUBbvRHQtpj > div > div > div > div.bag_whole_open").append(`<span class="morebtn">MORE</span>`);
+        $("#siteblocks-setting-wrap-uZUBbvRHQtpj > div > div > div > div.bag_whole_off").append(`<span class="morebtn">MORE</span>`);
+    })
+</script>
+
+
+<script>
+    onloadHack(function () {
+        $(window).scroll(function () {
+            var scrollTop = document.documentElement.scrollTop || window.pageYOfset || document.body.scrollTop;
+            var _scrolMax = 67 - scrollTop;
+            if (_scrolMax < 0) {
+                _scrolMax = 0;
+            }
+            $("#outerContainer_1579401090612").css("top", _scrolMax + 'px');
+            // console.log(_scrolMax);
+        });
+    })
+</script>
+
+<script>
+    onloadHack(function () {
+        var _thatDom = $("#component_jAUqIZpyfTKj > div > div > div > div");
+        $(_thatDom).hover(function () {
+            $(_thatDom).click();
+        })
+    });
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    onloadHack(function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/60ffcb0a649e0a0a5cce1f08/1fbjj28qs';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        }, 5000)
+    });
+</script>
+<!--End of Tawk.to Script-->
+
+
+<script>
+    onloadHack(function () {
+        $(".qin14834 .proshow-scroll-list .more-detail .more-text").text("Tingnan lahat");
+    })
+</script>
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    onloadHack(function () {
+        setTimeout(function () {
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function () {
+                var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+                s1.async = true;
+                s1.src = 'https://embed.tawk.to/5b98a72bc9abba57967773ae/default';
+                s1.charset = 'UTF-8';
+                s1.setAttribute('crossorigin', '*');
+                s0.parentNode.insertBefore(s1, s0);
+            })();
+        },5000)
+    });
+</script>
+<!--End of Tawk.to Script-->

@@ -1,0 +1,206 @@
+20220720N0001
+20220720N0004
+20220720N0005
+20220720N0006
+20220720N0008
+20220720N0009  系统偶发bug
+20220720U0014   
+20220720N0015
+20220720N0018
+20220720N0034
+20220720N0035
+20220720N0038
+20220720N0039
+20220721N0006 图片不清晰
+20220721N0007
+20220721N0009
+20220721N0012
+20220721N0017
+20220721N0020
+20220721N0029
+20220721N0030
+20220721N0031
+20220721N0032
+20220721N0033
+20220721N0039
+20220721N0043
+20220721N0045
+20220721N0046
+20220721N0047
+20220721N0050
+20220722N0009
+20220722N0017
+20220722N0019
+20220722N0020
+20220722U0023
+20220722N0024
+20220722N0026
+20220722N0027
+20220722N0030
+20220722N0041
+20220722N0042
+20220722N0044
+20220722N0049
+20220723N0002
+20220724N0002
+20220725N0004
+20220725U0009
+20220725N0012
+20220725N0023
+20220725N0033
+20220725N0054
+20220726N0016
+20220726N0020
+20220726N0023
+20220726N0026
+20220726N0027
+20220726N0041
+
+
+<script>
+    onloadHack(function(){
+       var _setTimeClone = setInterval(function(){
+            var _targetDom = $("#masterslider_CCfLJnmPdMvZ img");
+            if(_targetDom.length > 0 ){
+                _targetDom.each(function(index,item){
+                    var _src = $(item).attr('src');
+                    if(!_src){
+                        var _idStr = $(item).attr('id');
+                        $(this).attr("src",_idStr);
+                    }
+                });
+                console.log('替换成功');
+                clearInterval(_setTimeClone)
+            }
+        },100);
+    })
+</script>
+
+<script>
+  setTimeout(function () {
+    var eventMouse = new Event('mousemove');
+    var eventTouch = new Event('touchmove');
+    window.dispatchEvent(eventMouse);
+    window.dispatchEvent(eventTouch);
+    console.log('加载……');
+  }, 500)
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    onloadHack(function () {
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/61ad6e73c82c976b71bfc5b3/1fm6nesvr';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    })
+</script>
+<!--End of Tawk.to Script-->
+<script>
+  $('div.PDataLazyLoad_Module[data-lazyload-type][data-settingId]').each(function () {
+    loadModule2($(this), false)
+  })
+
+  function loadModule2(module, isAboveTheFold) {
+    var $el = module,
+      lazyloadUuid = $el.data('lazyload-uuid'),
+      encodeSettingId = $el.data('settingid');
+    var dataUuid = $el.data('uuid');
+    var $template = $el.find('template[data-lazyload-template=true][data-settingId=' + encodeSettingId +
+      '][data-uuid=' + dataUuid + ']');
+    $el.data('_bigRender_loading', true);
+    // 如果是动态刷新组件,直接执行
+    if ($el.data('dynamic-js-lazyload') == true) {
+      requestAnimationFrame(function () {
+        mobileLazyload.insertScript($el, encodeSettingId, lazyloadUuid, $template.html());
+        requestAnimationFrame(function () {
+          // logo pictureNew回调
+          $(window).triggerHandler('scroll.' + encodeSettingId);
+          // fullPageReBuild
+          $(window).triggerHandler("fullPageReBuild");
+        });
+      });
+      return;
+    }
+    // 正常组件
+    requestAnimationFrame(function () {
+      mobileLazyload.insertTxt($el, encodeSettingId, lazyloadUuid, $template.html());
+      var options = {};
+      var hackScript = $('script[type=text\\/x-delay-script][data-jsLazyload=true][data-id=' + encodeSettingId +
+        ']');
+      if (!!hackScript.length) {
+        options['js_depand'] = hackScript.attr('data-jsdepand');
+        options['css_depand'] = hackScript.attr('data-cssdepand');
+        options['_func_'] = hackScript.html();
+      }
+      requestAnimationFrame(function () {
+        // 后期可以再改进,控制回调加载css/js,保证css优先加载
+        mobileLazyload.loadCss(lazyloadUuid, options['css_depand']);
+        // 函数回调
+        var func = typeof options._func_ != "undefined" ? function () {
+          $.globalEval(options._func_)
+        } : function () {};
+        callback = function () {
+          requestAnimationFrame(function () {
+            // 搜集回调
+            func();
+          });
+        }
+        mobileLazyload.loadJs(lazyloadUuid, encodeSettingId, options['js_depand'], callback);
+      })
+      if (!!!$('body').data('isLoadUnAboveTheFold') && !isAboveTheFold) {
+        $('body').data('isLoadUnAboveTheFold', true);
+        // 非首屏组件加载后来移除unAboveTheFoldHeight样式
+        setTimeout(function () {
+          $('style[data-type=unAboveTheFoldHeight]').remove();
+        }, 3000)
+      }
+    })
+  }
+</script>
+
+<script>
+  setTimeout(function () {
+    var eventMouse = new Event('mousemove');
+    var eventTouch = new Event('touchmove');
+    window.dispatchEvent(eventMouse);
+    window.dispatchEvent(eventTouch);
+    console.log('触发');
+  }, 500);
+</script>
+
+
+<script>
+  $(function () {
+      function lsResetImgSrc() {
+          var $img = $("body img");
+          $img.each(function (index, item) {
+              isFlagImg = false;
+              var imgSrc = $(item).attr("src");
+              if (imgSrc) {
+                  var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320|238|1920)-(460|400|350|300|206|640|480|320|238|1920).", "ig");
+                  var r = re.exec(imgSrc);
+                  if (r) {
+                      var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                      var src = r[1] + Imgtype;
+                      $(item).attr("src", src);
+                      // $(item).attr("data-original", src);
+                  }
+              }
+          });
+      }
+      $(window).scroll(function () {
+          lsResetImgSrc();
+      });
+      onloadHack(function () {
+          lsResetImgSrc();
+      })
+  })
+</script>

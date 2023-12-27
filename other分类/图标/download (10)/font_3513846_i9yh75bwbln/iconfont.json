@@ -1,0 +1,23 @@
+{
+  "id": "3513846",
+  "name": "cp页",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "cp页 icon",
+  "glyphs": [
+    {
+      "icon_id": "30491548",
+      "name": "CP页管理",
+      "font_class": "CPyeguanli",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "30491566",
+      "name": "共享资源库",
+      "font_class": "gongxiangziyuanku",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    }
+  ]
+}

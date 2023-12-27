@@ -1,0 +1,19 @@
+<script>
+    function getChildren(dom,data) {
+        if(dom){
+            data['tree'] = dom;
+        }
+        domChildren = Array.from(dom.children) || [];
+        if (domChildren.length > 0) {
+            data['children'] = [];
+            domChildren.forEach(function (item, index) {
+                let obj ={};
+                data.children.push(obj);
+                getChildren(item,obj);
+            })
+        }
+    }
+
+    let arrTree = {};
+    getChildren(document.querySelector("body > div.backstage-frontendpreview"),arrTree);
+</script>

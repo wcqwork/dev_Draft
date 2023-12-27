@@ -1,0 +1,68 @@
+<style>
+  body .pop-downloadList .form-horizontal .control-label {
+    float: none;
+    width: auto;
+    text-align: left;
+  }
+  body .pop-downloadList .form-horizontal .controls {
+    margin-left: 0;
+  }
+
+  div a.refreshImg{
+    width: 22%;
+  }
+  div .sitewidget-inquire button.btn-success{
+    background-color: #1F5BEA;
+    border-color: #1F5BEA;
+  }
+  .sitewidget-inquire #faptcha_response_field {
+    padding-left: 12px !important;
+}
+div .form-horizontal .control-group {
+    margin-bottom: 8px;
+}
+</style>
+
+
+<script>
+    /**
+    * @params $selector Jquery对象
+    * @params Array  { tag: 'img', attrs:['src', 'data-origin'] }
+    */
+    // 
+    function replaceAttr($selector, tags = []) {
+        if (!tags.length) return
+        try {
+            tags.forEach(function (item) {
+                $selector.find(item.tag).each(function () {
+                    var _this = $(this)
+                    item.attrs.forEach(function (attr) {
+                        var smallimage = _this.attr(attr);
+                        if (smallimage && smallimage.length) {
+                            smallimage = smallimage.replace(/\-[0-9]+\-[0-9]+/g, '');
+                            _this.attr(attr, smallimage);
+                        }
+                    })
+                })
+            })
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    // 例子
+    var replaceTags = [{
+        tag: 'img',
+        attrs: ['src','data-lazy', 'data-src']
+    }, {
+        tag: 'source',
+        attrs: ['srcset']
+    }]
+    console.log('body','======================')
+    replaceAttr($('body'), replaceTags)
+    $(window).scroll(function () {
+        replaceAttr($('body'), replaceTags);
+        });
+    onloadHack(function () {
+        replaceAttr($('body'), replaceTags);
+    })
+</script>

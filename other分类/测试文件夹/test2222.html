@@ -1,0 +1,37 @@
+<link rel="stylesheet" type="text/css" href="//a0.leadongcdn.cn/static/t-7oBmBKiKqonkrmoqmrjqj/assets/widget/style/component/googleTranslate/googleTranslate.css">
+<script src="http://a2.leadongcdn.cn/static/t-7oBmBKiKqonkrmoqmrjqj/assets/widget/script/plugins/googleTranslate/element.js"></script>
+<script src="http://a3.leadongcdn.cn/static/t-7oBmBKiKqonkrmoqmrjqj/assets/widget/script/plugins/googleTranslate/lan/main.js"></script>
+<script>
+$(function(){
+        $("#siteblocks-setting-wrap-CbKqRozWLvmZ .sq_language_1").attr("id", "google_translate_elementSP").empty();
+$("#siteblocks-setting-wrap-CbKqRozWLvmZ .sq_language_1").append($('#outerContainer_1673592435488'));
+});
+ (function (window, $, undefined) {
+     try {
+         $(function () {
+             //加载翻译插件
+             //element_main.js需要每次重新加载组件的时候都要重新加载下，所以不写在sourcemap里
+             function googleTranslateElementInit(val) {
+                 new google.translate.TranslateElement({
+                         includedLanguages: val ||
+                             "zh-CN,zh-TW,en,es,pt,fr,ru,it,de,nl,ar,ko,ja,tr,fa,sq,id,hi",
+                         layout: 2,
+                     },
+                     "google_translate_elementSP"
+                 );
+             }
+             setTimeout(function(){
+                 $.getScript(
+                 "//a3-static.micyjz.com/static/assets/widget/script/plugins/googleTranslate/element_main.js",
+                 function () {
+                     google.translate.TranslateElement ? googleTranslateElementInit('es,pt,fr,ru,it,de,nl,ar,ko,ja') : '';
+                 });
+             },1000)
+         })
+     } catch (e) {
+         try {
+             console && console.log && console.log(e);
+         } catch (e) {}
+     }
+ })(window, $);
+</script>

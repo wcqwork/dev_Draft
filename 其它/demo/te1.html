@@ -1,0 +1,54 @@
+onloadHack(function () {
+    console.log('发送埋点');
+    //订单号
+    var orderNo = $(".base-information .order-id").text();
+    var purchase = {
+        id: orderNo
+    }
+    buyOrderProduct(purchase)
+    gtag('event', 'conversion', {
+        'send_to': 'AW-10827405410/2dgiCKybp6oDEOKw9Koo',
+        'value': grandTotal || '1',
+        'currency': 'USD',
+        'transaction_id': ''
+    });
+    gtag('event', 'buyOrder', {
+        'event_label': '购买成功',
+        'event_category': '购买'
+    });
+
+});
+
+function getCartProducts() {
+    var cartArryList = [];
+    $(".order-wrapper .order-list ul li").each(function () {
+        var obj = {};
+        obj.id = $(this).find("p.id").text();
+        obj.name = $(this).find("p.name").text();
+        cartArryList.push(obj);
+    });
+    return cartArryList;
+}
+
+function buyOrderProduct(purchase) {
+    var cart = getCartProducts();
+    buyProduct(cart, purchase);
+}
+
+// 付款
+function buyProduct(cart, purchase) {
+    ga("require", "ec");
+    for (var i = 0; i < cart.length; i++) {
+        var product = cart[i];
+        ga('ec:addProduct', {
+            'id': product.id,
+            'name': product.name
+        });
+    }
+    ga('ec:setAction', 'purchase', {
+        'id': purchase.id,
+        'revenue': purchase.revenue
+    });
+    ga('send', 'event', 'purchase', 'click', 'purchase');
+
+}

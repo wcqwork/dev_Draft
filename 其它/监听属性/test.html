@@ -1,0 +1,26 @@
+<div id="container">
+    <div class="child"></div>
+</div>
+<button id="update">
+    改变
+</button>
+<script>
+    var MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver
+    const container = document.getElementById('container')
+    const button = document.getElementById('update')
+    const options = {
+        attributes: true
+    }
+    // 创建MutationObserver实例，返回一个观察者对象
+    const mutation = new MutationObserver(function(mutationRecoards, observer) {
+        console.log(mutationRecoards)
+        console.log(observer)
+    })
+    // 对观察者添加需要观察的元素，并设置需要观察元素的哪些方面
+    mutation.observe(container, options);
+
+    // 对container进行操作
+    button.addEventListener('click', function() {
+        container.style.background = 'red'; // 属性改变
+    })
+</script>

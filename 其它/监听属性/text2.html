@@ -1,0 +1,39 @@
+<script>
+    /* 监听插件颜色属性变化时，将字母和下划线统一变色 */
+    function addAttrListener() {
+        var targetAll = document.querySelectorAll("[data-blocksetting-color]");
+
+        targetAll.forEach(function (item) {
+            debugger
+            // 实例化MutationObserver
+            var attrListener = new MutationObserver((mutations) => {
+                debugger
+                var colorDom = mutations[0].target
+                var color = colorDom.getAttribute('data-blocksetting-color')
+                colorDom.nextSibling.setAttribute('data-blocksetting-color', color)
+            })
+            // 监听dom的属性，仅监听fill属性的改变。
+            attrListener.observe(item, { attributes: true, attributeFilter: ['data-blocksetting-color'] });
+        })
+    }
+    addAttrListener();
+</script>
+
+
+<script>
+    /* 监听插件颜色属性变化时，将字母和下划线统一变色 */
+    function addAttrListener() {
+        const target = document.querySelector("[data-blocksetting-color]")
+
+        // 实例化MutationObserver
+        let attrListener = new MutationObserver((mutations) => {
+            debugger
+            var colorDom = mutations[0].target
+            var color = colorDom.getAttribute('data-blocksetting-color')
+            colorDom.nextSibling.setAttribute('data-blocksetting-color', color)
+        })
+        // 监听dom的属性，仅监听fill属性的改变。
+        attrListener.observe(target, { attributes: true, attributeFilter: ['data-blocksetting-color'] });
+    }
+    addAttrListener();
+</script>

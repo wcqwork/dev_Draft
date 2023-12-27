@@ -1,0 +1,18 @@
+{
+  "data": {
+    "fontSetting": {
+      "font-family": "Abel",
+      "color": "#FF7A00",
+      "font-size": "32px",
+      "line-height": "1",
+      "letter-spacing": "1px",
+      "font-weight": "normal",
+      "text-decoration": "none",
+      "font-style": "normal",
+      "isHoverFlag": true,
+      "hoverStyle": {}
+    }
+  },
+  "code": 200,
+  "msg": "success"
+}

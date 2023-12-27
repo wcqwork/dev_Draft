@@ -1,0 +1,9 @@
+<script>
+    onloadHack(function(){
+        $('.sitewidget-downloadlist .table-responsive table').on('click', 'td>span', function () {
+        setTimeout(function () {
+            $('#extend7 > option:nth-child(2)').before($('#extend7 > option[value="中国"]').eq(0))
+        }, 1000)
+    })
+    })
+</script>

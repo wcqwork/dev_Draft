@@ -1,0 +1,29 @@
+<script>
+     $("#loadSubmit").remove();
+     $("#formsubmit").removeClass("bea_style");
+     $("#formsubmit").html('提交');
+     $("#formsubmit").removeAttr("disabled");
+     $("#formsubmit").css("cursor","initial");
+     $("#component_ZPKfUpLAwnUY input[name='extend2']").parent().find(".errmessage").remove();
+     $('<div class="errormessage" style="">请输入有效邮箱地址</div>').insertAfter($("#component_ZPKfUpLAwnUY #extend2"));
+
+     try{
+        $("#loadSubmit").remove();
+        $("#formsubmit").removeClass("bea_style");
+        $("#formsubmit").html('[@s.m "phoenix_company_submit"/]');
+        $("#formsubmit").removeAttr("disabled");
+        $("#formsubmit").css("cursor","initial");
+     }catch(e){
+        console.log(e);
+     }
+</script>
+
+
+<script>
+   window._ldDataLayer = {
+      push: function(){
+
+      }
+   }
+   varifyResult = true
+</script>

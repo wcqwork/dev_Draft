@@ -1,0 +1,44 @@
+<script>
+
+setTimeout(function() {
+        var item = document.getElementById('i4y1');
+        if (!item) return;
+        (function(){
+(props) =>{
+    var el = this;
+    var deps = 'https://cdnjs.cloudflare.com/ajax/libs/lory.js/2.3.4/lory.min.js';
+    var falsies = ['0', 'false'];
+    var infinite = '';
+    infinite = infinite == 'true' ? 1 : parseInt(infinite, 10);
+    var options = {
+      slidesToScroll: parseInt('1', 10),
+      enableMouseEvents: falsies.indexOf('') >= 0 ? 0 : 1,
+      infinite: isNaN(infinite) ? false : infinite,
+      rewind: falsies.indexOf('') >= 0 ? false : true,
+      slideSpeed: parseInt('300', 10),
+      rewindSpeed: parseInt('600', 10),
+      snapBackSpeed: parseInt('200', 10),
+      ease: 'ease',
+      classNameFrame: 'gjs-lory-frame',
+      classNameSlideContainer: 'gjs-lory-slides',
+      classNamePrevCtrl: 'gjs-lory-prev',
+      classNameNextCtrl: 'gjs-lory-next',
+    };
+
+    var initSlider = function() {
+      window.sliderLory = lory(el, options);
+    };
+
+    if (deps && typeof lory == 'undefined') {
+      var script = document.createElement('script');
+      script.src = deps;
+      script.onload = initSlider;
+      document.head.appendChild(script);
+    } else {
+      initSlider();
+    }
+;}.bind(item))({})
+      }, 1);
+</script>
+
+// 

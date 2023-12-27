@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #resizeDiv {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #000;
+      resize: horizontal; /* 允许水平拖动 */
+      overflow: auto; /* 显示滚动条，以便在内容过长时可以滚动 */
+    }
+  </style>
+</head>
+<body>
+
+<div id="resizeDiv"></div>
+
+<script>
+  // 获取要调整大小的div元素
+  const resizeDiv = document.getElementById('resizeDiv');
+
+  // 当mousedown事件在div上触发时，开始拖动
+  resizeDiv.addEventListener('mousedown', function (e) {
+    e.preventDefault();
+    
+    // 获取初始鼠标位置和div宽度
+    const startX = e.clientX;
+    const startWidth = parseInt(document.defaultView.getComputedStyle(resizeDiv).width, 10);
+
+    // 当mousemove事件在document上触发时，进行拖动
+    document.addEventListener('mousemove', resize);
+
+    // 当mouseup事件在document上触发时，停止拖动
+    document.addEventListener('mouseup', stopResize);
+
+    // 定义resize函数，计算新的div宽度
+    function resize(e) {
+      const newWidth = startWidth + (e.clientX - startX);
+      resizeDiv.style.width = newWidth + 'px';
+    }
+
+    // 定义stopResize函数，停止拖动并移除事件监听器
+    function stopResize() {
+      document.removeEventListener('mousemove', resize);
+      document.removeEventListener('mouseup', stopResize);
+    }
+  });
+</script>
+
+</body>
+</html>

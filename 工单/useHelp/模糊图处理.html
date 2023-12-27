@@ -1,0 +1,169 @@
+<!-- 产品详情主图模糊替换代码块 -->
+<script>
+    $(function () {
+        function lsResetImgSrc() {
+            var $img = $(".sitewidget-video source");
+            $img.each(function (index, item) {
+                isFlagImg = false;
+                var imgSrc = $(item).attr("srcset");
+                if (imgSrc) {
+                    var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320)-(460|400|350|300|206|640|480|320).", "ig");
+                    var r = re.exec(imgSrc);
+                    if (r) {
+                        var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                        var src = r[1] + Imgtype;
+                        $(item).attr("srcset", src);
+                        // $(item).attr("data-original", src);
+                    }
+                }
+            });
+        }
+        $(window).scroll(function () {
+            lsResetImgSrc();
+        });
+        onloadHack(function () {
+            lsResetImgSrc();
+        })
+    })
+</script>
+<!-- 产品详情主图模糊替换代码块 -->
+<script>
+    $(function () {
+        function lsResetImgSrc() {
+            var $img = $(".qiaoxin12024 img");
+            $img.each(function (index, item) {
+                isFlagImg = false;
+                var imgSrc = $(item).attr("src");
+                if (imgSrc) {
+                    var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320|1920|1920)-(460|400|350|300|206|640|480|320|400|1920).", "ig");
+                    var r = re.exec(imgSrc);
+                    if (r) {
+                        var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                        var src = r[1] + Imgtype;
+                        $(item).attr("src", src);
+                        // $(item).attr("srcset", src);
+                        // $(item).attr("data-original", src);
+                    }
+                }
+            });
+        }
+        $(window).scroll(function () {
+            lsResetImgSrc();
+        });
+        onloadHack(function () {
+            lsResetImgSrc();
+        })
+    })
+</script>
+<script>
+    onloadHack(function(){
+        $(window).scroll(function () {
+            $("#submit > span.send").text("Подписаться");
+            $("#mailCollect > div > input").attr("placeholder","Введите вашу электронную почту");
+        });
+    });
+</script>
+<!-- 产品详情主图模糊替换代码块 -->
+<script>
+    $(function () {
+        function lsResetImgSrc() {
+            var $img = $(".sitewidget-proddetail img");
+            $img.each(function (index, item) {
+                isFlagImg = false;
+                var imgSrc = $(item).attr("src");
+                if (imgSrc) {
+                    var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320|1920|1920)-(460|400|350|300|206|640|480|320|400|1920).", "ig");
+                    var r = re.exec(imgSrc);
+                    if (r) {
+                        var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                        var src = r[1] + Imgtype;
+                        $(item).attr("src", src);
+                    }
+                }
+            });
+        }
+        $(window).scroll(function () {
+            lsResetImgSrc();
+        });
+        onloadHack(function () {
+            lsResetImgSrc();
+        })
+    })
+</script>
+<script>
+    setTimeout(function () {
+        console.log('触发');
+        var eventMouse = new Event('mousemove');
+        var eventTouch = new Event('touchmove');
+        window.dispatchEvent(eventMouse);
+        window.dispatchEvent(eventTouch);
+    }, 500)
+</script>
+
+
+
+Product name:Product name
+CAS:68002-25-5
+Molecular formula:C3H6N6
+Molecular weight：126.11994
+Packing：25kg/bag
+Ton bag/1t
+
+
+<!-- 产品详情主图模糊替换代码块 -->
+<script>
+    $(function () {
+        function lsResetImgSrc() {
+            var $img = $("#siteblocks-setting-wrap-ayprfKBqAoUZ source,#siteblocks-setting-wrap-ayprfKBqAoUZ img");
+            $img.each(function (index, item) {
+                isFlagImg = false;
+                var imgSrc = $(item).attr("srcset") || $(item).attr("src");
+                if (imgSrc) {
+                    var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320)-(460|400|350|300|206|640|480|320).", "ig");
+                    var r = re.exec(imgSrc);
+                    if (r) {
+                        var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                        var src = r[1] + Imgtype;
+                        $(item).attr("src", src);
+                        $(item).attr("srcset", src);
+                        $(item).attr("data-original", src);
+                    }
+                }
+            });
+        }
+        $(window).scroll(function () {
+            lsResetImgSrc();
+        });
+        onloadHack(function () {
+            lsResetImgSrc();
+        })
+    })
+</script>
+
+
+<script>
+    $(function () {
+        function lsResetImgSrc() {
+            var $img = $(".sitewidget-video source");
+            $img.each(function (index, item) {
+                isFlagImg = false;
+                var imgSrc = $(item).attr("srcset");
+                if (imgSrc) {
+                    var re = new RegExp("(.*)-(460|400|350|300|206|640|480|320|1920|1920)-(460|400|350|300|206|640|480|320|400|1920).", "ig");
+                    var r = re.exec(imgSrc);
+                    if (r) {
+                        var Imgtype = '.' + imgSrc.replace(/^.+\./, '');
+                        var src = r[1] + Imgtype;
+                        $(item).attr("srcset", src);
+                    }
+                }
+            });
+        }
+        $(window).scroll(function () {
+            lsResetImgSrc();
+        });
+        onloadHack(function () {
+            lsResetImgSrc();
+        })
+    })
+</script>

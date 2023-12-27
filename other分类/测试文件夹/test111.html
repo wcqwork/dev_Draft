@@ -1,0 +1,69 @@
+<style>
+    .QX-11227969 .imgBox{
+        visibility: hidden;
+    }
+    .QX-11227969 .imgBox.slick-slider{
+        visibility: initial;
+    }
+</style>
+<script>
+$(function(){
+    $(".prodDetail-tab-hover-event.prodDetail-tab-style .detial-cont-prodescription .detial-cont-tabslabel li").hover(function(){
+        $('.QX-11227969 .imgBox').css("visibility","hidden");
+        $('.QX-11227969 .imgBox').slick('unslick');
+       $('.QX-11227969 .imgBox').not('.slick-initialized').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: false,
+                draggable: true,
+                pauseOnHover: false,
+                responsive: [{
+                        breakpoint: 1000,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            infinite: true,
+                        }
+                    },
+                    {
+                        breakpoint: 550,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            dots: true,
+                            arrows: false,
+                        }
+    
+                    }
+    
+                ]
+    
+            });
+    
+    $(window).resize();
+    $('.QX-11227969 .imgBox').css("visibility","initial");
+    console.log('changevent');
+    setTimeout(function(){
+        
+    },1000);
+})
+})
+</script>
+
+<iframe width="630" height="355" data-src="https://www.youtube.com/embed/kPK0vYazlh0" id="youtubeIframe1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<script>
+    onloadHack(function(){
+        setTimeout(function(){
+            console.log('回填youtubeIframe1');
+            var _iframeSrc = $("#youtubeIframe1").attr("data-src");
+            $("#youtubeIframe1").attr("src",_iframeSrc);
+        },3000);
+    });
+</script>
+
+
+

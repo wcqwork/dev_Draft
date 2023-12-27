@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .row {
+        display: flex;
+        width: 100%;
+      }
+
+      .column {
+        border: 1px solid #000;
+        min-width: 5%; /* 设置最小列宽度为5% */
+        position: relative;
+        overflow: hidden; /* 隐藏溢出的内容 */
+      }
+
+      .drag-line {
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background-color: #888;
+        cursor: col-resize;
+        display: none; /* 默认隐藏拖拽线条 */
+      }
+
+      .column:hover .drag-line {
+        display: block; /* 鼠标悬浮时显示拖拽线条 */
+      }
+
+      .left-drag-line {
+        left: -2.5px; /* 左边拖拽线条的位置 */
+      }
+
+      .right-drag-line {
+        right: -2.5px; /* 右边拖拽线条的位置 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row" id="row">
+      <div class="column" id="col1" style="width: 30%">
+        <div class="left-drag-line drag-line" id="line1-left"></div>
+        Column 1
+        <div class="right-drag-line drag-line" id="line1-right"></div>
+      </div>
+      <div class="column" id="col2" style="width: 40%">
+        <div class="left-drag-line drag-line" id="line2-left"></div>
+        Column 2
+        <div class="right-drag-line drag-line" id="line2-right"></div>
+      </div>
+      <div class="column" id="col3" style="width: 30%">
+        <div class="left-drag-line drag-line" id="line3-left"></div>
+        Column 3
+        <div class="right-drag-line drag-line" id="line3-right"></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        const row = document.getElementById("row");
+        let isResizing = false;
+        let currentCol = null;
+        let nextCol = null;
+        let lastDownX = 0;
+
+        // 鼠标按下事件处理程序
+        const handleMouseDown = (e) => {
+          if (!e.target.classList.contains("drag-line")) return;
+
+          // 开始拖拽调整列宽
+          isResizing = true;
+          const column = e.target.parentElement;
+          currentCol = column;
+          nextCol = column.nextElementSibling;
+          lastDownX = e.clientX;
+
+          // 添加鼠标移动和鼠标松开事件监听器
+          document.addEventListener("mousemove", handleMouseMove);
+          document.addEventListener("mouseup", handleMouseUp);
+        };
+
+        // 鼠标移动事件处理程序
+        const handleMouseMove = (e) => {
+          if (!isResizing) return;
+
+          const rowWidth = row.offsetWidth;
+          const offset = ((e.clientX - lastDownX) / rowWidth) * 100;
+          const currentWidth = parseFloat(currentCol.style.width);
+
+          if (currentWidth + offset >= 5) {
+            // 更新当前列的宽度
+            currentCol.style.width = currentWidth + offset + "%";
+
+            if (nextCol) {
+              // 如果有下一列，更新下一列的宽度
+              const nextWidth = parseFloat(nextCol.style.width);
+              if (nextWidth - offset >= 5) {
+                nextCol.style.width = nextWidth - offset + "%";
+              }
+            }
+
+            lastDownX = e.clientX;
+          }
+        };
+
+        // 鼠标松开事件处理程序
+        const handleMouseUp = () => {
+          // 停止拖拽调整列宽
+          isResizing = false;
+
+          // 移除鼠标移动和鼠标松开事件监听器
+          document.removeEventListener("mousemove", handleMouseMove);
+          document.removeEventListener("mouseup", handleMouseUp);
+        };
+
+        // 添加鼠标按下事件监听器
+        row.addEventListener("mousedown", function (e) {
+          handleMouseDown(e);
+        });
+      })();
+    </script>
+  </body>
+</html>

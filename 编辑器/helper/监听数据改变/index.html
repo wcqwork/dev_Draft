@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function createDebuggableObject(obj, onChange) {
+      for (const key in obj) {
+        let value = obj[key];
+
+        Object.defineProperty(obj, key, {
+          get() {
+            return value;
+          },
+          set(newValue) {
+            const oldValue = value;
+            value = newValue;
+            if (key === 'seleced') {
+              debugger
+              onChange(key, oldValue, newValue);
+            }
+          },
+        });
+      }
+
+      return obj;
+    }
+
+    createDebuggableObject(selected, (property, oldValue, newValue) => {
+      debugger
+      console.log(`Property '${property}' changed from ${oldValue} to ${newValue}`);
+    }
+    );
+  </script>
+
+  <script>
+    Object.defineProperty(window, "selected", {
+      get() {
+        return {};
+      },
+      set(newValue) {
+        const oldValue = newValue;
+        value = newValue;
+        debugger
+      },
+    });
+  </script>
+</body>
+
+</html>

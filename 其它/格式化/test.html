@@ -1,0 +1,110 @@
+<script>
+    function twoTimeInterval(startTime, endTime) {
+ 
+    // 开始时间
+    let d1 = startTime.replace(/\-/g, "/");
+    let date1 = new Date(d1);
+
+    // 结束时间
+    let d2 = endTime.replace(/\-/g, "/");
+    let date2 = new Date(d2);
+
+    // 时间相差秒数
+    let dateDiff = date2.getTime() - date1.getTime();
+
+    // 计算出相差天数
+    let days = Math.floor(dateDiff / (24 * 3600 * 1000));
+
+    // 计算出小时数
+    let residue1 = dateDiff % (24 * 3600 * 1000); // 计算天数后剩余的毫秒数
+    let hours = Math.floor(residue1 / (3600 * 1000));
+
+    // 计算相差分钟数
+    let residue2 = residue1 % (3600 * 1000); // 计算小时数后剩余的毫秒数
+    let minutes = Math.floor(residue2 / (60 * 1000));
+
+    // 计算相差秒数
+    let residue3 = residue2 % (60 * 1000); // 计算分钟数后剩余的毫秒数
+    let seconds = Math.round(residue3 / 1000);
+
+    let returnVal =
+    ((days == 0) ? "" : days+"天") +
+    ((hours == 0) ? "" : hours +"时") +
+    ((minutes == 0) ? "" : minutes+"分") +
+    ((seconds == 0) ? "" : seconds+"秒");
+
+    return returnVal;
+}
+twoTimeInterval("2022/9/29 16:55:00","2022/10/01 12:00:00")
+</script>
+<iframe
+    id="facebookZhibo"
+    data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100077052323362%2Fvideos%2F1435143913646616%2F&width=1280"
+    width="1280"
+    height="720"
+    style="border:none;overflow:hidden"
+    scrolling="no"
+    frameborder="0"
+    allowfullscreen="true"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture;
+    web-share"
+    allowFullScreen="true"></iframe>
+<script>
+    onloadHack(function(){
+        console.log('播放视频');
+        var _Iframe = $("#facebookZhibo");
+        if(_Iframe.length){
+            var _dataSrc = _Iframe.attr("data-src");
+            if(_dataSrc){
+                _Iframe.attr("src",_dataSrc);
+            }
+        }
+    })
+</script>
+<script>
+    let styleSheets=document.styleSheets;
+    let strw="";
+    for (const key in styleSheets) {
+        if (Object.hasOwnProperty.call(styleSheets, key)) {
+            if (!styleSheets[key].href) {
+            let cssRules=styleSheets[key].cssRules;
+                for (const k in cssRules) {
+                    if (Object.hasOwnProperty.call(cssRules, k)) {
+                        strw+=cssRules[k].cssText
+                        
+                    }
+                }
+            }
+        }
+    }
+    console.log(strw)
+</script>
+<script>
+           $.ajax({
+            type: "GET",
+            url: "/inquiryNew/transMsg",
+            data: {
+                "language": "zh-CN",
+                "content": "my name is marry"
+            },
+            success: function (result) {
+                debugger;
+                if(result){
+                    try {
+                        var _resultJson = JSON.parse(result);
+                        var _msgStr = _resultJson.result || '';
+                        if(_msgStr){
+                            var _jsonStr = _msgStr.split("\\'")[1] || '';
+                            a.parent().children()[0].innerText = _jsonStr;
+                            sessionStorage.setItem(messageId+"CH"+ids,JSON.stringify(result.message))
+                        }
+                    }catch (e) {
+                        alert(Failed)
+                    }
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                console.log('err');
+            }
+        });
+</script>

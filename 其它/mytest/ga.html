@@ -1,0 +1,75 @@
+<script>
+  onloadHack(function () {
+    setTimeout(function () {
+      // 初始化脚本
+      initGtag();
+
+      function initGtag() {
+        if (timer) {
+          clearInterval(timer);
+        }
+        var timer = null;
+        var flag = false;
+        // 这个地方写定时器的原因是因为 当页面加载完成后首屏以下的内容通过document.querySelectorAll 是获取不到的 就会导致下面声明方法 无效
+        // 所以写了定时器 找这个元素 document.querySelectorAll('#formsubmit') 以绑定相关方法 方法内容 并没有做任何修改
+        timer = setInterval(function () {
+          if (flag) {
+            clearInterval(timer);
+            return;
+          }
+          if (
+            document.querySelectorAll("#formsubmit").length &&
+            document.querySelectorAll("a[href^='mailto:']").length
+          ) {
+            flag = true;
+            document.querySelectorAll("#formsubmit").forEach(function (e) {
+              e.addEventListener("click", function () {
+                gtag("event", "conversion", {
+                  send_to: "AW-10835428707/tBhNCO7sqpEDEOOK3q4o",
+                });
+              });
+            });
+
+            document
+              .querySelectorAll("a[href^='mailto:']")
+              .forEach(function (e) {
+                e.addEventListener("click", function () {
+                  gtag("event", "conversion", {
+                    send_to: "AW-10835428707/1Lg1CPHsqpEDEOOK3q4o",
+                  });
+                });
+              });
+          }
+        }, 500);
+        // 这个地方做个上面的方法补偿 防止页面根本就没有 document.querySelectorAll('#formsubmit') 该元素 定时器一直再跑影响性能 把定时器清理掉
+        setTimeout(function () {
+          flag = true;
+        }, 10000);
+      }
+    }, 5000);
+  });
+</script>
+
+<script>
+  onloadHack(function () {
+    $("body").on("click", "#formsubmitClone", function () {
+      console.log("General联系表单");
+      try {
+        if (ga) {
+          ga("send", "event", "click", "General联系表单");
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    });
+  });
+</script>
+
+<script>
+  onloadHack(function () {
+    $("body").on("click", "div .QX-101340403 .center1, div .QX-101340403 .center2", function () {
+      console.log("888888888");
+      $(this).toggleClass('open');
+    });
+  });
+</script>

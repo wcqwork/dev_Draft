@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="module" defer>
+    import { html, render, useReducer, Component,Fragment } from './standalone.js'
+
+    class Clock extends Component {
+      constructor() {
+        super();
+        this.state = { time: Date.now() };
+      }
+
+      componentDidMount() {
+        // 每秒钟更新一次时间
+        this.timer = setInterval(() => {
+          this.setState({ time: Date.now() });
+        }, 1000);
+      }
+
+      render() {
+        const [count, add] = useReducer((a, b) => a + b, 0);
+        let time = new Date(this.state.time).toLocaleTimeString();
+        return html`
+          <button onClick=${() => add(-1)}>Decrement</button>
+          <input readonly size="4" value=${count} />
+          <button onClick=${() => add(1)}>Increment</button>
+          ${time}
+        `;
+      }
+    }
+
+    render(html`<${Clock} />`, document.body);
+    debugger
+  </script>
+</body>
+
+</html>

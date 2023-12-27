@@ -1,0 +1,98 @@
+<script>
+    /**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * }
+ */
+    /**
+     * @param {TreeNode} p
+     * @param {TreeNode} q
+     * @return {boolean}
+     */
+    var isSameTree = function (p, q) {
+        let isFlag = true;
+        var depTree = function (p, q) {
+            if (p == null || q == null) {
+                if (p != q) {
+                    isFlag = false;
+                    return;
+                }
+                return;
+            } else {
+                if (p.val != q.val) {
+                    isFlag = false;
+                    return;
+                }
+            }
+            depTree(p.left, q.left);
+            depTree(p.right, q.right);
+        }
+        depTree(p, q);
+        return isFlag;
+    };
+</script>
+
+
+<script>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-10827405410/2dgiCKybp6oDEOKw9Koo',
+        'value': 1.0,
+        'currency': 'USD',
+        'transaction_id': ''
+    });
+</script>
+
+
+<style>
+    .activityState0,
+    .activityState1,
+    .activityState2 {
+        display: inline-block;
+        background: #ffeed9;
+        border-radius: 20px;
+        padding: 2px 15px 2px 22px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #ff8d00;
+        position: relative
+    }
+
+    .activityState0:before,
+    .activityState1:before,
+    .activityState2:before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        background: #ff8d00;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px
+    }
+
+    .activityState1{
+        background: #cdfadf;
+        font-size: 12px;
+        font-weight: 400;
+        color: #04ae1c
+    }
+
+    .activityState1:before {
+        background: #04ae1c
+    }
+
+    .activityState2{
+        background: #e9edf7;
+        font-size: 12px;
+        font-weight: 400;
+        color: #848ba4
+    }
+
+    .activityState2:before{
+        background: #848ba4
+    }
+</style>

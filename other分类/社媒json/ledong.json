@@ -1,0 +1,50 @@
+{
+    "_id": "64d471364199251912dbcda1",
+    "meta": {
+        "isImage": true,
+        "isVideo": false,
+        "isGif": false,
+        "isLink": false,
+        "isText": true,
+        "meta": [
+            {
+                "type": "image/png",
+                "height": 462,
+                "width": 831,
+                "size": "29648",
+                "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/RudEn4ciG.png"
+            }
+        ]
+    },
+    "isCustomized": false,
+    "profiles": [
+        "64d09d52e42a1c1934e9ee62",
+        "64d34cbc9c97e21900fa3f7b"
+    ],
+    "isPrivate": true,
+    "posts": {
+        "ALL": {
+            "attachments": [
+                {
+                    "src": "https://s3.eu-west-1.amazonaws.com/media.socialchamp.io/users/64d09c3c41517865558fa3e4/posts/images/RudEn4ciG.png",
+                    "type": "image",
+                    "altText": ""
+                }
+            ],
+            "post": "3232323232232222323个Greg哥哥和和任何人仍然有人提议人微软微软微软人😀 ",
+            "meta": {
+                "linkedinFirstComment": "23132123👍",
+                "linkedinPrivacyStatus": "PUBLIC"
+            },
+            "tagsMapping": []
+        }
+    },
+    "dateTime": "2023-08-10T05:10:13.229Z",
+    "accountId": "64d09c3c41517865558fa3e4",
+    "workspaceId": "64d09c3c41517865558fa3e5",
+    "createdBy": "kongcheng",
+    "createdAt": "2023-08-10T05:10:14.249Z",
+    "updatedAt": "2023-08-10T05:10:14.249Z",
+    "__v": 0,
+    "ownedBy": true
+}

@@ -1,0 +1,265 @@
+[@phoenix_component settingId="${settingId!''}" relationCommonId="${relationCommonId!''}"]
+[@web_depand_component_sourceMap uuid="${component.componentAlias!}${settingId!}" componentAlias="${component.componentAlias!''}" settingJson="{'prodCateShowStyle': '${component.prodCateShowStyle!}'}" /]
+<div class="backstage-stwidgets-settingwrap" scope="${scope}" settingId="${settingId!''}" id="component_${settingId!''}" relationCommonId="${relationCommonId!''}" classAttr="${component.widgetClass}">
+
+	[#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '8' ||component.prodCateShowStyle == '19' || component.prodCateShowStyle == '7' || component.prodCateShowStyle == '21' || component.prodCateShowStyle == '10' || component.prodCateShowStyle == '14')]
+		[#include "style.html" /]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '1']
+	[@web_style pm_style="${component.widgetClass!}" collect="true"]
+	[#if component.activeNavBorderVal??]
+	.${component.widgetClass} .sm-mint-vertical>.prodli>a:before,.${component.widgetClass} .sm-mint-vertical>.prodli>a:after{
+		background: ${component.activeNavBorderVal!?html};
+	}
+	[/#if]
+	.${component.widgetClass} .sm-mint a:hover, .sm-mint a:focus, .sm-mint a:active,.sm-mint a.highlighted{
+		[#if component.activeNavBgColorVal??]
+		border-bottom-color: ${component.activeNavBgColorVal}!important;
+		background: ${component.activeNavBgColorVal}!important;
+		[/#if]
+		[#if component.activeNavColorVal??]
+		color: ${component.activeNavColorVal}!important;
+		[/#if]
+	}
+	.${component.widgetClass} .sitewidget-bd ul li.on>a,
+	.${component.widgetClass} .sitewidget-bd ul.sm li.on>a { color: ${component.currentLinkTxtColor!?html}; }
+	[/@web_style]
+	[#-- 风格11 on样式 --]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '11']
+		[@web_style pm_style="${component.widgetClass!}" collect="true"]
+		.${component.widgetClass}.sitewidget-subList-slider .sitewidget-bd .on > a,
+		.${component.widgetClass}.sitewidget-subList-slider .sitewidget-bd .hover-on > a { color:${component.currentLinkTxtColor!?html};}
+		[/@web_style]
+
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '12']
+		[@web_style pm_style="${component.widgetClass!}" collect="true"]
+		.${component.widgetClass}.sitewidget-onlySub-list .onlySub-top-list > a {
+			font-size: ${component.firstLFontSize!?html}px;
+			line-height: ${component.firstLLineHeight!?html}px;
+			color: ${component.firstLTxtColor!?html};
+			[#if component.firstLFontStyleB??]font-weight: bold;[/#if]
+			[#if component.firstLFontStyleI??]font-style: italic;[/#if]
+			[#if component.firstLFontStyleU??]text-decoration: underline;[/#if]
+		}
+		.${component.widgetClass}.sitewidget-onlySub-list .onlySub-top-list > a:hover {
+			color: ${component.firstLHovTxtColor!?html};
+		}
+		.${component.widgetClass}.sitewidget-onlySub-list .onlySub-top-list.on > a,
+		.${component.widgetClass}.sitewidget-onlySub-list .onlySub-sub-list.on > a { color: ${component.currentLinkTxtColor!?html}; }
+		[/@web_style]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '13']
+		[@web_style pm_style="${component.widgetClass!}" collect="true"]
+		.${component.widgetClass}.sitewidget-showSubs-list .showSubs-list-root .showSubs-list-first > a,
+		.${component.widgetClass}.sitewidget-showSubs-list .showSubs-list-root .showSubs-list-first .showSubs-list-first-drop a {
+			font-size: ${component.firstLFontSize!?html}px;
+			line-height: ${component.firstLLineHeight!?html}px;
+			color: ${component.firstLTxtColor!?html};
+			[#if component.firstLFontStyleB??]font-weight: bold;[/#if]
+			[#if component.firstLFontStyleI??]font-style: italic;[/#if]
+			[#if component.firstLFontStyleU??]text-decoration: underline;[/#if]
+		}
+		.${component.widgetClass}.sitewidget-showSubs-list .showSubs-list-root .showSubs-list-first > a:hover,
+		.${component.widgetClass}.sitewidget-showSubs-list .showSubs-list-root .showSubs-list-first .showSubs-list-first-drop a:hover {
+			color: ${component.firstLHovTxtColor!?html};
+		}
+		.${component.widgetClass}.sitewidget-showSubs-list .showSubs-list-root .on > a,
+		.${component.widgetClass}.sitewidget-showSubs-list .showSubs-list-root .on .showSubs-list-first-drop a { color: ${component.currentLinkTxtColor!?html}; }
+		[/@web_style]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '17']
+		[@web_style pm_style="${component.widgetClass!}" collect="true"]
+		 .${component.widgetClass} .cateTranstyle2Title{
+		   		 background-color:${component.firstLTxtColor17!?html};
+		   }
+		[/@web_style]
+	[#else]
+		[@web_style pm_style="${component.widgetClass!}" collect="true"]
+			.${component.widgetClass} .sitewidget-bd ul li.on>a,
+			.${component.widgetClass} .sitewidget-bd ul.sm li.on>a { color: ${component.currentLinkTxtColor!?html}; }
+			[#if component.prodCateShowStyle?? && component.prodCateShowStyle == '15']
+			.${component.widgetClass}{background:#fff;}
+			.${component.widgetClass} .sm-simple,.${component.widgetClass} .sm-simple ul{background:#fff;}
+			@media screen and (min-width: 1000px) {
+				.${component.widgetClass}.fixed{position:fixed;top:0;z-index:7;}
+			}
+			[/#if]
+		[/@web_style]
+	[/#if]
+
+	[#assign classType="" /]
+	[#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '7')]
+		[#assign classType="category-default-gray category-default-simple category-default-simple7" /]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '21']
+		[#assign classType="category-default-gray category-default-simple category-default-simple21" /]
+	[#elseif component.prodCateShowStyle?? && (component.prodCateShowStyle == '8' || component.prodCateShowStyle == '19' || component.prodCateShowStyle == '10')]
+		[#assign classType="category-default-simple" /]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '11']
+		[#assign classType="sitewidget-subList-slider" /]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '12']
+		[#assign classType="sitewidget-onlySub-list" /]
+	[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '13']
+		[#assign classType="sitewidget-showSubs-list" /]
+    [#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '14']
+	[#assign classType="category-default-gray category-default-simple category-default-simple7" /]
+	[@web_style pm_style="${component.widgetClass!}" collect="true"]
+	.${component.widgetClass}{background:#fff;}
+	@media screen and (min-width: 1000px) {
+		.${component.widgetClass}.fixed{position:fixed;top:0;z-index:7;}
+	}
+	[/@web_style]
+	[/#if]
+
+
+
+	<div class="sitewidget-prodGroupCategory [#if component.prodCateShowStyle?? && component.prodCateShowStyle = '19']prodGroupCategory19[/#if] ${component.widgetClass} ${classType!} prodGroupCategory${component.prodCateShowStyle!''}">
+		[#assign sitewidget="sitewidget-all"]
+		[#if component.prodCateShowStyle?? && component.prodCateShowStyle = '5']
+			[#assign sitewidget="sitewidget-tile"]
+		[/#if]
+		<div class="sitewidget-hd ${sitewidget} [#if component.prodCateShowStyle?? && component.prodCateShowStyle == '9'] hd-style9[/#if]">
+			[#if component.componentTitle??]
+				<h2>${component.componentTitle!?html}<span class="sitewidget-thumb todown"><i class="fa fa-angle-down" aria-hidden="true"></i></span></h2>
+			[#else]
+				[#if component.prodCateShowStyle?? && component.prodCateShowStyle != '5']
+					<h2 class="sitewidget-prodGroupCategory-settedtitle">
+						[@table_select selectCateIds="${component.productGroup_ids!''}" serviceName="phoenixGroupService" selectGroupType="${selectGroupType!'1'}" ]
+							[#if table_data??]
+								[#list table_data as group]
+									[#if group_index == 0]${group.groupName!?html}[/#if]
+								[/#list]
+							[/#if]
+						[/@table_select]
+						<span class="sitewidget-thumb todown"><i class="fa fa-angle-down" aria-hidden="true"></i></span>
+					</h2>
+				[/#if]
+			[/#if]
+
+		</div>
+
+		<div class="sitewidget-bd ${sitewidget}">
+
+			[#include "include.html" /]
+
+			[@web_backend]<a class="hide" href="javascript:;">&nbsp;</a>[/@web_backend]
+
+		</div>
+	</div>
+
+	[@web_javascript collect="true" pm_script="${component.widgetClass!}" jumpTo="${settingId!}"]
+	$(function(){
+		[#--//目录导航折叠效果--]
+	    phoenixSite.sitewidgets.prodGroupCategoryThumbToggle(".${component.widgetClass}");
+		[#if component.proCatebtnOpenStyle?? && component.proCatebtnOpenStyle == "0" && component.prodCateShowStyle?? && (component.prodCateShowStyle == '7' || component.prodCateShowStyle == '21' ||component.prodCateShowStyle == '19' || component.prodCateShowStyle == '8' || component.prodCateShowStyle == '10' || component.prodCateShowStyle == '14')]
+		$(".${component.widgetClass} .prodli.on").parents(".prodli").each(function(){
+			$(this).addClass("on");
+		})
+
+		[/#if]
+
+	})
+	[/@web_javascript]
+	[#-- 后台组件包裹框注册.script节点一定要在组件div内--]
+	[@web_backend]
+		[@web_javascript]
+			(function(window,jQuery,undefined){
+				// 组件包裹框注册
+				$(function(){
+					$_phoenix.pagefunc.component_management.setup('${settingId!''}',{title: '[@phoenix_directive_i18n code="component_alias_name_${component.componentAlias!}" txt="${component.componentName!}"/]'});
+				});
+			})(window,jQuery)
+		[/@web_javascript]
+	[/@web_backend]
+	[@web_javascript collect="true" pm_script="${component.widgetClass!}" jumpTo="${settingId!}"]
+		(function(window, $, undefined){
+			$(function(){
+				[#if !component.prodCateShowStyle?? || component.prodCateShowStyle == '6' || component.prodCateShowStyle == '7' || component.prodCateShowStyle == '21' || component.prodCateShowStyle == '19' || component.prodCateShowStyle == '8' || component.prodCateShowStyle == '9' || component.prodCateShowStyle == '10' || component.prodCateShowStyle == '14']
+					console.log($('.${component.widgetClass} .with-submenu,.${component.widgetClass} .submenu-default-gray'));
+					console.log($('.${component.widgetClass} .submenu-default-simple'));
+					$('.${component.widgetClass} .with-submenu,.${component.widgetClass} .submenu-default-gray').slightSubmenu({buttonActivateEvents: 'click click',submenuOpeneTime:400});
+					$('.${component.widgetClass} .submenu-default-simple').slightSubmenu({buttonActivateEvents: 'click click',submenuOpeneTime:10});
+					[#--设置菜单展开效果--]
+					[#if component.proCatebtnOpenStyle?? && component.proCatebtnOpenStyle != "0" && (component.prodCateShowStyle == '7' || component.prodCateShowStyle == '21' || component.prodCateShowStyle == '14')]
+						[#if component.proCatebtnOpenStyle == "1"]
+							var showList = $('.${component.widgetClass} .submenu-default-gray').find(">.li-with-ul");
+						[#elseif component.proCatebtnOpenStyle == "2"]
+							var showList = $('.${component.widgetClass} .sitewidget-bd > .submenu-default-gray').find(">.li-with-ul");
+						[/#if]
+						showList.addClass("submenuUlShow").find(">.slight-submenu-button").addClass("opened");
+						showList.find(">ul").show();
+					[#elseif component.proCatebtnOpenStyle?? && component.proCatebtnOpenStyle != "0" && (component.prodCateShowStyle == '19' ||component.prodCateShowStyle == '8' || component.prodCateShowStyle == '9' || component.prodCateShowStyle == '10')] [#-- 风格8/19/9/10 --]
+						[#if component.proCatebtnOpenStyle == "1"]
+							var showList = $('.${component.widgetClass} .submenu-default-simple').find(">.li-with-ul");
+							[#if component.prodCateShowStyle == "9"]
+							var showList9 = $('.${component.widgetClass} ul').find(".li-with-ul");
+							[/#if]
+						[#elseif component.proCatebtnOpenStyle == "2"]
+							var showList = $('.${component.widgetClass} .sitewidget-bd > .submenu-default-simple').find(">.li-with-ul");
+							[#if component.prodCateShowStyle == "9"]
+							var showList9 = $('.${component.widgetClass} .sitewidget-bd >ul').find(">.li-with-ul");
+							[/#if]
+						[/#if]
+						[#if component.prodCateShowStyle == "9"]
+						showList9.addClass("submenuUlShow").find(">.slight-submenu-button").addClass("opened");
+						showList9.find(">ul").show();
+						[#else]
+						showList.addClass("submenuUlShow").find(">.slight-submenu-button").addClass("opened");
+						showList.find(">ul").show();
+						[/#if]
+					[/#if]
+				[#elseif component.prodCateShowStyle?? && component.prodCateShowStyle == '12']
+					[#--风格13 无脚本 --]
+				[#else]
+					$('.${component.widgetClass} #menu-blue-vertical,#menu-clean-vertical,#menu-simple-vertical').smartmenus({
+						subMenusSubOffsetX: 0,
+						subMenusSubOffsetY: -1
+					});
+					$('.${component.widgetClass} #menu-mint-vertical').smartmenus({
+						subMenusSubOffsetX: 0,
+						subMenusSubOffsetY: -1
+					});
+
+				[/#if]
+			});
+			[#--点击链接后展开二级组--]
+			$(function() {
+				var subListOn = $(".${component.widgetClass} .slight-submenu-wrap ul .on");
+				if(subListOn.length){
+					subListOn.parents('ul').show();
+					subListOn.parents('ul').siblings(".slight-submenu-button").addClass("opened");
+				}
+				[#--判断是否展开--]
+				if($('.sitewidget-prodGroupCategory .sitewidget-bd ul li').hasClass('on')){
+				$('.sitewidget-prodGroupCategory .sitewidget-bd ul .on').children('.slight-submenu-button').addClass('opened');
+					$('.sitewidget-prodGroupCategory .sitewidget-bd ul .on').children('ul').css('display','block');
+				}
+				[#if component.prodCateShowStyle?? && (component.prodCateShowStyle == '15' || component.prodCateShowStyle == '14')]
+				$('.sitewidget-prodGroupCategory').addClass('ul-bg-white');
+
+				if($(window).width()>999){
+					var _sitewidget='${component.widgetClass}';
+					var _sitewidgetTop=$('.'+_sitewidget).offset().top;
+					var _sitewidgetWidth=$('.'+_sitewidget).width();
+					var _sitewidgetCssTop=$('.'+_sitewidget).css('top');
+					$(window).scroll(function(){
+						var _top=$(this).scrollTop();
+						var _holdingHeight=0;
+						if(_top>_sitewidgetTop){
+							$('.'+_sitewidget).addClass('fixed');
+							if($('.holding').length){
+								$('.holding').each(function(i,ele){
+									return _holdingHeight+=$(ele).height();
+								});
+								$('.'+_sitewidget).css({'top':_holdingHeight});
+							}
+							$('.'+_sitewidget).css({'width':_sitewidgetWidth});
+						}else{
+							$('.'+_sitewidget).removeClass('fixed').css('top',_sitewidgetCssTop);
+						}
+					});
+				}
+
+				[/#if]
+			});
+		})(window, jQuery);
+	[/@web_javascript]
+</div>
+[#include "/phoenix/lab/component_labjs_include.html" /]
+[/@phoenix_component]
