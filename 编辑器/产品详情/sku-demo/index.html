@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <div id="prod-sku-container"></div>
   <script type="module" defer>
     import { html, render, useReducer, Component,useState,useMemo } from '../preact/standalone.js'
     import SpecAdjoinMatrix from "./utils/spec-adjoin-martix.js";
@@ -29,7 +30,7 @@
         { id: "6", specs: ["KG", "2寸", "粉色", "正方"] },
       ],
     };
-    class Clock extends Component {
+    class Sku extends Component {
       componentDidMount() {
       }
 
@@ -53,7 +54,6 @@
 
         const classNames = (...args) => {
           let strClass = ''
-          debugger
           for(let itemObj of args){
             for(let [key,val] of Object.entries(itemObj)){
               if(val){
@@ -94,8 +94,7 @@
       }
     }
 
-    render(html`<${Clock} />`, document.body);
-    debugger
+    render(html`<${Sku} />`, document.querySelector("#prod-sku-container"));
   </script>
 </body>
 
