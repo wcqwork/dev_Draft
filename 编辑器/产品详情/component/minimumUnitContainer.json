@@ -1,0 +1,43 @@
+[
+  {
+    "name": "产品详情",
+    "children": [
+      {
+        "name": "产品名称",
+        "blockName":"prodDetail-prodName",
+        "media": "<i class='iconfont icon-module-icon-tupian'></i>",
+        "appid": "1688"
+      },
+      {
+        "name": "产品简介",
+        "blockName":"prodDetail-brief",
+        "media": "<i class='iconfont icon-module-icon-tupian'></i>",
+        "appid": "23223"
+      },
+      {
+        "name": "询盘按钮",
+        "blockName":"prodDetail-inquiryBtn",
+        "media": "<i class='iconfont icon-module-icon-tupian'></i>",
+        "appid": "12332"
+      },
+      {
+        "name": "产品图片",
+        "blockName":"prodDetail-prodImg",
+        "media": "<i class='iconfont icon-module-icon-tupian'></i>",
+        "appid": "23323"
+      },
+      {
+        "name": "产品属性",
+        "blockName":"prodDetail-prodProperty",
+        "media": "<i class='iconfont icon-module-icon-tupian'></i>",
+        "appid": "23323"
+      },
+      {
+        "name": "sku",
+        "blockName":"prodDetail-sku",
+        "media": "<i class='iconfont icon-module-icon-tupian'></i>",
+        "appid": "3433"
+      }
+    ]
+  }
+]
