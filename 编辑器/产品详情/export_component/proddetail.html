@@ -1,0 +1,17 @@
+<div class="dynamic-component-container" data-block-uuid="aaa" data-default-setting={} >
+	[@api method="post" url="/phoenix2/composite/graphql"
+			expandIds="${expandIds!''}"
+			query='{
+					productDetail(prodId: "") {
+						prodName
+						prodUrl
+					}
+			}']
+	[#if data?? && data.productDetail??]
+		[#assign product = data.productDetail]
+	[/#if]
+		<div class="minimum-unit-container">
+			[@develop_include appId="12332" style="-1" fileName="view_default.html"][/@develop_include]
+		</div>
+	[/@api]
+</div>

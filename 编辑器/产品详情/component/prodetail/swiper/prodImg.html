@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<style>
+  .lead_swiper_container {
+    position: relative;
+    width: auto;
+
+    --gap-xs: 10px;
+  }
+
+  .lead_swiper_wrapper {
+
+    --swiper-navigation-color: #fff;
+    --swiper-pagination-color: #fff
+  }
+</style>
+
+<style>
+  /* 风格上下 */
+  .upAndDown .lead_swiper_wrapper {
+    width: 100%;
+    height: 316px;
+  }
+
+  .upAndDown .lead_swiper_wrapper  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .upAndDown .lead_swiper_wrapper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .upAndDown .lead_swiper_thumbs {
+    height: 102px;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .upAndDown .lead_swiper_thumbs .swiper-slide {
+    width: calc(25% - 8px);
+    margin-right: 10px;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .upAndDown .lead_swiper_thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 风格上下 */
+  .upAndDown .lead_swiper_thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+</style>
+
+<style>
+  .upAndDown_translate {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+</style>
+
+<style>
+  .leftAndRight {
+    display: flex;
+  }
+
+  .leftAndRight .lead_swiper_wrapper {
+    width: 432px;
+    height: 432px;
+    margin: 0;
+  }
+
+  .leftAndRight .lead_swiper_wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .leftAndRight .lead_swiper_thumbs {
+    width: 108px;
+    height: calc(108px * 4);
+    margin: 0;
+    margin-left: 10px;
+  }
+
+  .leftAndRight .lead_swiper_thumbs .swiper-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .leftAndRight .lead_swiper_thumbs .swiper-slide {
+    height: 108px;
+    margin-bottom: 10px;
+  }
+
+  .leftAndRight .lead_swiper_thumbs .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+
+<style>
+  .leftAndRight_translate {
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+
+  .leftAndRight_translate .lead_swiper_thumbs {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+</style>
+
+<body>
+  <div style="width: 800px;">
+    <!-- Swiper -->
+    <div class="lead_swiper_container upAndDown upAndDown_translate">
+      <div class="swiper lead_swiper_wrapper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div thumbsSlider="" class="swiper lead_swiper_thumbs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".upAndDown .lead_swiper_thumbs", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".upAndDown .lead_swiper_wrapper", {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+
+  <!-- <script>
+    var swiper = new Swiper(".leftAndRight .lead_swiper_thumbs", {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      direction: 'vertical',
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".leftAndRight .lead_swiper_wrapper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script> -->
+</body>
+
+</html>

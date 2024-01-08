@@ -1,0 +1,63 @@
+{
+  "pageSize": 10,
+  "page": 1,
+  "dataType": "0",
+  "dataIds": [],
+  "dataGroupId": [],
+  "orderBy": "0",
+  "loadMethod": "0",
+  "jumpMethod": "0",
+  "expandIds": {
+    "functionBtn": {
+      "label": "功能按钮",
+      "key": "functionBtn",
+      "draggable": true,
+      "data": [
+        { "label": "询盘", "key": "inquiry", "value": "1", "checked": true },
+        {
+          "label": "加入询盘栏",
+          "key": "addInquiry",
+          "value": "2",
+          "checked": true
+        },
+        { "label": "立即购买", "key": "buyNow", "value": "3", "checked": true },
+        {
+          "label": "加入购物车",
+          "key": "addBasket",
+          "value": "4",
+          "checked": true
+        }
+      ]
+    },
+    "showField": {
+      "label": "显示字段",
+      "key": "showField",
+      "draggable": false,
+      "data": [
+        {
+          "fieldName": "品牌",
+          "fieldId": "prodBrand",
+          "fieldType": "0",
+          "value": "1",
+          "checked": true
+        },
+        {
+          "fieldName": "型号",
+          "fieldId": "prodModel",
+          "fieldType": "0",
+          "value": "2",
+          "checked": true
+        },
+        {
+          "fieldName": "编码",
+          "fieldId": "prodCode",
+          "fieldType": "0",
+          "value": "3",
+          "checked": true
+        }
+      ]
+    }
+  },
+  "expandSort": ["functionBtn", "showField"],
+  "layoutStyle": "0"
+}

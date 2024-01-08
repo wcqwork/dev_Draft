@@ -7,14 +7,16 @@
   <title>Document</title>
   <link rel="stylesheet" href="./spec.css">
   <script type="module" src="./standalone.js"></script>
+  <script src="./utils/spec-adjoin-martix.js"></script>
 </head>
 
 <body>
-  <div id="prod-sku-container"></div>
-  <script type="module" defer>
-    const { html, render, useReducer, Component,useState,useMemo } = window.leadPreact;
-    import SpecAdjoinMatrix from "./utils/spec-adjoin-martix.js";
+  <div id="prod-sku-container" class="minimum-unit-sku" data-minimumUnit-component="prodDetail-sku" data-appid="21212" data-component-style="1">
 
+  </div>
+  <script type="module" defer>
+    const { html, render, useReducer, Component, useState, useMemo } = window.leadPreact;
+    const SpecAdjoinMatrix = window.leadd_SpecAdjoinMatrix
     const initialState = {
       specList: [
         { title: "颜色", list: ["白色", "粉色"] },
@@ -55,9 +57,9 @@
 
         const classNames = (...args) => {
           let strClass = ''
-          for(let itemObj of args){
-            for(let [key,val] of Object.entries(itemObj)){
-              if(val){
+          for (let itemObj of args) {
+            for (let [key, val] of Object.entries(itemObj)) {
+              if (val) {
                 strClass += key + ' '
               }
             }
@@ -65,22 +67,22 @@
           return strClass
         }
 
-        const skuItem = ({ value,i,index }) => {
+        const skuItem = ({ value, i, index }) => {
           const isOption = optionSpecs.includes(value); // 当前规格是否可选
           const isActive = specsS.includes(value); // 当前规格是否被选
           return html`<span
                 key=${i}
                 className=${classNames({
-                  specOption: isOption,
-                  specAction: isActive,
-                  specDisabled: !isOption,
-                })}
+            specOption: isOption,
+            specAction: isActive,
+            specDisabled: !isOption,
+          })}
                 onClick=${() => handleClick(isOption, value, index)}
               >
             ${value}
           </span>`
         }
-        
+
         return html`
           <div className="container">
             ${specList.map(({ title, list }, index) => html`
@@ -97,6 +99,9 @@
     }
 
     render(html`<${Sku} />`, document.querySelector("#prod-sku-container"));
+  </script>
+  <script>
+    // leadComponentSite.miniUnitSku.init({});
   </script>
 </body>
 
