@@ -1,96 +1,23 @@
-[@phoenix2_directive_html]
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <link rel="preload" as="image" href="http://design.ldwebsitebuilder.com:8080/phxBlockEditor/images/defaultheader.png"
-    fetchpriority="high">
-
-  [#include "phoenix/component/mark_head_view_default.ftl"]
-</head>
-
-<body class="frontend-body-canvas">
-
-  [#include "phoenix/component/mark_body_top_view_default.ftl"]
-  <section id="iczg"
-    class="block-container block-editor-lead-container global-animation block-settingId-fc690cd5-57c5-4aef-8348-daa5e4a1554c"
-    data-gjs-type="blockContainer">
-    <div id="iouh" draggable="false" class="site-block-container" data-gjs-type="siteblockContainer">
-      <div id="i6hl" class="row-container" data-gjs-type="rowContainer">
-        <div id="ioz7" class="column-container" data-gjs-type="column">
-          <div data-new-auto-uuid="proddetail_uuid_1111" class="dynamic-component-container" id="i0wz"
-            data-gjs-type="dynamic-component-container">[@page_node uuid="ygj-yuuyyt"]
-            [@api method="post" url="产品详情接口" prodId="${productId!''}" query="{type:''}"]
-            <div class="row-container" id="i1dp" data-gjs-type="rowContainer">
-              <div class="column-container" id="i9lix" data-gjs-type="column">
-                <div class="lead-component-wrapper lead-container-wrapper" id="ijkp1" data-gjs-type="componentWrapper">
-                  <div data-provider="" draggable="false" class="lead-image-container" id="i23co"
-                    data-gjs-type="images">
-                    <picture draggable="false" class="lead-picture" data-gjs-type="pictureType">
-                      <source srcset="//g3.leadongcdn.cn/cloud/jiBpjKiilpSRikimnnjrjo/default_img.png"
-                        media="(min-width: 992px)" draggable="false" data-gjs-type="sourceType">
-                      <source srcset="//g3.leadongcdn.cn/cloud/jiBpjKiilpSRikimnnjrjo/default_img.png"
-                        media="(min-width: 768px)" draggable="false" data-gjs-type="sourceType"><img
-                        src="//g3.leadongcdn.cn/cloud/jiBpjKiilpSRikimnnjrjo/default_img.png" loading="lazy"
-                        draggable="false" class="lead-img" id="iqbo8" data-gjs-type="imageType">
-                    </picture>
-                  </div>
-                </div>
-                <div data-new-auto-uuid="proddetail_component_uuid_22222" class="minimum-unit-container" id="iztj5"
-                  data-gjs-type="minimum-unit-container">
-                  <link rel="stylesheet"
-                    href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/ldApfKUwmiOH-VdfpKUAWgiKc-GkUfApKfpKpq-jlBqrKkjriqiliijnkr/style.css"
-                    draggable="false">[@develop_include appId="21212" style="-1"
-                  fileName="view_default.html"][/@develop_include]
-                </div>
-              </div>
-              <div class="column-container" id="imnf4" data-gjs-type="column">
-                <div data-new-auto-uuid="proddetail_component_uuid_333333" class="minimum-unit-container" id="ilc13"
-                  data-gjs-type="minimum-unit-container">[@develop_include appId="12332" style="-1"
-                  fileName="view_default.html"][/@develop_include]</div>
-                <div data-new-auto-uuid="proddetail_component_uuid_444444" class="minimum-unit-container" id="i4j6t"
-                  data-gjs-type="minimum-unit-container">[@develop_include appId="3434" style="-1"
-                  fileName="view_default.html"][/@develop_include]</div>
-                <div class="lead-component-wrapper" id="iiomn" data-gjs-type="componentWrapper">
-                  <div draggable="false" class="lead-button-container" id="iac5p" data-gjs-type="ButtonContainer"><a
-                      href="#" draggable="false" class="lead-button" id="irs75" data-gjs-type="button"><svg
-                        version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                        x="0px" y="0px" viewBox="0 0 24 24" xml:space="preserve" draggable="false"
-                        class="lead-css-pzetr" data-gjs-type="svg">
-                        <g fill="currentColor" draggable="false" class="nc-icon-wrapper" data-gjs-type="svg-in">
-                          <path fill="currentColor"
-                            d="M22.707,11.293L15,3.586L13.586,5l6,6H2c-0.553,0-1,0.448-1,1s0.447,1,1,1h17.586l-6,6L15,20.414 l7.707-7.707C23.098,12.316,23.098,11.684,22.707,11.293z"
-                            draggable="false" data-gjs-type="svg-in"></path>
-                        </g>
-                      </svg>
-                      <div draggable="false" class="lead-button-text" data-gjs-type="text">BUTTON</div>
-                    </a></div>
-                </div>
-                <div class="lead-text" data-gjs-type="text" draggable="false">
-                  <div draggable="false" data-gjs-type="text">This is the default text, you can click here to add the
-                    t342423424324ext content
-                    you want to render.</div>
-                </div>
-              </div>
-            </div>[/@api]
-            [/@page_node]
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <script type="text/javascript"
-    data-src="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/ldApfKUwmiOH-VofpUAKCLNKQ-GkUfApKfpKpq-jjBqrKkjriqiiiriqlr/demo.js"></script>
-  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
-  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1703567903000">
-
-</body>
-
-</html>
-[/@phoenix2_directive_html]
+<div class="dynamic-component-container" data-block-uuid="productDetail_77356" data-default-setting="{&quot;prodId&quot;:&quot;miUgAMZasPyb&quot;}">
+	[@api method="post" url="/phoenix2/composite/graphql" prodId="$prodId" query='{
+		productList(conditionDto: {searchProdIds: "$prodId", page: 0, limit: 1}) {
+			list {
+				encodeId
+				prodName 
+			}
+		}
+    }']
+		[#if data?? &amp;&amp; data.productList?? &amp;&amp; data.productList.list??]
+			[#list data.productList.list as product]
+        		<link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/hEKpfAUmRiFl-WopUfKArgiaM-GkUfApKfpKpq-jmBqrKljirprkrjnqkr/product.css">
+            <div data-gjs-highlightable="true" id="i6he" data-gjs-type="minimum-unit-container" draggable="true" data-new-auto-uuid="prodName_747de92d4ca848a1a8619763f67f8db7" data-block-uuid="prodName" componenttype="prodName" class="minimum-unit-container">
+              <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/lJfpUAKHwNPa-VNAfKUpCqsOd-GkUfApKfpKpq-jrBqrKljirprkrrnpni/unit.css">
+              [@develop_include appId="77355" styleId="-1" fileName="view_default.html"][/@develop_include blockSort="0" ]
+            </div>
+            <div data-gjs-highlightable="true" id="i2ps8" data-gjs-type="minimum-unit-container" draggable="true" class="minimum-unit-container">
+              [@develop_include appId="77355" styleId="-1" fileName="view_default.html"  blockSort="1" ]
+            </div>
+			[/#list]
+		[/#if]
+    [/@api]
+</div>

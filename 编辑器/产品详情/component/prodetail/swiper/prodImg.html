@@ -14,7 +14,25 @@
     position: relative;
     width: auto;
 
-    --gap-xs: 10px;
+    /* 主图大小 */
+    /* --swiper_wrapperWidth: 432px; */
+    --swiper_wrapperWidth: 100%;
+    --swiper_wrapperHeight: 432px;
+    /* 整个缩略图 整个缩略图间距*/
+    /* --swiper_thumbsWidth: 108px; */
+    --swiper_thumbsWidth: 100%;
+    --swiper_slidesPerView: 5;
+    --swiper_thumbsSpaceBetween_top: 10px;
+    --swiper_thumbsSpaceBetween_right: 0px;
+    --swiper_thumbsSpaceBetween_bottom: 0px;
+    --swiper_thumbsSpaceBetween_left: 0px;
+    /* 缩略图一个小块间距 */
+    --swiper_thumbsSlideHeight: 108px;
+    --swiper_thumbsSlideWidth: 108px;
+    --swiper_swiperSlideSpaceBetween_top: 0px;
+    --swiper_swiperSlideSpaceBetween_right: 10px;
+    --swiper_swiperSlideSpaceBetween_bottom: 0px;
+    --swiper_swiperSlideSpaceBetween_left: 0px;
   }
 
   .lead_swiper_wrapper {
@@ -27,8 +45,8 @@
 <style>
   /* 风格上下 */
   .upAndDown .lead_swiper_wrapper {
-    width: 100%;
-    height: 316px;
+    width: var(--swiper_wrapperWidth);
+    height: var(--swiper_wrapperHeight);
   }
 
   .upAndDown .lead_swiper_wrapper .swiper-slide {
@@ -51,15 +69,22 @@
   }
 
   .upAndDown .lead_swiper_thumbs {
-    height: 102px;
-    box-sizing: border-box;
-    padding: 10px 0;
+    width: var(--swiper_thumbsWidth);
+    height: var(--swiper_thumbsSlideHeight);
+    margin-top: var(--swiper_thumbsSpaceBetween_top);
+    margin-right: var(--swiper_thumbsSpaceBetween_right);
+    margin-bottom: var(--swiper_thumbsSpaceBetween_bottom);
+    margin-left: var(--swiper_thumbsSpaceBetween_left);
   }
 
   .upAndDown .lead_swiper_thumbs .swiper-slide {
-    width: calc(25% - 8px);
-    margin-right: 10px;
-    height: 100%;
+    width: var(--swiper_thumbsSlideWidth);
+    height: var(--swiper_thumbsSlideHeight);
+
+    margin-top: var(--swiper_swiperSlideSpaceBetween_top);
+    margin-right: var(--swiper_swiperSlideSpaceBetween_right);
+    margin-bottom: var(--swiper_swiperSlideSpaceBetween_bottom);
+    margin-left: var(--swiper_swiperSlideSpaceBetween_left);
     opacity: 0.4;
   }
 
@@ -92,8 +117,8 @@
   }
 
   .leftAndRight .lead_swiper_wrapper {
-    width: 432px;
-    height: 432px;
+    width: var(--swiper_wrapperWidth);
+    height: var(--swiper_wrapperHeight);
     margin: 0;
   }
 
@@ -104,10 +129,12 @@
   }
 
   .leftAndRight .lead_swiper_thumbs {
-    width: 108px;
-    height: calc(108px * 4);
-    margin: 0;
-    margin-left: 10px;
+    width: var(--swiper_thumbsWidth);
+    height: calc((var(--swiper_thumbsSlideHeight)) * var(--swiper_slidesPerView));
+    margin-top: var(--swiper_thumbsSpaceBetween_top);
+    margin-right: var(--swiper_thumbsSpaceBetween_right);
+    margin-bottom: var(--swiper_thumbsSpaceBetween_bottom);
+    margin-left: var(--swiper_thumbsSpaceBetween_left);
   }
 
   .leftAndRight .lead_swiper_thumbs .swiper-wrapper {
@@ -116,8 +143,12 @@
   }
 
   .leftAndRight .lead_swiper_thumbs .swiper-slide {
-    height: 108px;
-    margin-bottom: 10px;
+    height: var(--swiper_thumbsSlideHeight);
+
+    margin-top: var(--swiper_swiperSlideSpaceBetween_top);
+    margin-right: var(--swiper_swiperSlideSpaceBetween_right);
+    margin-bottom: var(--swiper_swiperSlideSpaceBetween_bottom);
+    margin-left: var(--swiper_swiperSlideSpaceBetween_left);
   }
 
   .leftAndRight .lead_swiper_thumbs .swiper-slide img {
@@ -135,15 +166,17 @@
   }
 
   .leftAndRight_translate .lead_swiper_thumbs {
-    margin-left: 0;
-    margin-right: 10px;
+    margin-top: var(--swiper_thumbsSpaceBetween_top);
+    margin-right: var(--swiper_thumbsSpaceBetween_right);
+    margin-bottom: var(--swiper_thumbsSpaceBetween_bottom);
+    margin-left: var(--swiper_thumbsSpaceBetween_left);
   }
 </style>
 
 <body>
   <div style="width: 800px;">
     <!-- Swiper -->
-    <div class="lead_swiper_container upAndDown upAndDown_translate">
+    <div class="lead_swiper_container upAndDown">
       <div class="swiper lead_swiper_wrapper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -222,20 +255,21 @@
 
   <script>
     const upAndDown = {
-      swiperSetting: {
-        selector: ".upAndDown .lead_swiper_thumbs",
-        config: {
-          spaceBetween: 10,
-          slidesPerView: 4,
-          freeMode: true,
-          watchSlidesProgress: true,
+      swiperSetting: function (config) {
+        return {
+          selector: ".upAndDown .lead_swiper_thumbs",
+          config: {
+            spaceBetween: config.spaceBetween || 10,
+            slidesPerView: config.slidesPerView || 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+          }
         }
       },
       thumbsSetting: function (swiper) {
         return {
           selector: ".upAndDown .lead_swiper_wrapper",
           config: {
-            spaceBetween: 10,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -248,21 +282,22 @@
       }
     }
     const leftAndRight = {
-      swiperSetting: {
-        selector: ".leftAndRight .lead_swiper_thumbs",
-        config: {
-          spaceBetween: 10,
-          slidesPerView: 4,
-          direction: 'vertical',
-          freeMode: true,
-          watchSlidesProgress: true,
+      swiperSetting: function (config) {
+        return {
+          selector: ".leftAndRight .lead_swiper_thumbs",
+          config: {
+            spaceBetween: config.spaceBetween || 10,
+            slidesPerView: config.slidesPerView || 4,
+            direction: 'vertical',
+            freeMode: true,
+            watchSlidesProgress: true,
+          }
         }
       },
       thumbsSetting: function (swiper) {
         return {
           selector: ".leftAndRight .lead_swiper_wrapper",
           config: {
-            spaceBetween: 10,
             navigation: {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -280,13 +315,18 @@
       leftAndRight
     }
 
-    const initLeaSwiper = (setting) => {
+    const initLeaSwiper = (setting,config) => {
       const { swiperSetting, thumbsSetting } = setting
-      var swiper = new Swiper(swiperSetting.selector, swiperSetting.config);
+      const swiperOption = swiperSetting(config)
+      var swiper = new Swiper(swiperOption.selector, swiperOption.config);
       const thembsOption = thumbsSetting(swiper)
       var swiper2 = new Swiper(thembsOption.selector, thembsOption.config);
     }
-    initLeaSwiper(leadSwiperOption['upAndDown'])
+    const config = {
+        slidesPerView: 5,
+        spaceBetween: 10
+      }
+    initLeaSwiper(leadSwiperOption['upAndDown'],config)
   </script>
 </body>
 

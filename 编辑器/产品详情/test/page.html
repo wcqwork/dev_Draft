@@ -1,0 +1,67 @@
+[@phoenix2_directive_html]
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preload" as="image" href="http://design.ldwebsitebuilder.com:8080/phxBlockEditor/images/defaultheader.png"
+    fetchpriority="high">
+
+  [#include "phoenix/component/mark_head_view_default.ftl"]
+</head>
+
+<body class="frontend-body-canvas">
+
+  [#include "phoenix/component/mark_body_top_view_default.ftl"]
+  <section
+    class="block-container block-editor-lead-container global-animation block-settingId-3d28cb6a-e9aa-4bee-af27-c0812adcea76"
+    id="iiq2" data-gjs-type="blockContainer">
+    <div class="site-block-container" id="ifx2" data-gjs-type="siteblockContainer" draggable="false">
+      <div class="row-container" id="i29v" data-gjs-type="rowContainer">
+        <div class="column-container" id="isdv" data-gjs-type="column">
+          <div class="dynamic-component-container" data-block-uuid="productDetail_77356" data-default-setting="{"
+            prodId":"miUgAMZasPyb"}" draggable="false">
+            [@api method="post" url="/phoenix2/composite/graphql" prodId="$prodId" query='{
+            productList(conditionDto: {searchProdIds: "$prodId", page: 0, limit: 1}) {
+            list {
+            encodeId
+            prodName
+            }
+            }
+            }']
+            [#if data?? && data.productList?? && data.productList.list??]
+            [#list data.productList.list as product]
+            <link rel="stylesheet"
+              href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/hEKpfAUmRiFl-WopUfKArgiaM-GkUfApKfpKpq-jmBqrKljirprkrjnqkr/product.css"
+              draggable="false">
+            <div data-new-auto-uuid="prodName_d4f4c0c301424294b91ebd89573b48e2" data-block-uuid="prodName"
+              componenttype="prodName" class="minimum-unit-container" id="i9dx" data-gjs-type="minimum-unit-container">
+              <link rel="stylesheet"
+                href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/lJfpUAKHwNPa-VNAfKUpCqsOd-GkUfApKfpKpq-jrBqrKljirprkrrnpni/unit.css"
+                draggable="false">[@develop_include appId="77355" styleId="-1"
+              fileName="view_default.html"][/@develop_include blockSort="0" ]
+            </div>
+            [/#list]
+            [/#if]
+            [/@api]
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript"
+    data-src="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/lJfpUAKHwNPa-VCApUKfrqiOe-GkUfApKfpKpq-jlBqrKljirprkrinorr/unit.js"></script>
+  <script type="text/javascript"
+    data-src="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/hEKpfAUmRiFl-QZUpfKACVsaB-GkUfApKfpKpq-jlBqrKljirprkrjnjkr/product.js"></script>
+  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
+  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1703567903000">
+
+</body>
+
+</html>
+[/@phoenix2_directive_html]
