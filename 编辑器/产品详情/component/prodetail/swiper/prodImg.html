@@ -15,28 +15,34 @@
     width: auto;
 
     /* 主图大小 */
-    /* --swiper_wrapperWidth: 432px; */
-    --swiper_wrapperWidth: 100%;
+    --swiper_wrapperWidth: 432px;
+    /* --swiper_wrapperWidth: 100%; */
     --swiper_wrapperHeight: 432px;
     /* 整个缩略图 整个缩略图间距*/
-    /* --swiper_thumbsWidth: 108px; */
-    --swiper_thumbsWidth: 100%;
+    --swiper_thumbsWidth: 108px;
+    /* --swiper_thumbsWidth: 100%; */
     --swiper_slidesPerView: 5;
-    --swiper_thumbsSpaceBetween_top: 10px;
+    --swiper_thumbsSpaceBetween_top: 0px;
     --swiper_thumbsSpaceBetween_right: 0px;
     --swiper_thumbsSpaceBetween_bottom: 0px;
-    --swiper_thumbsSpaceBetween_left: 0px;
+    --swiper_thumbsSpaceBetween_left: 10px;
     /* 缩略图一个小块间距 */
     --swiper_thumbsSlideHeight: 108px;
-    --swiper_thumbsSlideWidth: 108px;
     --swiper_swiperSlideSpaceBetween_top: 0px;
-    --swiper_swiperSlideSpaceBetween_right: 10px;
+    --swiper_swiperSlideSpaceBetween_right: 0px;
     --swiper_swiperSlideSpaceBetween_bottom: 0px;
     --swiper_swiperSlideSpaceBetween_left: 0px;
   }
 
-  .lead_swiper_wrapper {
+  .lead_swiper_thumbs .swiper-slide{
+    opacity: 0.4;
+  }
 
+  .lead_swiper_thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  .lead_swiper_wrapper {
     --swiper-navigation-color: #fff;
     --swiper-pagination-color: #fff
   }
@@ -78,14 +84,13 @@
   }
 
   .upAndDown .lead_swiper_thumbs .swiper-slide {
-    width: var(--swiper_thumbsSlideWidth);
+    width: calc(var(--swiper_thumbsWidth) / var(--swiper_slidesPerView));
     height: var(--swiper_thumbsSlideHeight);
 
     margin-top: var(--swiper_swiperSlideSpaceBetween_top);
     margin-right: var(--swiper_swiperSlideSpaceBetween_right);
     margin-bottom: var(--swiper_swiperSlideSpaceBetween_bottom);
     margin-left: var(--swiper_swiperSlideSpaceBetween_left);
-    opacity: 0.4;
   }
 
   .upAndDown .lead_swiper_thumbs img {
@@ -95,9 +100,6 @@
   }
 
   /* 风格上下 */
-  .upAndDown .lead_swiper_thumbs .swiper-slide-thumb-active {
-    opacity: 1;
-  }
 </style>
 
 <style>
@@ -176,7 +178,7 @@
 <body>
   <div style="width: 800px;">
     <!-- Swiper -->
-    <div class="lead_swiper_container upAndDown">
+    <div class="lead_swiper_container leftAndRight">
       <div class="swiper lead_swiper_wrapper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -326,7 +328,7 @@
         slidesPerView: 5,
         spaceBetween: 10
       }
-    initLeaSwiper(leadSwiperOption['upAndDown'],config)
+    initLeaSwiper(leadSwiperOption['leftAndRight'],config)
   </script>
 </body>
 
