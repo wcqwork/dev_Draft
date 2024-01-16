@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <div id="prod-sku-container" class="minimum-unit-sku" data-minimumUnit-component="prodDetail-sku" data-appid="21212" data-component-style="1">
+  <div id="prod-sku-container" class="minimum-unit-sku" data-minimumUnit-component="prodDetail-sku" data-appid="21212"
+    data-component-style="1">
 
   </div>
   <script type="module" defer>
@@ -19,34 +20,172 @@
     const SpecAdjoinMatrix = window.leadd_SpecAdjoinMatrix
     const initialState = {
       specList: [
-        { title: "颜色", list: ["白色", "粉色"] },
-        { title: "体重", list: ["G", "KG"] },
-        { title: "尺寸", list: ["1寸", "2寸", "3寸"] },
-        { title: "形状", list: ["圆", "正方", "三角"] },
+        {
+          "skuId": "QGfpUKAUfpiR",
+          "skuName": "尺寸",
+          "transNameList": [
+            "S",
+            "M",
+            "L"
+          ]
+        },
+        {
+          "skuId": "QRKUAfpAUpiQ",
+          "skuName": "颜色",
+          "transNameList": [
+            "红色",
+            "黑色",
+            "黄色",
+            "白色"
+          ]
+        }
       ],
       specCombinationList: [
-        { id: "1", specs: ["G", "1寸", "白色", "正方"] },
-        { id: "2", specs: ["G", "1寸", "白色", "圆"] },
-        { id: "3", specs: ["G", "1寸", "粉色", "圆"] },
-        { id: "4", specs: ["G", "1寸", "粉色", "正方"] },
-        { id: "5", specs: ["KG", "3寸", "白色", "圆"] },
-        { id: "6", specs: ["KG", "2寸", "粉色", "正方"] },
+        // {
+        //   "skuValueId": "gFAfpKCHUlYd",
+        //   "transValueList": [
+        //     "S",
+        //     "红色"
+        //   ],
+        //   "stock": 1,
+        //   "price": "80",
+        //   "comparePrice": "100",
+        //   "prodWeight": "20.000"
+        // },
+        // {
+        //   "skuValueId": "gtAKpfWRUliT",
+        //   "transValueList": [
+        //     "S",
+        //     "黑色"
+        //   ],
+        //   "stock": null,
+        //   "price": "100",
+        //   "comparePrice": "100",
+        //   "prodWeight": ""
+        // },
+        {
+          "skuValueId": "YtfpKArRUGEf",
+          "transValueList": [
+            "S",
+            "黄色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "YifApKhwUQtL",
+          "transValueList": [
+            "S",
+            "白色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "cGpUfACcKlZW",
+          "transValueList": [
+            "M",
+            "红色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "cFAfKprHUQZs",
+          "transValueList": [
+            "M",
+            "黑色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "YAfKUphmUQjO",
+          "transValueList": [
+            "M",
+            "黄色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "ioUKAfCRpGZa",
+          "transValueList": [
+            "M",
+            "白色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "cWUKAfMcpvtl",
+          "transValueList": [
+            "L",
+            "红色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "cLApfKWmUQjw",
+          "transValueList": [
+            "L",
+            "黑色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "hPUpKAhwfbEI",
+          "transValueList": [
+            "L",
+            "黄色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        },
+        {
+          "skuValueId": "hEpfAKhHUbZz",
+          "transValueList": [
+            "L",
+            "白色"
+          ],
+          "stock": null,
+          "price": "100",
+          "comparePrice": "100",
+          "prodWeight": ""
+        }
       ],
     };
     class Sku extends Component {
-      componentDidMount() {
-      }
-
       render() {
         const { specList, specCombinationList } = initialState;
         // 已选择的规格，长度为规格列表的长度
-        const [specsS, setSpecsS] = useState(Array(specList.length).fill(""));
-
+        const [specsS, setSpecsS] = useState(specCombinationList[0].transValueList || Array(specList.length).fill(""));
         // 创建一个规格矩阵
         const specAdjoinMatrix = useMemo(() => new SpecAdjoinMatrix(specList, specCombinationList), [specList, specCombinationList]);
         // 获得可选项表
         const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS);
-
+        // 获取选择的规格对象
+        const selectedCombination = specAdjoinMatrix.getSelectedSpecCombinationList(specsS)
         const handleClick = function (bool, text, index) {
           // 排除可选规格里面没有的规格
           if (specsS[index] !== text && !bool) return;
@@ -85,11 +224,11 @@
 
         return html`
           <div className="container">
-            ${specList.map(({ title, list }, index) => html`
+            ${specList.map(({ skuName, transNameList }, index) => html`
               <div key=${index}>
-                <p className="title">${title}</p>
+                <p className="skuName">${skuName}</p>
                 <div className="specBox">
-                  ${list.map((value, i) => html`<${skuItem} value="${value}" i="${i}" index="${index}" />`)}
+                  ${transNameList.map((value, i) => html`<${skuItem} value="${value}" i="${i}" index="${index}" />`)}
                 </div>
               </div>
             `)}

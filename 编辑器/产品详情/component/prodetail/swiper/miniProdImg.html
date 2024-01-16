@@ -1,0 +1,82 @@
+<script>
+  $(function () {
+    leadComponentSite.miniUnitProductImg.init({
+      callback: function () {
+        console.log('miniUnitProductImg init callback')
+        const upAndDown = {
+          swiperSetting: function (config) {
+            return {
+              selector: ".upAndDown .lead_swiper_thumbs",
+              config: {
+                spaceBetween: config.spaceBetween || 10,
+                slidesPerView: config.slidesPerView || 4,
+                freeMode: true,
+                watchSlidesProgress: true,
+              }
+            }
+          },
+          thumbsSetting: function (swiper) {
+            return {
+              selector: ".upAndDown .lead_swiper_wrapper",
+              config: {
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                  swiper: swiper,
+                },
+              }
+            }
+          }
+        }
+        const leftAndRight = {
+          swiperSetting: function (config) {
+            return {
+              selector: ".leftAndRight .lead_swiper_thumbs",
+              config: {
+                spaceBetween: config.spaceBetween || 10,
+                slidesPerView: config.slidesPerView || 4,
+                direction: 'vertical',
+                freeMode: true,
+                watchSlidesProgress: true,
+              }
+            }
+          },
+          thumbsSetting: function (swiper) {
+            return {
+              selector: ".leftAndRight .lead_swiper_wrapper",
+              config: {
+                navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                  swiper: swiper,
+                },
+              }
+            }
+          }
+        }
+
+        const leadSwiperOption = {
+          upAndDown,
+          leftAndRight
+        }
+
+        const initLeaSwiper = (setting, config) => {
+          const { swiperSetting, thumbsSetting } = setting
+          const swiperOption = swiperSetting(config)
+          var swiper = new Swiper(swiperOption.selector, swiperOption.config);
+          const thembsOption = thumbsSetting(swiper)
+          var swiper2 = new Swiper(thembsOption.selector, thembsOption.config);
+        }
+        const config = {
+          slidesPerView: 5,
+          spaceBetween: 10
+        }
+        initLeaSwiper(leadSwiperOption['leftAndRight'], config)
+      }
+    });
+  });
+</script>

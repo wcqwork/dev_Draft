@@ -1,5 +1,5 @@
-<div class="minimum-unit-sku" data-minimumUnit-component="prodDetail-sku" data-appid="232323"
-  data-component-style="1" data-js-depped="[]" data-new-auto-uuid="proddetail_component_sku_uuid_11122333">
+<div class="minimum-unit-sku" data-minimumUnit-component="prodDetail-sku" data-appid="232323" data-component-style="1"
+  data-js-depped="[]" data-new-auto-uuid="proddetail_component_sku_uuid_11122333">
   <script>
     debugger;
     $(function () {
@@ -10,3 +10,14 @@
 
 
 [@develop_include appId="232323" style="-1" fileName="view_default.html"][/@develop_include]
+
+
+<script>
+  $(function () {
+    leadComponentSite.miniUnitSku.init({
+      callback:function(){
+        console.log('sku init callback')
+      }
+    });
+  });
+</script>

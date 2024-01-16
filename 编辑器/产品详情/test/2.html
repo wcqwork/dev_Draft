@@ -1,0 +1,83 @@
+[@phoenix2_directive_html
+dynamicAppIdJson='[{"appId":"77355","pageNodeId":"prodName_cf5fbba72a4f4c6ca5bd191febff86a1","appIsDev":"1","nodeId":"cf5fbba72a4f4c6ca5bd191febff86a1"},{"appId":"77361","pageNodeId":"photoUrlList_cf5fbba72a4f4c6ca5bd191febff86a1_1705291146167","appIsDev":"1","nodeId":"cf5fbba72a4f4c6ca5bd191febff86a1"},{"appId":"77361","pageNodeId":"photoUrlList_cf5fbba72a4f4c6ca5bd191febff86a1_1705291215629","appIsDev":"1","nodeId":"cf5fbba72a4f4c6ca5bd191febff86a1"}]']
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preload" as="image" href="http://design.ldwebsitebuilder.com:8080/phxBlockEditor/images/defaultheader.png"
+    fetchpriority="high">
+
+  [@web_css pm_styles="head" pm_styles="head" collect="true" version="pageEditor"]
+  /assets/blockEditor/styles/swiper.min.css,
+  [/@web_css]
+
+  [#include "phoenix/component/mark_head_view_default.ftl"]
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_CSS-->
+</head>
+
+<body class="frontend-body-canvas">
+
+  [#include "phoenix/component/mark_body_top_view_default.ftl"]
+  <section id="istm"
+    class="block-container block-editor-lead-container global-animation block-settingId-ce39d9d2-ac3c-4fc3-9a65-f8deb1d2e7d8"
+    data-gjs-type="blockContainer">
+    <div draggable="false" id="iulp" class="site-block-container" data-gjs-type="siteblockContainer">
+      <div id="i5n5" class="row-container" data-gjs-type="rowContainer">
+        <div id="ixyr" class="column-container" data-gjs-type="column">
+          [@page_node appId="77356" appIsDev="1" uuid="productDetail_77356_cf5fbba72a4f4c6ca5bd191febff86a1"
+          nodeId="cf5fbba72a4f4c6ca5bd191febff86a1" dataBlockUUID="productDetail_77356" blockSort="" type="1" ]
+          <div id="${pageNodeId}" class="dynamic-component-container" data-block-uuid="productDetail_77356"
+            data-new-auto-uuid="productDetail_77356_cf5fbba72a4f4c6ca5bd191febff86a1"
+            data-node-id="cf5fbba72a4f4c6ca5bd191febff86a1" data-block-sort="" draggable="false">[@api method="post"
+            url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList"
+            dataRange='{"list":["encodeId","prodName","photoUrlList"]}']
+            [@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+            productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 1,prodType:"2"}) ${data.newDataRange}
+            }']
+            [#if data?? && data.productList?? && data.productList.list??]
+            [#list data.productList.list as product]
+            <div id="iolk" class="minimum-unit-container" data-gjs-type="minimum-unit-container">[@develop_include
+              appId="77355" styleId="-1" fileName="view_default.html"][/@develop_include]</div>
+            <div id="ifywv" class="row-container" data-gjs-type="rowContainer">
+              <div id="is27u" class="column-container" data-gjs-type="column">
+                <div id="ivicf" class="minimum-unit-container developer-component-collect"
+                  data-gjs-type="minimum-unit-container">[@develop_include appId="77361" styleId="-1"
+                  fileName="view_default.html" blockSort="1705291146167" appVersion=""
+                  backendGuideReplace=""][/@develop_include]</div>
+              </div>
+              <div id="idbe1" class="column-container" data-gjs-type="column">
+                <div id="iey51" class="minimum-unit-container developer-component-collect"
+                  data-gjs-type="minimum-unit-container">[@develop_include appId="77361" styleId="-1"
+                  fileName="view_default.html" blockSort="1705291215629" appVersion=""
+                  backendGuideReplace=""][/@develop_include]</div>
+              </div>
+            </div>
+            [/#list]
+            [/#if]
+            [/@api]
+            [/@api]
+          </div>
+          [/@page_node]
+        </div>
+      </div>
+    </div>
+  </section>
+  [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/swiper.min.js,
+  [/@web_script] [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/minimumUnitDeep.js,
+  [/@web_script]
+  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
+  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1704977581000">
+
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_JAVASCRIPT-->
+</body>
+
+</html>
+[/@phoenix2_directive_html]

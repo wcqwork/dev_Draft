@@ -1,23 +1,24 @@
-<div class="dynamic-component-container" data-block-uuid="productDetail_77356" data-default-setting="{&quot;prodId&quot;:&quot;miUgAMZasPyb&quot;}">
-	[@api method="post" url="/phoenix2/composite/graphql" prodId="$prodId" query='{
-		productList(conditionDto: {searchProdIds: "$prodId", page: 0, limit: 1}) {
-			list {
-				encodeId
-				prodName 
-			}
-		}
-    }']
-		[#if data?? &amp;&amp; data.productList?? &amp;&amp; data.productList.list??]
-			[#list data.productList.list as product]
-        		<link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/hEKpfAUmRiFl-WopUfKArgiaM-GkUfApKfpKpq-jmBqrKljirprkrjnqkr/product.css">
-            <div data-gjs-highlightable="true" id="i6he" data-gjs-type="minimum-unit-container" draggable="true" data-new-auto-uuid="prodName_747de92d4ca848a1a8619763f67f8db7" data-block-uuid="prodName" componenttype="prodName" class="minimum-unit-container">
-              <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/lJfpUAKHwNPa-VNAfKUpCqsOd-GkUfApKfpKpq-jrBqrKljirprkrrnpni/unit.css">
-              [@develop_include appId="77355" styleId="-1" fileName="view_default.html"][/@develop_include blockSort="0" ]
-            </div>
-            <div data-gjs-highlightable="true" id="i2ps8" data-gjs-type="minimum-unit-container" draggable="true" class="minimum-unit-container">
-              [@develop_include appId="77355" styleId="-1" fileName="view_default.html"  blockSort="1" ]
-            </div>
-			[/#list]
-		[/#if]
-    [/@api]
+[@page_node appId="77356" appIsDev="1" uuid="productDetail_77356_1899e0a01ba948a281686619de9f430a"
+nodeId="1899e0a01ba948a281686619de9f430a" dataBlockUUID="productDetail_77356" blockSort="" type="1" ]
+<div id="${pageNodeId}" class="dynamic-component-container" data-block-uuid="productDetail_77356"
+	data-new-auto-uuid="productDetail_77356_1899e0a01ba948a281686619de9f430a"
+	data-node-id="1899e0a01ba948a281686619de9f430a" data-block-sort="">[@api method="post"
+	url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList"
+	dataRange='{"list":["encodeId","prodName","prodSku"]}']
+	[@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+	productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 1,prodType:"2"}) ${data.newDataRange}
+	}']
+	[#if data?? &amp;&amp; data.productList?? &amp;&amp; data.productList.list??]
+	[#list data.productList.list as product]
+	<div data-gjs-highlightable="true" id="imvy" data-gjs-type="minimum-unit-container" draggable="true"
+		class="minimum-unit-container">[@develop_include appId="77355" styleId="-1"
+		fileName="view_default.html"][/@develop_include]</div>
+	<div data-gjs-highlightable="true" id="icjyd" data-gjs-type="minimum-unit-container" draggable="true"
+		class="minimum-unit-container developer-component-collect">[@develop_include appId="77391" styleId="-1"
+		blockSort="1705304421324" fileName="view_default.html" ][/@develop_include]</div>
+	[/#list]
+	[/#if]
+	[/@api]
+	[/@api]
 </div>
+[/@page_node]

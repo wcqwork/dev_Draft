@@ -15,23 +15,32 @@
     width: auto;
 
     /* 主图大小 */
-    --swiper_wrapperWidth: 432px;
-    /* --swiper_wrapperWidth: 100%; */
+    /* --swiper_wrapperWidth: 432px; */
+    --swiper_wrapperWidth: 100%;
     --swiper_wrapperHeight: 432px;
     /* 整个缩略图 整个缩略图间距*/
-    --swiper_thumbsWidth: 108px;
-    /* --swiper_thumbsWidth: 100%; */
+    /* --swiper_thumbsWidth: 108px; */
+    --swiper_thumbsWidth: 100%;
     --swiper_slidesPerView: 5;
     --swiper_thumbsSpaceBetween_top: 0px;
     --swiper_thumbsSpaceBetween_right: 0px;
     --swiper_thumbsSpaceBetween_bottom: 0px;
-    --swiper_thumbsSpaceBetween_left: 10px;
+    --swiper_thumbsSpaceBetween_left: 0px;
     /* 缩略图一个小块间距 */
     --swiper_thumbsSlideHeight: 108px;
-    --swiper_swiperSlideSpaceBetween_top: 0px;
-    --swiper_swiperSlideSpaceBetween_right: 0px;
+    /* --swiper_swiperSlideSpaceBetween_top: 0px;
+    --swiper_swiperSlideSpaceBetween_right: 10px;
     --swiper_swiperSlideSpaceBetween_bottom: 0px;
-    --swiper_swiperSlideSpaceBetween_left: 0px;
+    --swiper_swiperSlideSpaceBetween_left: 0px; */
+    --swiper_swiperSlideSpaceBetween:10px;
+  }
+  
+  .lead_swiper_container .lead_swiper_thumbs .swiper-wrapper{
+    gap: 10px;
+  }
+
+  .lead_swiper_container .swiper-initialized .lead_swiper_thumbs .swiper-wrapper{
+    gap: 0px;
   }
 
   .lead_swiper_thumbs .swiper-slide{
@@ -179,7 +188,7 @@
   <div style="width: 800px;">
     <!-- Swiper -->
     <div class="lead_swiper_container leftAndRight">
-      <div class="swiper lead_swiper_wrapper">
+      <div class="swiper lead_swiper lead_swiper_wrapper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -215,7 +224,7 @@
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
-      <div thumbsSlider="" class="swiper lead_swiper_thumbs">
+      <div thumbsSlider="" class="swiper lead_swiper lead_swiper_thumbs">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />

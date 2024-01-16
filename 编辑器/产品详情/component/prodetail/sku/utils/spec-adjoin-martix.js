@@ -18,15 +18,16 @@ class AdjoinMatrix {
         const pIndex = this.vertex.indexOf(id);
         sides.forEach((item) => {
             const index = this.vertex.indexOf(item);
-            const cur = this.adjoinArray[pIndex * this.quantity + index];
+            const _postion = pIndex * this.quantity + index;
+            const cur = this.adjoinArray[_postion];
             if (typeof cur !== 'number') { // specList.length > 3时，存在单边多权的情况
-                this.adjoinArray[pIndex * this.quantity + index].push(weight);
+                this.adjoinArray[_postion].push(weight);
             }
             else if (cur > 1) {
-                this.adjoinArray[pIndex * this.quantity + index] = [cur, weight];
+                this.adjoinArray[_postion] = [cur, weight];
             }
             else {
-                this.adjoinArray[pIndex * this.quantity + index] = weight;
+                this.adjoinArray[_postion] = weight;
             }
         });
     }
@@ -115,7 +116,7 @@ class SpecAdjoinMatrix extends AdjoinMatrix {
     specList;
     specCombinationList;
     constructor(specList, specCombinationList) {
-        super(specList.reduce((total, current) => [...total, ...current.list], []));
+        super(specList.reduce((total, current) => [...total, ...current.transNameList], []));
         this.specList = specList;
         this.specCombinationList = specCombinationList;
         // 根据可选规格列表矩阵创建
@@ -128,7 +129,7 @@ class SpecAdjoinMatrix extends AdjoinMatrix {
      */
     initSpec() {
         this.specCombinationList.forEach((item, index) => {
-            this.fillInSpec(item.specs, index + 2); // 0用于互不相连，1用于同级，权级就从2开始
+            this.fillInSpec(item.transValueList, index + 2); // 0用于互不相连，1用于同级，权级就从2开始
         });
     }
     // 填写同级点
@@ -138,7 +139,7 @@ class SpecAdjoinMatrix extends AdjoinMatrix {
         this.specList.forEach((item) => {
             const params = [];
             // 获取同级别顶点
-            item.list.forEach((value) => {
+            item.transNameList.forEach((value) => {
                 if (specsOption.includes(value))
                     params.push(value);
             });
@@ -170,6 +171,17 @@ class SpecAdjoinMatrix extends AdjoinMatrix {
         params.forEach((param) => {
             this.setAdjoinVertexs(param, params, weight);
         });
+    }
+    /*
+     * @params
+     * 获取选中的规格对象
+     */
+    getSelectedSpecCombinationList(param){
+        for(let item of this.specCombinationList){
+            if(item && item.transValueList && item.transValueList.join(',') === param.join(',')){
+                return item;
+            }
+        }
     }
 }
 window.leadd_SpecAdjoinMatrix = SpecAdjoinMatrix;
