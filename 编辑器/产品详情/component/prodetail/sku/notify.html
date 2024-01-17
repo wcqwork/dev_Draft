@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./notify.js"></script>
+</head>
+<body>
+  <script>
+    window.eventEmitter1 = new EventEmitter()
+    eventEmitter1.on('test', function (data) {
+      debugger
+      console.log('test1', data)
+    })
+    eventEmitter1.on('test', function (data) {
+      debugger
+      console.log('test1', data)
+    })
+    eventEmitter1.emit('test')
+    debugger
+  </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<div id="${pageNodeId}" class="dynamic-component-container" data-block-uuid="productDetail_77356" data-default-setting={"prodId":"[\"hypLAMtGiVKc\"]"}>
+	[@api method="post" url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList" dataRange="{\"list\":[\"encodeId\",\"prodName\"]}"]
+		[@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+			productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 1,prodType:"2"}) ${data.newDataRange}
+		}']
+			[#if data?? && data.productList?? && data.productList.list??]
+				[#list data.productList.list as product]
+					[@develop_include appId="77356" styleId="-1" fileName="template_content.html" backendGuideReplace="<!-- editor_replace_place -->" /]
+				[/#list]
+			[/#if]
+		[/@api]
+	[/@api]
+</div>

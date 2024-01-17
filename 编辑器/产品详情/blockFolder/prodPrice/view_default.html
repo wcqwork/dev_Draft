@@ -1,0 +1,12 @@
+<div id="${pageNodeId}" class="prodPrice" data-block-uuid="prodPrice" data-minimumUnit-component="prodPrice"  data-default-setting={} >
+  <span class="prodPrice_coinSymbol">${data.productList.extraData.coinSymbol!'$'}</span>
+  <span class="prodPrice_value">${product.prodPrice!'0.00'?html}</span>
+  <script>
+      leadComponentSite.globalMinimumUnitEvent.on("${nodeId!''}", function (selectedProdObj) {
+          if(selectedProdObj && selectedProdObj.price){
+              $("#${pageNodeId!''} .prodPrice_value").text(selectedProdObj.price)
+          }
+          console.log('产品价格', selectedProdObj)
+      })
+</script>
+</div>
