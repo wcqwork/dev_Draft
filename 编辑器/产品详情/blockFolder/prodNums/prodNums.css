@@ -1,0 +1,42 @@
+.prodNums{
+  --color-foreground: 18,18,18;
+  --prodnums-width:30px;
+  --prodnums-height:30px;
+
+  display: flex;
+}
+.prodNums input::-webkit-outer-spin-button,
+.prodNums input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+}
+.prodNums input[type="number"]{
+-moz-appearance: textfield;
+}
+.prodNums .quantity__button{
+  width: var(--prodnums-width);
+  height: var(--prodnums-height);
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(var(--color-foreground));
+  padding: 0;
+  border: 1px solid #ccc;
+}
+.prodNums .quantity__button svg{
+  width: 1rem;
+  pointer-events: none;
+}
+.prodNums .quantity__input{
+  height: var(--prodnums-height);
+  line-height: 1.8em;
+  outline: none;
+  border: 1px solid #ccc;
+  text-align: center;
+  font-size: 14px;
+  margin-left: 3px;
+  margin-right: 3px;
+}

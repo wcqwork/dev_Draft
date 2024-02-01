@@ -23,6 +23,9 @@
   padding: 5px 10px 5px 10px;
   color: #505257;
 }
+ img{
+  width: 20px;
+}
 .specAction {
   margin-left: 20px;
   background-color: #fef6f4;

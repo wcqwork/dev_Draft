@@ -1,4 +1,6 @@
-[@phoenix2_directive_html]
+[@phoenix2_directive_html
+dynamicAppIdJson='[{"appId":"77361","pageNodeId":"photoUrlList_de538acffbe24671819ccdf94d05ff96","appIsDev":"0","nodeId":"de538acffbe24671819ccdf94d05ff96"},{"appId":"77391","pageNodeId":"prodSku_de538acffbe24671819ccdf94d05ff96_1706498478596","appIsDev":"0","nodeId":"de538acffbe24671819ccdf94d05ff96"}]'
+time='1706507303940']
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,58 +11,83 @@
   <title></title>
   <meta name="keywords" content="">
   <meta name="description" content="">
-  <link rel="preload" as="image" href="http://design.ldwebsitebuilder.com:8080/phxBlockEditor/images/defaultheader.png"
+  <link rel="preload" as="image" href="http://rornrwxhjjjr5o.leadongcdn.cn:6541/cloud/lnBqmKmiSRmknplpikk/qwe.png"
     fetchpriority="high">
 
+  [@web_css pm_styles="head" pm_styles="head" collect="true" version="pageEditor"]
+  /assets/blockEditor/layUi/css/layui.css,
+  /assets/widget/style/component/shoppingcartStatus/shoppingcartStatus.css
+  [/@web_css]
+
+  [@web_css pm_styles="head" pm_styles="head" collect="true" version="pageEditor"]
+  /assets/blockEditor/styles/swiper.min.css,
+  [/@web_css]
+
   [#include "phoenix/component/mark_head_view_default.ftl"]
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_CSS-->
 </head>
 
 <body class="frontend-body-canvas">
 
   [#include "phoenix/component/mark_body_top_view_default.ftl"]
-  <section
-    class="block-container block-editor-lead-container global-animation block-settingId-3d28cb6a-e9aa-4bee-af27-c0812adcea76"
-    id="iiq2" data-gjs-type="blockContainer">
-    <div class="site-block-container" id="ifx2" data-gjs-type="siteblockContainer" draggable="false">
-      <div class="row-container" id="i29v" data-gjs-type="rowContainer">
-        <div class="column-container" id="isdv" data-gjs-type="column">
-          <div class="dynamic-component-container" data-block-uuid="productDetail_77356" data-default-setting="{"
-            prodId":"miUgAMZasPyb"}" draggable="false">
-            [@api method="post" url="/phoenix2/composite/graphql" prodId="$prodId" query='{
-            productList(conditionDto: {searchProdIds: "$prodId", page: 0, limit: 1}) {
-            list {
-            encodeId
-            prodName
-            }
-            }
+  <section id="i8aw"
+    class="block-container block-editor-lead-container global-animation block-settingId-bc5ec801-e2c1-4caa-ae0a-01da04c5696b"
+    data-gjs-type="blockContainer">
+    <div id="igfg" draggable="false" class="site-block-container" data-gjs-type="siteblockContainer">
+      <div id="ig3c" class="row-container" data-gjs-type="rowContainer">
+        <div id="i4de" class="column-container" data-gjs-type="column">
+          [@page_node appId="77405" appIsDev="0" uuid="productDetail_77405_de538acffbe24671819ccdf94d05ff96"
+          nodeId="de538acffbe24671819ccdf94d05ff96" dataBlockUUID="productDetail_77405" blockSort="" ]
+          <div id="${pageNodeId}" class="dynamic-component-container" data-block-uuid="productDetail_77405"
+            data-new-auto-uuid="productDetail_77405_de538acffbe24671819ccdf94d05ff96"
+            data-node-id="de538acffbe24671819ccdf94d05ff96" data-block-sort="" draggable="false">[@api method="post"
+            url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList"
+            dataRange='{"list":["encodeId","photoUrlList","productSkuItem {skuOptionItemListStr
+            skuValueItemListStr}"]}']
+            [@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+            productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 1,prodType:"2"}) ${data.newDataRange}
             }']
             [#if data?? && data.productList?? && data.productList.list??]
             [#list data.productList.list as product]
-            <link rel="stylesheet"
-              href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/hEKpfAUmRiFl-WopUfKArgiaM-GkUfApKfpKpq-jmBqrKljirprkrjnqkr/product.css"
-              draggable="false">
-            <div data-new-auto-uuid="prodName_d4f4c0c301424294b91ebd89573b48e2" data-block-uuid="prodName"
-              componenttype="prodName" class="minimum-unit-container" id="i9dx" data-gjs-type="minimum-unit-container">
-              <link rel="stylesheet"
-                href="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/lJfpUAKHwNPa-VNAfKUpCqsOd-GkUfApKfpKpq-jrBqrKljirprkrrnpni/unit.css"
-                draggable="false">[@develop_include appId="77355" styleId="-1"
-              fileName="view_default.html"][/@develop_include blockSort="0" ]
+            <div id="ibo3b" class="row-container" data-gjs-type="rowContainer">
+              <div id="id8of" class="column-container" data-gjs-type="column">
+                <div id="it3l" class="minimum-unit-container developer-component-collect"
+                  data-gjs-type="minimum-unit-container">[@develop_include appId="77361" styleId="-1"
+                  fileName="view_default.html"][/@develop_include]</div>
+              </div>
+              <div id="iw8xz" class="column-container" data-gjs-type="column">
+                <div id="igy1s" class="minimum-unit-container developer-component-collect"
+                  data-gjs-type="minimum-unit-container">[@develop_include appId="77391" styleId="-1"
+                  fileName="view_default.html" blockSort="1706498478596" appVersion=""
+                  backendGuideReplace=""][/@develop_include]</div>
+              </div>
             </div>
             [/#list]
             [/#if]
             [/@api]
+            [/@api]
           </div>
+          [/@page_node]
         </div>
       </div>
     </div>
   </section>
-  <script type="text/javascript"
-    data-src="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/lJfpUAKHwNPa-VCApUKfrqiOe-GkUfApKfpKpq-jlBqrKljirprkrinorr/unit.js"></script>
-  <script type="text/javascript"
-    data-src="//rornrwxhjjjr5o.leadongcdn.cn:6541/develop/hEKpfAUmRiFl-QZUpfKACVsaB-GkUfApKfpKpq-jlBqrKljirprkrjnjkr/product.js"></script>
-  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
-  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1703567903000">
 
+  [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/layUi/layui.js,
+  /assets/blockEditor/script/editorblock_pay.js,
+  /assets/widget/script/plugins/shoppingcartStatus/shoppingcartStatus.js
+  [/@web_script]
+  [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/swiper.min.js,
+  [/@web_script] [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/minimumUnitDeep.js,
+  /assets/blockEditor/script/prodBaseUnitDeep.js,
+  [/@web_script]
+  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
+  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1706253267573">
+
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_JAVASCRIPT-->
 </body>
 
 </html>

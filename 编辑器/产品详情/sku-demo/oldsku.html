@@ -42,7 +42,6 @@
 
         // 创建一个规格矩阵
         const specAdjoinMatrix = useMemo(() => new SpecAdjoinMatrix(specList, specCombinationList), [specList, specCombinationList]);
-        debugger
         // 获得可选项表
         const optionSpecs = specAdjoinMatrix.getSpecscOptions(specsS);
 
@@ -65,6 +64,23 @@
           }
           return strClass
         }
+
+        const skuItem = ({ value,i,index }) => {
+          const isOption = optionSpecs.includes(value); // 当前规格是否可选
+          const isActive = specsS.includes(value); // 当前规格是否被选
+          return html`<span
+                key=${i}
+                className=${classNames({
+                  specOption: isOption,
+                  specAction: isActive,
+                  specDisabled: !isOption,
+                })}
+                onClick=${() => handleClick(isOption, value, index)}
+              >
+            ${value}
+            <img src="//a111.leadongcdn.cn:6541/cloud/lnBqmKmiSRmknplpikk/qwe-120-120.png" />
+          </span>`
+        }
         
         return html`
           <div className="container">
@@ -72,29 +88,12 @@
               <div key=${index}>
                 <p className="title">${title}</p>
                 <div className="specBox">
-                  ${list.map((value, i) => {
-                    const isOption = optionSpecs.includes(value); // 当前规格是否可选
-                    const isActive = specsS.includes(value); // 当前规格是否被选
-                    return html`
-                      <span
-                        key=${i}
-                        className=${classNames({
-                          specOption: isOption,
-                          specAction: isActive,
-                          specDisabled: !isOption,
-                        })}
-                        onClick=${() => handleClick(isOption, value, index)}
-                      >
-                        ${value}
-                        <img src="//a111.leadongcdn.cn:6541/cloud/lnBqmKmiSRmknplpikk/qwe-120-120.png" />
-                      </span>`;
-                  })}
+                  ${list.map((value, i) => html`<${skuItem} value="${value}" i="${i}" index="${index}" />`)}
                 </div>
               </div>
             `)}
           </div>
         `;
-
       }
     }
 

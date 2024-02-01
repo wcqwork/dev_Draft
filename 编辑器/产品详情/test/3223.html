@@ -1,0 +1,113 @@
+[@phoenix2_directive_html
+dynamicAppIdJson='[{"appId":"77355","pageNodeId":"prodName_ed12e0bfb0c043538a6d10f8fedcb741","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77360","pageNodeId":"prodBrief_ed12e0bfb0c043538a6d10f8fedcb741_1705736774338","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77364","pageNodeId":"prodPrice_ed12e0bfb0c043538a6d10f8fedcb741_1705736778642","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77361","pageNodeId":"photoUrlList_ed12e0bfb0c043538a6d10f8fedcb741_1705736783065","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77411","pageNodeId":"prodProperty_ed12e0bfb0c043538a6d10f8fedcb741_1705736800411","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77391","pageNodeId":"prodSku_ed12e0bfb0c043538a6d10f8fedcb741_1705736805666","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77398","pageNodeId":"prodNums_ed12e0bfb0c043538a6d10f8fedcb741_1705736837115","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77402","pageNodeId":"prodPayment_ed12e0bfb0c043538a6d10f8fedcb741_1705736841985","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"},{"appId":"77404","pageNodeId":"phoenixProductTextVO_ed12e0bfb0c043538a6d10f8fedcb741_1705736846219","appIsDev":"1","nodeId":"ed12e0bfb0c043538a6d10f8fedcb741"}]'
+time='1705736884389']
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preload" as="image" href="http://design.ldwebsitebuilder.com:8080/phxBlockEditor/images/defaultheader.png"
+    fetchpriority="high">
+
+  [@web_css pm_styles="head" pm_styles="head" collect="true" version="pageEditor"]
+  /assets/blockEditor/layUi/css/layui.css,
+  /assets/widget/style/component/shoppingcartStatus/shoppingcartStatus.css
+  [/@web_css]
+
+  [@web_css pm_styles="head" pm_styles="head" collect="true" version="pageEditor"]
+  /assets/blockEditor/styles/swiper.min.css,
+  [/@web_css]
+
+  [#include "phoenix/component/mark_head_view_default.ftl"]
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_CSS-->
+</head>
+
+<body class="frontend-body-canvas">
+
+  [#include "phoenix/component/mark_body_top_view_default.ftl"]
+  <section
+    class="block-container block-editor-lead-container global-animation block-settingId-773f5ecc-227b-4367-9635-4b355df6b238"
+    id="iel6" data-gjs-type="blockContainer">
+    <div class="site-block-container" id="irsu" data-gjs-type="siteblockContainer" draggable="false">
+      <div id="ii5g" class="row-container" data-gjs-type="rowContainer">
+        <div class="column-container" id="ipbi" data-gjs-type="column">
+          [@page_node appId="77356" appIsDev="1" uuid="productDetail_77356_ed12e0bfb0c043538a6d10f8fedcb741"
+          nodeId="ed12e0bfb0c043538a6d10f8fedcb741" dataBlockUUID="productDetail_77356" blockSort="" type="1" ]
+          <div id="${pageNodeId}" class="dynamic-component-container" data-block-uuid="productDetail_77356"
+            data-new-auto-uuid="productDetail_77356_ed12e0bfb0c043538a6d10f8fedcb741"
+            data-node-id="ed12e0bfb0c043538a6d10f8fedcb741" data-block-sort="" draggable="false">[@api method="post"
+            url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList"
+            dataRange='{"list":["encodeId","prodName","prodBrief","enabledTrade","isSkuProd","prodPrice","photoUrlList","prodBrand","prodModel","prodCode","customFieldList","productSkuItem{skuOptionItemListStr,skuValueItemListStr}","phoenixProductTextVO{prodDescTitle,prodDescript}"],"extraData":["coinSymbol","isB2cPlan","prodStructureData"]}']
+            [@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+            productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 1,prodType:"2"}) ${data.newDataRange}
+            }']
+            [#if data?? && data.productList?? && data.productList.list??]
+            [#list data.productList.list as product]
+            <div class="minimum-unit-container" id="iozl" data-gjs-type="minimum-unit-container">[@develop_include
+              appId="77355" styleId="-1" fileName="view_default.html"][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="ibdrj"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77360" styleId="-1"
+              fileName="view_default.html" blockSort="1705736774338" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="izbru"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77364" styleId="-1"
+              fileName="view_default.html" blockSort="1705736778642" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="i94ku"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77361" styleId="-1"
+              fileName="view_default.html" blockSort="1705736783065" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="i3krh"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77411" styleId="-1"
+              fileName="view_default.html" blockSort="1705736800411" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="izrgu7"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77391" styleId="-1"
+              fileName="view_default.html" blockSort="1705736805666" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="i8d1ht"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77398" styleId="-1"
+              fileName="view_default.html" blockSort="1705736837115" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="ij2xxo"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77402" styleId="-1"
+              fileName="view_default.html" blockSort="1705736841985" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            <div class="minimum-unit-container developer-component-collect" id="iktg3s"
+              data-gjs-type="minimum-unit-container">[@develop_include appId="77404" styleId="-1"
+              fileName="view_default.html" blockSort="1705736846219" appVersion=""
+              backendGuideReplace=""][/@develop_include]</div>
+            [/#list]
+            [/#if]
+            [/@api]
+            [/@api]
+          </div>
+          [/@page_node]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/layUi/layui.js,
+  /assets/blockEditor/script/editorblock_pay.js,
+  /assets/widget/script/plugins/shoppingcartStatus/shoppingcartStatus.js
+  [/@web_script]
+  [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/swiper.min.js,
+  [/@web_script] [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/minimumUnitDeep.js,
+  [/@web_script]
+  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
+  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1705306878539">
+
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_JAVASCRIPT-->
+</body>
+
+</html>
+[/@phoenix2_directive_html]

@@ -1,12 +1,41 @@
-<div id="${pageNodeId}" class="prodSku" data-block-uuid="prodSku" data-minimumUnit-component='productSkuItem {skuOptionItemListStr,skuValueItemListStr}'  data-default-setting={} >
-  <script>
-    window._block_namespaces_['sku77391_style1'].init({
-        'settingId':'${settingId!}',
-        'nodeId':'${nodeId!}',
-        "pageNodeId":"${pageNodeId!''}",
-        "moutedEl":"#${pageNodeId!''}",
-        "skuOptionItemList":'${product.productSkuItem.skuOptionItemListStr!}',
-        "skuValueItemList":'${product.productSkuItem.skuValueItemListStr!}',
-      });
-  </script>
+<div id="${pageNodeId}" class="prodSku" data-block-uuid="prodSku" data-minimumUnit-component='productSkuItem {skuOptionItemListStr  skuValueItemListStr}' data-default-setting={}>
+    [#if product?? && product.productSkuItem??]
+    [#if product.productSkuItem.skuOptionItemListStr?? && product.productSkuItem.skuOptionItemListStr != ""]
+    [#assign skuOptionItemListStrObj=product.productSkuItem.skuOptionItemListStr?eval /]
+    [#if skuOptionItemListStrObj?? && skuOptionItemListStrObj?size > 0]
+    <div class="sku_container">
+        [#list skuOptionItemListStrObj as skuOptionItem]
+        <div class="sku_item">
+            <p class="skuName">
+                ${skuOptionItem.skuName!''}
+            </p>
+            [#if skuOptionItem.transNameList??]
+            <div class="specBox">
+                [#list skuOptionItem.transNameList as transName]
+                <div class="specOption ">
+                    ${transName!''}
+                </div>
+                [/#list]
+            </div>
+            [/#if]
+        </div>
+        [/#list]
+    </div>
+    <script>
+        window._block_namespaces_['sku77391_style1'].init({
+            'settingId': '${settingId!}',
+            'nodeId': '${nodeId!}',
+            "pageNodeId": "${pageNodeId!''}",
+            "moutedEl": "#${pageNodeId!''}",
+            "skuOptionItemList": '${product.productSkuItem.skuOptionItemListStr!}',
+            "skuValueItemList": '${product.productSkuItem.skuValueItemListStr!}',
+        });
+    </script>
+    [#else]
+    [@web_backend]
+    请在后台产品添加sku
+    [/@web_backend]
+    [/#if]
+    [/#if]
+    [/#if]
 </div>

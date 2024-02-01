@@ -1,0 +1,90 @@
+[@page_node appId="28412" appIsDev="0" uuid="productDetail_28412_ae75ec3bd8f4489baf8160f1735b30f5"
+nodeId="ae75ec3bd8f4489baf8160f1735b30f5" dataBlockUUID="productDetail_28412" blockSort="" ]
+<div id="${pageNodeId}" class="dynamic-component-container" data-block-uuid="productDetail_28412"
+  data-new-auto-uuid="productDetail_28412_ae75ec3bd8f4489baf8160f1735b30f5"
+  data-node-id="ae75ec3bd8f4489baf8160f1735b30f5" data-block-sort="" draggable="false">[@api method="post"
+  url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList"
+  dataRange='{"list":["encodeId","photoUrlList","prodName","commentStar","prodBrief","prodBrand","prodModel","prodCode","customFieldList","productPropVo{propTypeList{name
+  valueList{name}}}","enabledTrade","isSkuProd","prodPrice","shopProdPrice","shopProdPriceMax","minPrice","maxPrice","productSkuItem
+  {skuOptionItemListStr skuValueItemListStr}","phoenixProductTextVO{prodDescTitle
+  prodDescript}"],"extraData":["coinSymbol","isB2cPlan","prodStructureData"]}']
+  [@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+  productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 1,prodType:"2"}) ${data.newDataRange}
+  }']
+  [#if data?? && data.productList?? && data.productList.list??]
+  [#list data.productList.list as product]
+  <div id="i9ba3j" class="row-container" data-gjs-type="rowContainer">
+    <div id="isdhqw" class="column-container" data-gjs-type="column">
+      <div data-appid="28452" data-appisdev="0" data-appname="N产品图片" id="i0esn"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28452" styleId="-1" fileName="view_default.html" blockSort="1706080136733"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+    </div>
+    <div id="it96wg" class="column-container" data-gjs-type="column">
+      <div id="iwknj" class="minimum-unit-container" data-gjs-type="minimum-unit-container">[@develop_include
+        appId="28422" styleId="-1" fileName="view_default.html"][/@develop_include]</div>
+      <div data-appid="28482" data-appisdev="0" data-appname="产品星级评价" id="i27a3b"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28482" styleId="-1" fileName="view_default.html" blockSort="1706083393961"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+      <div data-appid="28432" data-appisdev="0" data-appname="N产品简介" id="iz4h9"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28432" styleId="-1" fileName="view_default.html" blockSort="1706080102895"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+      <div id="i7d1i" data-appname="N产品属性" data-appisdev="0" data-appid="28472"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28472" styleId="-1" fileName="view_default.html" blockSort="1706080169586"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+      <div data-appid="28442" data-appisdev="0" data-appname="N产品价格" id="i7tj3"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28442" styleId="-1" fileName="view_default.html" blockSort="1706080091271"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+      <div id="izaj6a" data-appname="Nsku" data-appisdev="0" data-appid="28492"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28492" styleId="-1" fileName="view_default.html" blockSort="1706080180087"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+      <div id="i1y5ij" data-appname="N产品数量" data-appisdev="0" data-appid="28502"
+        class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+        [@develop_include appId="28502" styleId="-1" fileName="view_default.html" blockSort="1706080205274"
+        appVersion="" backendGuideReplace=""][/@develop_include]</div>
+      <div id="i0zc3k" class="row-container" data-gjs-type="rowContainer">
+        <div id="ifanos" class="column-container" data-gjs-type="column">
+          <div id="i1v2h2" data-appname="N购买按钮" data-appisdev="0" data-appid="28462"
+            class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+            [@develop_include appId="28462" styleId="-1" fileName="view_default.html"
+            blockSort="1706080225236" appVersion="" backendGuideReplace=""][/@develop_include]</div>
+          <div data-appid="28542" data-appisdev="0" data-appname="N询盘按钮"
+            class="minimum-unit-container developer-component-collect" id="i66sbf"
+            data-gjs-type="minimum-unit-container">[@develop_include appId="28542" styleId="-1"
+            fileName="view_default.html" blockSort="1706145316883" appVersion=""
+            backendGuideReplace=""][/@develop_include]</div>
+        </div>
+        <div id="i0dyle" class="column-container" data-gjs-type="column">
+          <div id="i3q4gi" data-appname="加入询盘栏" data-appisdev="0" data-appid="28522"
+            class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+            [@develop_include appId="28522" styleId="-1" fileName="view_default.html"
+            blockSort="1706080232692" appVersion="" backendGuideReplace=""][/@develop_include]</div>
+          <div id="isa2kl" data-appname="N加入购物车" data-appisdev="0" data-appid="28532"
+            class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+            [@develop_include appId="28532" styleId="-1" fileName="view_default.html"
+            blockSort="1706080245229" appVersion="" backendGuideReplace=""][/@develop_include]</div>
+        </div>
+        <div id="ihyb0u" class="column-container" data-gjs-type="column"></div>
+      </div>
+    </div>
+  </div>
+  <div data-appname="N产品属性" data-appisdev="0" data-appid="28472"
+    class="minimum-unit-container developer-component-collect" id="i8vsjf" data-gjs-type="minimum-unit-container">
+    [@develop_include appId="28472" styleId="-1"
+    fileName="view_default.html" blockSort="1706145282343" appVersion=""
+    backendGuideReplace=""][/@develop_include]</div>
+  <div id="i9isyw" data-appname="N产品描述" data-appisdev="0" data-appid="28512"
+    class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+    [@develop_include appId="28512" styleId="-1" fileName="view_default.html" blockSort="1706080212328"
+    appVersion="" backendGuideReplace=""][/@develop_include]</div>
+  [/#list]
+  [/#if]
+  [/@api]
+  [/@api]
+</div>
+[/@page_node]
