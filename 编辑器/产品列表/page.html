@@ -1,0 +1,79 @@
+[@phoenix2_directive_html
+dynamicAppIdJson='[{"appId":"77454","pageNodeId":"productList_77454_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"pageNodeId":""},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"},{"appId":"77355","pageNodeId":"prodName_4262ca8dc44d4997b9ae7121d036db9f","appIsDev":"1","nodeId":"4262ca8dc44d4997b9ae7121d036db9f"}]'
+time='1708665601804']
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <link rel="preload" as="image" href="http://design.ldwebsitebuilder.com:8080/phxBlockEditor/images/defaultheader.png"
+    fetchpriority="high">
+
+  [@web_css pm_styles="head" pm_styles="head" collect="true" version="pageEditor"]
+  /assets/blockEditor/styles/base.css,/assets/blockEditor/layUi/css/layui.css,/assets/widget/style/component/shoppingcartStatus/shoppingcartStatus.css,
+  [/@web_css]
+
+  [@web_script pm_script="boot" collect="true" version="pageEditor"]
+  /assets/blockEditor/script/minimumUnitDeep.js,/assets/blockEditor/script/prodBaseUnitDeep.js,/assets/blockEditor/layUi/layui.js,/assets/blockEditor/script/editorblock_pay.js,/assets/widget/script/plugins/shoppingcartStatus/shoppingcartStatus.js,
+  [/@web_script]
+
+  [#include "phoenix/component/mark_head_view_default.ftl"]
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_CSS-->
+</head>
+
+<body class="frontend-body-canvas">
+
+  [#include "phoenix/component/mark_body_top_view_default.ftl"]
+  <section id="igin"
+    class="block-container block-editor-lead-container global-animation block-settingId-e3604d04-f85f-4569-bf70-5868a711cc09"
+    data-gjs-type="blockContainer">
+    <div id="i1f8" draggable="false" class="site-block-container" data-gjs-type="siteblockContainer">
+      <div id="i052" class="row-container" data-gjs-type="rowContainer">
+        <div id="ibng" class="column-container" data-gjs-type="column">
+          [@page_node appId="77454" appIsDev="1" uuid="productList_77454_4262ca8dc44d4997b9ae7121d036db9f"
+          nodeId="4262ca8dc44d4997b9ae7121d036db9f" dataBlockUUID="productList_77454" blockSort="" ]
+          <div id="${pageNodeId}" class="dynamic-list-container" data-block-uuid="productList_77454"
+            data-new-auto-uuid="productList_77454_4262ca8dc44d4997b9ae7121d036db9f"
+            data-node-id="4262ca8dc44d4997b9ae7121d036db9f" data-block-sort="" draggable="false">[@api method="post"
+            url="/phoenix2/composite/site/graphql/generateApiParam" apiType="productList"
+            dataRange='{"list":["encodeId","prodName"]}']
+            [@api method="post" url="/phoenix2/composite/graphql" prodId="${prodId}" query='{
+            productList(conditionDto: {searchProdIds: $prodId, page: 0, limit: 10,prodType:"2"}) ${data.newDataRange}
+            }']
+            [#assign miniComponentType = "dynamic-list-container"]
+            [#if data?? && data.productList?? && data.productList.list??]
+            [#list data.productList.list as product]
+
+            <div id="i6gwy" data-nodelistid="170866549682365760"
+              class="dynamic-component-container developer-component-collect"
+              data-gjs-type="dynamic-component-container">
+              <div id="il35j" data-nodelistid="170866549683233800"
+                class="minimum-unit-container developer-component-collect" data-gjs-type="minimum-unit-container">
+                [@develop_include appId="77355" styleId="-1" fileName="view_default.html"][/@develop_include]</div>
+            </div>
+
+            [/#list]
+            [/#if]
+            [@develop_include appId="77454" styleId="-1" fileName="style_extend.html"][/@develop_include]
+            [/@api]
+            [/@api]
+          </div>
+          [/@page_node]
+        </div>
+      </div>
+    </div>
+  </section>
+
+  [#include "phoenix/component/mark_body_bottom_view_default.ftl"]
+  <link rel="stylesheet" href="//rornrwxhjjjr5o.leadongcdn.cn:6541/font?family=iconfont&t=1708328899936">
+
+  <!--PLACEHOLDER_DYNAMIC_COMPONENT_RESOURCE_JAVASCRIPT-->
+</body>
+
+</html>
+[/@phoenix2_directive_html]
